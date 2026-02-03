@@ -1,0 +1,26 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Navbar } from '../sections/Navbar';
+import { ServicePageHero } from '../sections/ServicePageHero';
+import { ServicesSection } from '../sections/ServicesSection';
+import { QuoteSection } from '../sections/QuoteSection';
+import { FooterSection } from '../sections/FooterSection';
+---
+
+<Layout>
+  <div class="min-h-screen bg-neutral-100 font-figtree text-black text-sm leading-5 antialiased">
+    <Navbar client:load />
+    <main class="pt-0">
+      <ServicePageHero client:load />
+      <ServicesSection client:load />
+      <QuoteSection client:load showTerms={false} />
+      <FooterSection client:load />
+      {/* Imagery Disclaimer */}
+      <div class="box-border caret-transparent py-8 text-center max-w-[800px] mx-auto px-5">
+        <p class="text-[15px] box-border caret-transparent leading-6 text-gray-500 italic md:text-base">
+          All imagery shown on this website is our own and is of watches we have worked on
+        </p>
+      </div>
+    </main>
+  </div>
+</Layout>

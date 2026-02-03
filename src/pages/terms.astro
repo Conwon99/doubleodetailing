@@ -1,0 +1,108 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Navbar } from '../sections/Navbar';
+import { QuoteSection } from '../sections/QuoteSection';
+import { FooterSection } from '../sections/FooterSection';
+---
+
+<Layout>
+  <div class="min-h-screen bg-neutral-100 font-figtree text-black text-sm leading-5 antialiased">
+    <Navbar client:load />
+    <main class="pt-0">
+      <section class="relative bg-cover bg-center bg-no-repeat py-20 md:py-32" style="background-image: url('/hero-background.jpeg');">
+        <div class="absolute inset-0 bg-black/50"></div>
+        <div class="relative max-w-[1204px] mx-auto px-5 md:px-8">
+          <div class="box-border caret-transparent gap-x-4 flex flex-col gap-y-4 text-center">
+            <div class="box-border caret-transparent flex blur-0 justify-center">
+              <div class="box-border caret-transparent border border-white/30 px-3 py-1 rounded-[1000px] border-solid">
+                <div class="font-medium box-border caret-transparent leading-[22px] text-white">
+                  Legal
+                </div>
+              </div>
+            </div>
+            <div class="box-border caret-transparent blur-0 max-w-[680px] mx-auto">
+              <h1 class="text-[44px] font-medium box-border caret-transparent tracking-[-1.44px] leading-[52px] md:text-7xl md:leading-[80px] text-white">
+                Terms &{" "}
+                <span class="text-[44px] box-border caret-transparent leading-[52px] font-figtree md:text-7xl md:leading-[80px]">
+                  Conditions
+                </span>
+              </h1>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="box-border caret-transparent py-[60px] md:py-[100px]">
+        <div class="box-border caret-transparent max-w-[1204px] mx-auto px-5 md:px-8">
+          <div class="box-border caret-transparent max-w-[800px] mx-auto">
+            <div class="box-border caret-transparent space-y-6">
+              <div class="box-border caret-transparent">
+                <h2 class="text-xl font-medium box-border caret-transparent mb-3 md:text-2xl">
+                  Estimates & Quotes
+                </h2>
+                <p class="text-base box-border caret-transparent leading-6 text-neutral-700">
+                  Estimates are always free, please enquire by email or by filling in the contact form below. On receipt of the watch, a free fixed price quote will be issued after we conduct in-house diagnosis. If the customer decides to decline the quote, the customer will only be charged the return postage costs.
+                </p>
+              </div>
+
+              <div class="box-border caret-transparent">
+                <h2 class="text-xl font-medium box-border caret-transparent mb-3 md:text-2xl">
+                  Postage
+                </h2>
+                <p class="text-base box-border caret-transparent leading-6 text-neutral-700">
+                  As standard we use Royal Mail Special Delivery 1PM for all postage as this allows adequate insurance and next day delivery. This is charged by us at a flat rate of £10. If you wish to use another postage option please let us know and we will gladly accommodate.
+                </p>
+              </div>
+
+              <div class="box-border caret-transparent">
+                <h2 class="text-xl font-medium box-border caret-transparent mb-3 md:text-2xl">
+                  Warranties on Watch Repairs
+                </h2>
+                <p class="text-base box-border caret-transparent leading-6 text-neutral-700">
+                  A 12 month warranty is included with all services, including replacement parts associated with the service.
+                </p>
+                <p class="text-base box-border caret-transparent leading-6 text-neutral-700 mt-3">
+                  Watches that have not been serviced are not warranted. This includes what is referred to as "partial repairs", such as works carried out on stem & crowns, straps, bezels, hand & dial repairs and glass replacements.
+                </p>
+              </div>
+
+              <div class="box-border caret-transparent">
+                <h2 class="text-xl font-medium box-border caret-transparent mb-3 md:text-2xl">
+                  Partial Service / Minor Intervention Policy
+                </h2>
+                <p class="text-base box-border caret-transparent leading-6 text-neutral-700">
+                  There is no warranty on partial repairs, however as a courtesy we usually offer to apply a previous partial repair's cost toward a comprehensive service if the watch requires a second related repair within one year.
+                </p>
+              </div>
+
+              <div class="box-border caret-transparent">
+                <h2 class="text-xl font-medium box-border caret-transparent mb-3 md:text-2xl">
+                  Exclusions
+                </h2>
+                <p class="text-base box-border caret-transparent leading-6 text-neutral-700">
+                  AMPM will honour our warranty provided that you retain the original receipt of work completed. Warranty is void if damaged by water, abuse (knocking/dropping the watch), or intervention by any third party.
+                </p>
+              </div>
+
+              <div class="box-border caret-transparent">
+                <h2 class="text-xl font-medium box-border caret-transparent mb-3 md:text-2xl">
+                  Water Resistance
+                </h2>
+                <p class="text-base box-border caret-transparent leading-6 text-neutral-700">
+                  If requested, and where appropriate, a water resistance test will be carried out in our industry standard "Greiner Leak Checker Prime". A report will be given on its ability to withstand the ingress of water. It must be understood that the test carried out in the workshop cannot replicate real-world conditions, as it is a static test within a dry chamber.
+                </p>
+                <p class="text-base box-border caret-transparent leading-6 text-neutral-700 mt-3">
+                  The water resistance test does not constitute a guarantee of water resistance in any way, nor for any specified length of time. Gaskets can degrade quickly under exposure to chemicals or UV, and the test is solely for advising that the watch has been correctly re-sealed. Annual resealing is advised if the watch is intended for use in water.
+                </p>
+                <p class="text-base box-border caret-transparent leading-6 text-neutral-700 mt-3">
+                  Damage resulting from mistreatment, improper use, or magnetism is not covered.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <QuoteSection client:load showTerms={false} />
+      <FooterSection client:load />
+    </main>
+  </div>
+</Layout>

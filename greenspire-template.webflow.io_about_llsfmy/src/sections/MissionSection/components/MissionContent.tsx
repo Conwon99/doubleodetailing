@@ -1,0 +1,84 @@
+export const MissionContent = () => {
+  return (
+    <div className="box-border caret-transparent blur-0 basis-[0%] grow max-w-[590px]">
+      <div className="font-medium box-border caret-transparent leading-[22px]">
+        [More About]
+      </div>
+      <div className="box-border caret-transparent mt-[18px] mb-4 md:mt-5">
+        <h2 className="text-3xl font-medium box-border caret-transparent tracking-[-0.52px] leading-[35px] md:text-[52px] md:leading-[62px]">
+          Growing BeautyThrough Honest,{" "}
+          <span className="text-3xl italic box-border caret-transparent leading-[35px] font-playfair_display md:text-[52px] md:leading-[62px]">
+            Reliable Care
+          </span>
+        </h2>
+      </div>
+      <div className="text-gray-700 box-border caret-transparent">
+        <div className="text-[15px] box-border caret-transparent leading-6 md:text-base">
+          To provide dependable, eco-conscious lawn and garden care that
+          enhances curb appeal, supports healthy growth, and gives our clients
+          more time.
+        </div>
+      </div>
+      <div className="box-border caret-transparent mt-10 md:mt-14">
+        <div className="border-b-emerald-950 border-l-emerald-950 border-r-emerald-950 border-t-neutral-200 box-border caret-transparent py-4 border-t">
+          <div className="text-[15px] font-medium box-border caret-transparent leading-6 md:text-base">
+            Providing dependable, high-quality lawn and garden care.
+          </div>
+        </div>
+        <div className="border-b-emerald-950 border-l-emerald-950 border-r-emerald-950 border-t-neutral-200 box-border caret-transparent py-4 border-t">
+          <div className="text-[15px] font-medium box-border caret-transparent leading-6 md:text-base">
+            Treating every outdoor space with precision and pride.
+          </div>
+        </div>
+        <div className="border-b-emerald-950 border-l-emerald-950 border-r-emerald-950 border-t-neutral-200 box-border caret-transparent py-4 border-t">
+          <div className="text-[15px] font-medium box-border caret-transparent leading-6 md:text-base">
+            Building trust through eco-friendly, honest service.
+          </div>
+        </div>
+      </div>
+      <div className="box-border caret-transparent mt-7 md:mt-10">
+        <div className="box-border caret-transparent flex">
+          <a
+            href="/contact"
+            className="text-cyan-950 items-center bg-emerald-200 box-border caret-transparent gap-x-5 flex max-w-full gap-y-5 text-center border pl-6 pr-1 py-1 rounded-[100px] border-solid border-transparent hover:bg-white hover:border-emerald-950"
+          >
+            <div className="relative box-border caret-transparent overflow-hidden">
+              <div className="box-border caret-transparent">
+                <div className="relative text-sm font-medium box-border caret-transparent leading-5 z-[2] md:text-base md:leading-6">
+                  Learn More
+                </div>
+              </div>
+              <div className="absolute box-border caret-transparent w-full">
+                <div className="relative text-sm font-medium box-border caret-transparent leading-5 z-[2] md:text-base md:leading-6">
+                  Learn More
+                </div>
+              </div>
+            </div>
+            <div className="text-emerald-200 items-center bg-cyan-950 box-border caret-transparent flex h-12 justify-center w-12 overflow-hidden rounded-[50%]">
+              <div className="relative box-border caret-transparent">
+                <div className="box-border caret-transparent">
+                  <div className="box-border caret-transparent h-3.5 w-3.5 before:accent-auto before:caret-transparent before:text-emerald-200 before:table before:text-sm before:not-italic before:normal-nums before:font-normal before:col-end-2 before:col-start-1 before:row-end-2 before:row-start-1 before:tracking-[normal] before:leading-5 before:list-outside before:list-disc before:pointer-events-auto before:text-center before:indent-[0px] before:normal-case before:visible before:border-separate before:font-geist after:accent-auto after:caret-transparent after:clear-both after:text-emerald-200 after:table after:text-sm after:not-italic after:normal-nums after:font-normal after:col-end-2 after:col-start-1 after:row-end-2 after:row-start-1 after:tracking-[normal] after:leading-5 after:list-outside after:list-disc after:pointer-events-auto after:text-center after:indent-[0px] after:normal-case after:visible after:border-separate after:font-geist">
+                    <img
+                      src="https://c.animaapp.com/mkllptvwihl2Ks/assets/icon-4.svg"
+                      alt="Icon"
+                      className="box-border caret-transparent h-full w-full"
+                    />
+                  </div>
+                </div>
+                <div className="absolute bottom-[-200%] box-border caret-transparent left-[-200%]">
+                  <div className="box-border caret-transparent h-3.5 w-3.5 before:accent-auto before:caret-transparent before:text-emerald-200 before:table before:text-sm before:not-italic before:normal-nums before:font-normal before:col-end-2 before:col-start-1 before:row-end-2 before:row-start-1 before:tracking-[normal] before:leading-5 before:list-outside before:list-disc before:pointer-events-auto before:text-center before:indent-[0px] before:normal-case before:visible before:border-separate before:font-geist after:accent-auto after:caret-transparent after:clear-both after:text-emerald-200 after:table after:text-sm after:not-italic after:normal-nums after:font-normal after:col-end-2 after:col-start-1 after:row-end-2 after:row-start-1 after:tracking-[normal] after:leading-5 after:list-outside after:list-disc after:pointer-events-auto after:text-center after:indent-[0px] after:normal-case after:visible after:border-separate after:font-geist">
+                    <img
+                      src="https://c.animaapp.com/mkllptvwihl2Ks/assets/icon-4.svg"
+                      alt="Icon"
+                      className="box-border caret-transparent h-full w-full"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  );
+};

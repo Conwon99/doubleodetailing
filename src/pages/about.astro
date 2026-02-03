@@ -1,0 +1,22 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Navbar } from '../sections/Navbar';
+import { AboutPageHero } from '../sections/AboutPageHero';
+import { AboutPageAbout } from '../sections/AboutPageAbout';
+import { ProcessSection } from '../sections/ProcessSection';
+import { QuoteSection } from '../sections/QuoteSection';
+import { FooterSection } from '../sections/FooterSection';
+---
+
+<Layout>
+  <div class="min-h-screen bg-neutral-100 font-figtree text-black text-sm leading-5 antialiased">
+    <Navbar client:load />
+    <main class="pt-0">
+      <AboutPageHero client:load />
+      <AboutPageAbout client:load />
+      <ProcessSection client:load />
+      <QuoteSection client:load showTerms={false} />
+      <FooterSection client:load />
+    </main>
+  </div>
+</Layout>

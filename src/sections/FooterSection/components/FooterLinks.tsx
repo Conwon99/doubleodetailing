@@ -6,26 +6,30 @@ export const FooterLinks = () => {
       </div>
       <nav className="box-border caret-transparent gap-x-0 flex flex-col gap-y-3">
         <a
-          href="/"
-          className="text-[15px] box-border caret-transparent leading-6 text-white/80 hover:text-white md:text-base"
+          href="#"
+          onClick={(e) => e.preventDefault()}
+          className="text-[15px] box-border caret-transparent leading-6 text-white/80 hover:text-white md:text-base cursor-not-allowed opacity-70"
         >
           Home
         </a>
         <a
-          href="/about"
-          className="text-[15px] box-border caret-transparent leading-6 text-white/80 hover:text-white md:text-base"
+          href="#"
+          onClick={(e) => e.preventDefault()}
+          className="text-[15px] box-border caret-transparent leading-6 text-white/80 hover:text-white md:text-base cursor-not-allowed opacity-70"
         >
           About Us
         </a>
         <a
-          href="/services"
-          className="text-[15px] box-border caret-transparent leading-6 text-white/80 hover:text-white md:text-base"
+          href="#"
+          onClick={(e) => e.preventDefault()}
+          className="text-[15px] box-border caret-transparent leading-6 text-white/80 hover:text-white md:text-base cursor-not-allowed opacity-70"
         >
           Services
         </a>
         <a
-          href="/contact"
-          className="text-[15px] box-border caret-transparent leading-6 text-white/80 hover:text-white md:text-base"
+          href="#"
+          onClick={(e) => e.preventDefault()}
+          className="text-[15px] box-border caret-transparent leading-6 text-white/80 hover:text-white md:text-base cursor-not-allowed opacity-70"
         >
           Contact
         </a>

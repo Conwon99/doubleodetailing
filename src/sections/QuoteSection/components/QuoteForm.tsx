@@ -13,6 +13,26 @@ export const QuoteForm = () => {
   const [imagePreview, setImagePreview] = useState<string | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
+  const [formStarted, setFormStarted] = useState(false);
+
+  const trackFormStart = () => {
+    if (!formStarted && typeof window !== 'undefined') {
+      setFormStarted(true);
+      const pathname = window.location.pathname;
+      let eventName = 'formstart_contact';
+      
+      if (pathname.includes('/services')) {
+        eventName = 'formstart_service';
+      }
+      
+      if ((window as any).gtag) {
+        (window as any).gtag('event', eventName, {
+          event_category: 'Form',
+          event_label: pathname
+        });
+      }
+    }
+  };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -63,46 +83,44 @@ export const QuoteForm = () => {
       formDataToSend.append("phone", formData.phone);
       formDataToSend.append("serviceType", formData.serviceType);
       formDataToSend.append("description", formData.description);
-      formDataToSend.append("website", "https://ampmwatchrepair.com/");
+      formDataToSend.append("website", "https://doubleodetailing.co.uk/");
       
       if (imageFile) {
         formDataToSend.append("image", imageFile);
       }
 
-      const response = await fetch("https://formspree.io/f/xvzzebzl", {
+      const response = await fetch("https://formspree.io/f/xnjbaogz", {
         method: "POST",
         body: formDataToSend,
+        headers: {
+          'Accept': 'application/json'
+        }
       });
 
+      // Formspree returns 200 OK with JSON on success
       if (response.ok) {
-        setSubmitStatus("success");
-        setFormData({
-          name: "",
-          email: "",
-          phone: "",
-          serviceType: "",
-          description: "",
-        });
-        setImageFile(null);
-        setImagePreview(null);
-        // Reset file input
-        const fileInput = document.getElementById("image") as HTMLInputElement;
-        if (fileInput) {
-          fileInput.value = "";
-        }
+        // Redirect to thank you page on success
+        window.location.href = "/thank-you";
       } else {
+        // Try to get error message from response
+        try {
+          const errorData = await response.json();
+          console.error('Form submission error:', errorData);
+        } catch (e) {
+          console.error('Form submission failed');
+        }
         setSubmitStatus("error");
+        setIsSubmitting(false);
       }
     } catch (error) {
       setSubmitStatus("error");
-    } finally {
       setIsSubmitting(false);
     }
   };
 
   return (
     <div className="w-full max-w-[700px]">
-      <form onSubmit={handleSubmit} action="https://formspree.io/f/xvzzebzl" method="POST" className="bg-black rounded-xl p-6 md:p-8 shadow-xl">
+      <form onSubmit={handleSubmit} action="https://formspree.io/f/xnjbaogz" method="POST" encType="multipart/form-data" className="bg-black rounded-xl p-6 md:p-8 shadow-xl">
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-6">
           <div className="md:col-span-2">
             <label htmlFor="name" className="block text-sm font-medium text-white mb-2">
@@ -115,6 +133,7 @@ export const QuoteForm = () => {
               required
               value={formData.name}
               onChange={handleChange}
+              onFocus={trackFormStart}
               className="w-full px-4 py-3 bg-gray-900 border border-gray-700 text-white rounded-lg focus:ring-2 focus:ring-cta focus:border-cta outline-none transition placeholder:text-gray-500"
               placeholder="John Doe"
             />
@@ -131,6 +150,7 @@ export const QuoteForm = () => {
               required
               value={formData.email}
               onChange={handleChange}
+              onFocus={trackFormStart}
               className="w-full px-4 py-3 bg-gray-900 border border-gray-700 text-white rounded-lg focus:ring-2 focus:ring-cta focus:border-cta outline-none transition placeholder:text-gray-500"
               placeholder="john@example.com"
             />
@@ -165,11 +185,10 @@ export const QuoteForm = () => {
               className="w-full px-4 py-3 bg-gray-900 border border-gray-700 text-white rounded-lg focus:ring-2 focus:ring-cta focus:border-cta outline-none transition"
             >
               <option value="">Select a service...</option>
-              <option value="full-service">Full Service</option>
-              <option value="part-repair">Part Repair</option>
-              <option value="glass-replacement">Glass Replacement</option>
-              <option value="battery-replacement">Battery Replacement</option>
-              <option value="vintage-restoration">Vintage Restoration</option>
+              <option value="machine-polishing">Machine Polishing</option>
+              <option value="ceramic-coatings">Ceramic Coatings</option>
+              <option value="deep-cleans-valets">Deep Cleans and Valets</option>
+              <option value="maintenance">Maintenance</option>
               <option value="other">Other</option>
             </select>
           </div>
@@ -186,7 +205,7 @@ export const QuoteForm = () => {
               value={formData.description}
               onChange={handleChange}
               className="w-full px-4 py-3 bg-gray-900 border border-gray-700 text-white rounded-lg focus:ring-2 focus:ring-cta focus:border-cta outline-none transition resize-none placeholder:text-gray-500"
-              placeholder="Please describe the issue with your watch or the service you require..."
+              placeholder="Please describe the service you require for your vehicle..."
             />
           </div>
 
@@ -226,12 +245,6 @@ export const QuoteForm = () => {
             </div>
           </div>
         </div>
-
-        {submitStatus === "success" && (
-          <div className="mt-6 p-4 bg-green-900/30 border border-green-700 rounded-lg text-green-300">
-            Thank you! Your quote request has been submitted. We'll get back to you soon.
-          </div>
-        )}
 
         {submitStatus === "error" && (
           <div className="mt-6 p-4 bg-red-900/30 border border-red-700 rounded-lg text-red-300">

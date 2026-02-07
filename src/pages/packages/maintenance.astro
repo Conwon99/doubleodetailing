@@ -1,0 +1,22 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { Navbar } from '../../sections/Navbar';
+import { PackageCategorySection } from '../../sections/PackageCategorySection';
+import { QuoteSection } from '../../sections/QuoteSection';
+import { FooterSection } from '../../sections/FooterSection';
+---
+
+<Layout 
+  title="Maintenance Packages - Double O Detailing | Glasgow"
+  description="Maintenance detailing packages: Spectre, Q and 007. Maintenance detail, valet and exterior safe wash. Keep your vehicle pristine after a full detail. Glasgow and Central Scotland."
+  canonical="https://doubleodetailing.co.uk/packages/maintenance"
+>
+  <div class="min-h-screen bg-neutral-100 font-figtree text-black text-sm leading-5 antialiased">
+    <Navbar client:load />
+    <main class="pt-0">
+      <PackageCategorySection client:load categoryId="maintenance" />
+      <QuoteSection client:load showTerms={false} />
+      <FooterSection client:load />
+    </main>
+  </div>
+</Layout>

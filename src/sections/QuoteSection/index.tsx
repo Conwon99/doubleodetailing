@@ -7,7 +7,7 @@ export type QuoteSectionProps = {
 
 export const QuoteSection = ({ showTerms = true }: QuoteSectionProps) => {
   return (
-    <section id="contact" className="relative bg-cover bg-center bg-no-repeat pt-[120px] pb-[60px] md:pt-[150px] md:pb-[100px]" style={{ backgroundImage: `url('/g1.jpeg')` }}>
+    <section id="contact" className="relative bg-cover bg-center bg-no-repeat pt-[120px] pb-[60px] md:pt-[150px] md:pb-[100px]" style={{ backgroundImage: `url('/gallery/WhatsApp Image 2026-02-02 at 11.18.23 PM (3).jpeg')` }}>
       <div className="absolute inset-0 bg-black/60"></div>
       <div className="relative max-w-[1204px] mx-auto px-5 md:px-8">
         <div className="flex flex-col items-center gap-y-8 md:gap-y-12">
@@ -40,6 +40,21 @@ export const QuoteSection = ({ showTerms = true }: QuoteSectionProps) => {
                   </svg>
                   <a 
                     href="tel:07768243728" 
+                    onClick={() => {
+                      if (typeof window !== 'undefined' && (window as any).gtag) {
+                        const pathname = window.location.pathname;
+                        let eventName = 'phone_hero';
+                        
+                        if (pathname.includes('/services')) {
+                          eventName = 'phone_services';
+                        }
+                        
+                        (window as any).gtag('event', eventName, {
+                          event_category: 'Phone',
+                          event_label: pathname
+                        });
+                      }
+                    }}
                     className="text-white text-xl font-medium hover:text-cta transition-colors md:text-2xl"
                   >
                     07768 243 728

@@ -7,7 +7,11 @@ import { QuoteSection } from '../sections/QuoteSection';
 import { FooterSection } from '../sections/FooterSection';
 ---
 
-<Layout>
+<Layout 
+  title="Our Services - Double O Detailing | Machine Polishing, Ceramic Coating & More"
+  description="Browse our car detailing services: Machine Polishing, Ceramic Coatings, Deep Cleans and Valets, and Maintenance. Professional mobile car detailing in Glasgow and Central Scotland."
+  canonical="https://doubleodetailing.co.uk/services"
+>
   <div class="min-h-screen bg-neutral-100 font-figtree text-black text-sm leading-5 antialiased">
     <Navbar client:load />
     <main class="pt-0">
@@ -15,12 +19,6 @@ import { FooterSection } from '../sections/FooterSection';
       <ServicesSection client:load />
       <QuoteSection client:load showTerms={false} />
       <FooterSection client:load />
-      {/* Imagery Disclaimer */}
-      <div class="box-border caret-transparent py-8 text-center max-w-[800px] mx-auto px-5">
-        <p class="text-[15px] box-border caret-transparent leading-6 text-gray-500 italic md:text-base">
-          All imagery shown on this website is our own and is of watches we have worked on
-        </p>
-      </div>
     </main>
   </div>
 </Layout>

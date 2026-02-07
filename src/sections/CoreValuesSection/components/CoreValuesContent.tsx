@@ -11,60 +11,68 @@ export const CoreValuesContent = () => {
           <span className="text-3xl box-border caret-transparent leading-[35px] font-refrigerator uppercase md:text-[52px] md:leading-[62px]">Why</span> <span className="font-refrigerator uppercase">Choose Double O Detailing?</span>
         </h2>
       </div>
-      <div className="text-gray-700 box-border caret-transparent space-y-4">
-        <div className="text-[15px] box-border caret-transparent leading-6 md:text-base">
-          At Double-O Detailing, we're passionate about restoring and protecting vehicles to the highest standard. Based in Stirlingshire, we provide professional mobile detailing and valeting services across Central Scotland, including Glasgow and the surrounding areas.
-        </div>
-        <div className="text-[15px] box-border caret-transparent leading-6 md:text-base">
-          As a small, independent business, we pride ourselves on quality, attention to detail, and customer satisfaction. Every car we work on receives the same level of care and precision—whether it's a quick valet or a full ceramic coating. Our fully equipped mobile unit means we bring the service to you.
+      <div className="text-gray-700 box-border caret-transparent">
+        <p className="text-[15px] box-border caret-transparent leading-6 md:text-base">
+          At Double-O Detailing, we're passionate about restoring and protecting vehicles to the highest standard. Based in the north of Glasgow, we provide professional mobile detailing and valeting across Central Scotland. We pride ourselves on quality, attention to detail, and customer satisfaction—and we bring the service to you with our fully equipped mobile unit.
+        </p>
+        <div className="flex flex-wrap gap-x-6 gap-y-3 mt-5">
+          <div className="flex items-center gap-2">
+            <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-amber-100 text-amber-600" aria-hidden>
+              <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0" />
+              </svg>
+            </span>
+            <span className="text-[15px] font-medium text-black md:text-base">Fully Mobile</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-amber-100 text-amber-600" aria-hidden>
+              <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+              </svg>
+            </span>
+            <span className="text-[15px] font-medium text-black md:text-base">Fully Insured</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-amber-100 text-amber-600" aria-hidden>
+              <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+              </svg>
+            </span>
+            <span className="text-[15px] font-medium text-black md:text-base">Quality Guaranteed</span>
+          </div>
         </div>
       </div>
-      <div className="box-border caret-transparent mt-7 md:mt-10">
-        <div className="box-border caret-transparent space-y-3 mb-6">
-          <div className="box-border caret-transparent gap-x-3 flex items-start gap-y-2">
-            <div className="text-black items-center bg-neutral-200 box-border caret-transparent flex h-6 justify-center w-6 overflow-hidden rounded-[50%] shrink-0 mt-0.5">
-              <div className="items-center box-border caret-transparent flex h-4 justify-center w-4">
-                <img
-                  src="https://c.animaapp.com/mhnzg6knJo6lE7/assets/icon-11.svg"
-                  alt="Icon"
-                  className="box-border caret-transparent h-full w-full"
-                />
-              </div>
+      <div className="box-border caret-transparent mt-6 pt-6 border-t border-neutral-200">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4">
+          <div className="rounded-xl border border-neutral-200 bg-neutral-50/50 p-4 md:p-5 flex flex-col sm:flex-row sm:justify-between sm:items-start gap-3">
+            <div className="order-2 sm:order-none flex-1 min-w-0">
+              <span className="text-[15px] font-medium text-black leading-6 md:text-base">SONAX and PROFILINE Coating Trained</span>
             </div>
-            <div className="text-[15px] box-border caret-transparent leading-6 text-gray-700 md:text-base">
-              Quality Products - We use high quality detailing products and tools
+            <div className="order-1 sm:order-none w-12 h-12 sm:w-14 sm:h-14 shrink-0 flex items-center justify-center sm:self-start">
+              <img src="/certs/SONAX.png" alt="SONAX certification" className="w-full h-full object-contain" />
             </div>
           </div>
-          <div className="box-border caret-transparent gap-x-3 flex items-start gap-y-2">
-            <div className="text-black items-center bg-neutral-200 box-border caret-transparent flex h-6 justify-center w-6 overflow-hidden rounded-[50%] shrink-0 mt-0.5">
-              <div className="items-center box-border caret-transparent flex h-4 justify-center w-4">
-                <img
-                  src="https://c.animaapp.com/mhnzg6knJo6lE7/assets/icon-12.svg"
-                  alt="Icon"
-                  className="box-border caret-transparent h-full w-full"
-                />
-              </div>
+          <div className="rounded-xl border border-neutral-200 bg-neutral-50/50 p-4 md:p-5 flex flex-col sm:flex-row sm:justify-between sm:items-start gap-3">
+            <div className="order-2 sm:order-none flex-1 min-w-0">
+              <span className="text-[15px] font-medium text-black leading-6 md:text-base">SONAX and PROFILINE Expert Trained</span>
             </div>
-            <div className="text-[15px] box-border caret-transparent leading-6 text-gray-700 md:text-base">
-              Mobile Service - We come to you, saving you time and hassle
+            <div className="order-1 sm:order-none w-12 h-12 sm:w-14 sm:h-14 shrink-0 flex items-center justify-center sm:self-start">
+              <img src="/certs/SONAX.png" alt="SONAX certification" className="w-full h-full object-contain" />
             </div>
           </div>
-          <div className="box-border caret-transparent gap-x-3 flex items-start gap-y-2">
-            <div className="text-black items-center bg-neutral-200 box-border caret-transparent flex h-6 justify-center w-6 overflow-hidden rounded-[50%] shrink-0 mt-0.5">
-              <div className="items-center box-border caret-transparent flex h-4 justify-center w-4">
-                <img
-                  src="https://c.animaapp.com/mhnzg6knJo6lE7/assets/icon-13.svg"
-                  alt="Icon"
-                  className="box-border caret-transparent h-full w-full"
-                />
-              </div>
+          <div className="rounded-xl border border-neutral-200 bg-neutral-50/50 p-4 md:p-5">
+            <span className="text-[15px] leading-6 text-gray-700 md:text-base">Paint Correction, Sanding + Coating Business Skills — @cmpristinedetailing</span>
+          </div>
+          <div className="rounded-xl border border-neutral-200 bg-neutral-50/50 p-4 md:p-5 flex flex-col sm:flex-row sm:justify-between sm:items-start gap-3">
+            <div className="order-2 sm:order-none flex-1 min-w-0">
+              <span className="text-[15px] leading-6 text-gray-700 md:text-base">Machine Polishing Technique — UKDA Trained</span>
             </div>
-            <div className="text-[15px] box-border caret-transparent leading-6 text-gray-700 md:text-base">
-              Insured - We are fully insured to work on your vehicle and at any property
+            <div className="order-1 sm:order-none w-12 h-12 sm:w-14 sm:h-14 shrink-0 flex items-center justify-center sm:self-start">
+              <img src="/certs/ukDA.png" alt="UKDA certification" className="w-full h-full object-contain" />
             </div>
           </div>
         </div>
-        <div className="box-border caret-transparent flex">
+        <div className="box-border caret-transparent flex pt-6">
           <a
             href="/contact"
             className="text-white items-center bg-cta-dark box-border caret-transparent gap-x-3 flex max-w-full gap-y-3 text-center border border-cta-dark px-6 py-4 rounded-[100px] border-solid hover:text-cta-dark hover:bg-white"

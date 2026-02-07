@@ -89,12 +89,23 @@ export const MobileNav = () => {
               </li>
               <li>
                 <a
-                  href="/services"
+                  href="/packages"
                   onClick={closeMenu}
                   className="text-slate-900 box-border caret-transparent flex justify-center max-w-full text-center hover:text-cta"
                 >
                   <div className="text-slate-900 text-[15px] box-border caret-transparent leading-6">
-                    Services & Pricing
+                    Packages and Pricing
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/gallery"
+                  onClick={closeMenu}
+                  className="text-slate-900 box-border caret-transparent flex justify-center max-w-full text-center hover:text-cta"
+                >
+                  <div className="text-slate-900 text-[15px] box-border caret-transparent leading-6">
+                    Gallery
                   </div>
                 </a>
               </li>
@@ -111,7 +122,18 @@ export const MobileNav = () => {
               </li>
               <li>
                 <a
-                  href="https://www.facebook.com"
+                  href="/contact"
+                  onClick={closeMenu}
+                  className="text-slate-900 box-border caret-transparent flex justify-center max-w-full text-center hover:text-cta"
+                >
+                  <div className="text-slate-900 text-[15px] box-border caret-transparent leading-6">
+                    Contact
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.facebook.com/p/Double-O-Detailing-61562055449917/"
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={closeMenu}
@@ -124,7 +146,7 @@ export const MobileNav = () => {
               </li>
               <li>
                 <a
-                  href="https://www.instagram.com/ampmwatch_repair/"
+                  href="https://www.instagram.com/doubleo.detailing/"
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={closeMenu}
@@ -139,7 +161,15 @@ export const MobileNav = () => {
             <div className="box-border caret-transparent px-5 pb-5">
               <a
                 href="/contact"
-                onClick={closeMenu}
+                onClick={() => {
+                  if (typeof window !== 'undefined' && (window as any).gtag) {
+                    (window as any).gtag('event', 'quoteButton_nav', {
+                      event_category: 'CTA',
+                      event_label: 'Mobile Navigation'
+                    });
+                  }
+                  closeMenu();
+                }}
                 className="text-white items-center bg-cta box-border caret-transparent gap-x-3 flex max-w-full gap-y-3 text-center border border-cta px-6 py-3 rounded-[100px] border-solid hover:bg-cta-dark w-full justify-center"
               >
                 <div className="relative box-border caret-transparent overflow-hidden">

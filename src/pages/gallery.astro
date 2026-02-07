@@ -1,0 +1,165 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Navbar } from '../sections/Navbar';
+import { FooterSection } from '../sections/FooterSection';
+
+const galleryImages = [
+  "WhatsApp Image 2026-02-02 at 11.14.51 PM (1).jpeg",
+  "WhatsApp Image 2026-02-02 at 11.14.51 PM.jpeg",
+  "WhatsApp Image 2026-02-02 at 11.14.52 PM (1).jpeg",
+  "WhatsApp Image 2026-02-02 at 11.14.52 PM (2).jpeg",
+  "WhatsApp Image 2026-02-02 at 11.14.52 PM (3).jpeg",
+  "WhatsApp Image 2026-02-02 at 11.14.52 PM (4).jpeg",
+  "WhatsApp Image 2026-02-02 at 11.14.52 PM.jpeg",
+  "WhatsApp Image 2026-02-02 at 11.14.53 PM (1).jpeg",
+  "WhatsApp Image 2026-02-02 at 11.14.53 PM (2).jpeg",
+  "WhatsApp Image 2026-02-02 at 11.14.53 PM (3).jpeg",
+  "WhatsApp Image 2026-02-02 at 11.14.53 PM (4).jpeg",
+  "WhatsApp Image 2026-02-02 at 11.14.53 PM.jpeg",
+  "WhatsApp Image 2026-02-02 at 11.14.54 PM (1).jpeg",
+  "WhatsApp Image 2026-02-02 at 11.14.54 PM (2).jpeg",
+  "WhatsApp Image 2026-02-02 at 11.14.54 PM (3).jpeg",
+  "WhatsApp Image 2026-02-02 at 11.14.54 PM (4).jpeg",
+  "WhatsApp Image 2026-02-02 at 11.14.54 PM (5).jpeg",
+  "WhatsApp Image 2026-02-02 at 11.14.54 PM.jpeg",
+  "WhatsApp Image 2026-02-02 at 11.14.55 PM (1).jpeg",
+  "WhatsApp Image 2026-02-02 at 11.14.55 PM (2).jpeg",
+  "WhatsApp Image 2026-02-02 at 11.14.55 PM (3).jpeg",
+  "WhatsApp Image 2026-02-02 at 11.14.55 PM (4).jpeg",
+  "WhatsApp Image 2026-02-02 at 11.14.55 PM (5).jpeg",
+  "WhatsApp Image 2026-02-02 at 11.14.55 PM (6).jpeg",
+  "WhatsApp Image 2026-02-02 at 11.14.55 PM (7).jpeg",
+  "WhatsApp Image 2026-02-02 at 11.14.55 PM.jpeg",
+  "WhatsApp Image 2026-02-02 at 11.14.56 PM (1).jpeg",
+  "WhatsApp Image 2026-02-02 at 11.14.56 PM (2).jpeg",
+  "WhatsApp Image 2026-02-02 at 11.14.56 PM (3).jpeg",
+  "WhatsApp Image 2026-02-02 at 11.14.56 PM (4).jpeg",
+  "WhatsApp Image 2026-02-02 at 11.14.56 PM (5).jpeg",
+  "WhatsApp Image 2026-02-02 at 11.14.56 PM (6).jpeg",
+  "WhatsApp Image 2026-02-02 at 11.14.56 PM (7).jpeg",
+  "WhatsApp Image 2026-02-02 at 11.14.56 PM.jpeg",
+  "WhatsApp Image 2026-02-02 at 11.14.57 PM (1).jpeg",
+  "WhatsApp Image 2026-02-02 at 11.14.57 PM (10).jpeg",
+  "WhatsApp Image 2026-02-02 at 11.14.57 PM (11).jpeg",
+  "WhatsApp Image 2026-02-02 at 11.14.57 PM (12).jpeg",
+  "WhatsApp Image 2026-02-02 at 11.14.57 PM (2).jpeg",
+  "WhatsApp Image 2026-02-02 at 11.14.57 PM (3).jpeg",
+  "WhatsApp Image 2026-02-02 at 11.14.57 PM (4).jpeg",
+  "WhatsApp Image 2026-02-02 at 11.14.57 PM (5).jpeg",
+  "WhatsApp Image 2026-02-02 at 11.14.57 PM (6).jpeg",
+  "WhatsApp Image 2026-02-02 at 11.14.57 PM (7).jpeg",
+  "WhatsApp Image 2026-02-02 at 11.14.57 PM (8).jpeg",
+  "WhatsApp Image 2026-02-02 at 11.14.57 PM (9).jpeg",
+  "WhatsApp Image 2026-02-02 at 11.14.57 PM.jpeg",
+  "WhatsApp Image 2026-02-02 at 11.14.58 PM (1).jpeg",
+  "WhatsApp Image 2026-02-02 at 11.14.58 PM (2).jpeg",
+  "WhatsApp Image 2026-02-02 at 11.14.58 PM.jpeg",
+];
+---
+
+<Layout 
+  title="Gallery - Double O Detailing | See Our Car Detailing Work"
+  description="View our gallery of premium car detailing results. See before and after photos of vehicles we've detailed in Glasgow and Central Scotland. Machine polishing, ceramic coatings, and deep cleaning."
+  canonical="https://doubleodetailing.co.uk/gallery"
+>
+  <div class="min-h-screen bg-neutral-100 font-figtree text-black text-sm leading-5 antialiased">
+    <Navbar client:load />
+    <main class="pt-0">
+      <section class="box-border py-[60px] md:py-[100px]">
+        <div class="box-border max-w-[1204px] mx-auto px-5 md:px-8">
+          <div class="box-border gap-x-4 flex flex-col gap-y-4">
+            <div class="box-border flex justify-center">
+              <div class="box-border border border-neutral-200 px-3 py-1 rounded-[1000px] border-solid">
+                <span class="font-medium leading-[22px]">Gallery</span>
+              </div>
+            </div>
+            <div class="box-border max-w-[680px] text-center mx-auto">
+              <h1 class="text-3xl font-bold box-border tracking-[-0.52px] leading-[35px] md:text-[52px] md:leading-[62px] font-refrigerator uppercase">
+                Our Work - Premium Car Detailing Results
+              </h1>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-5 mt-10 md:mt-14">
+            {galleryImages.map((filename, index) => {
+              const src = `/gallery/${encodeURIComponent(filename)}`;
+              return (
+                <div
+                  class="relative box-border overflow-hidden rounded-lg md:rounded-xl aspect-[4/3] bg-gray-200"
+                >
+                  <img
+                    src={src}
+                    alt={`Double O Detailing gallery photo ${index + 1}`}
+                    class="w-full h-full object-cover"
+                    loading={index < 12 ? "eager" : "lazy"}
+                  />
+                </div>
+              );
+            })}
+          </div>
+          <div class="box-border mt-8 text-center">
+            <div class="box-border flex justify-center">
+              <a
+                href="/contact"
+                id="gallery-book-now-btn"
+                class="text-black items-center bg-cta box-border gap-x-5 flex max-w-full gap-y-5 text-center border pl-6 pr-1 py-1 rounded-[100px] border-solid border-transparent hover:bg-white hover:border-cta-dark transition"
+              >
+                <div class="relative box-border overflow-hidden">
+                  <div class="box-border">
+                    <div class="relative text-sm font-medium box-border leading-5 z-[2] md:text-base md:leading-6">
+                      BOOK NOW
+                    </div>
+                  </div>
+                  <div class="absolute box-border w-full">
+                    <div class="relative text-sm font-medium box-border leading-5 z-[2] md:text-base md:leading-6">
+                      BOOK NOW
+                    </div>
+                  </div>
+                </div>
+                <div class="text-white items-center bg-[#8B6B3D] box-border flex h-12 justify-center w-12 overflow-hidden rounded-[50%]">
+                  <div class="relative box-border">
+                    <div class="box-border">
+                      <div class="box-border h-3.5 w-3.5">
+                        <img
+                          src="https://c.animaapp.com/mhnzg6knJo6lE7/assets/icon-4.svg"
+                          alt="Icon"
+                          class="box-border h-full w-full"
+                          style="filter: brightness(0) saturate(100%) invert(78%) sepia(45%) saturate(500%) hue-rotate(330deg) brightness(110%) contrast(85%)"
+                        />
+                      </div>
+                    </div>
+                    <div class="absolute bottom-[-200%] box-border left-[-200%]">
+                      <div class="box-border h-3.5 w-3.5">
+                        <img
+                          src="https://c.animaapp.com/mhnzg6knJo6lE7/assets/icon-4.svg"
+                          alt="Icon"
+                          class="box-border h-full w-full"
+                          style="filter: brightness(0) saturate(100%) invert(78%) sepia(45%) saturate(500%) hue-rotate(330deg) brightness(110%) contrast(85%)"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <FooterSection client:load />
+    </main>
+  </div>
+  <script is:inline>
+    document.addEventListener('DOMContentLoaded', function() {
+      const bookNowBtn = document.getElementById('gallery-book-now-btn');
+      if (bookNowBtn) {
+        bookNowBtn.addEventListener('click', function() {
+          if (typeof window !== 'undefined' && window.gtag) {
+            window.gtag('event', 'quoteButton_gallery', {
+              event_category: 'CTA',
+              event_label: 'Gallery Page'
+            });
+          }
+        });
+      }
+    });
+  </script>
+</Layout>

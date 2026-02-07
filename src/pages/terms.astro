@@ -5,11 +5,15 @@ import { QuoteSection } from '../sections/QuoteSection';
 import { FooterSection } from '../sections/FooterSection';
 ---
 
-<Layout>
+<Layout 
+  title="Terms & Conditions - Double O Detailing"
+  description="Read our terms and conditions for car detailing services. Information about pricing, deposits, booking policies, and service terms for Double O Detailing in Glasgow."
+  canonical="https://doubleodetailing.co.uk/terms"
+>
   <div class="min-h-screen bg-neutral-100 font-figtree text-black text-sm leading-5 antialiased">
     <Navbar client:load />
     <main class="pt-0">
-      <section class="relative bg-cover bg-center bg-no-repeat py-20 md:py-32" style="background-image: url('/hero-background.jpeg');">
+      <section class="relative bg-cover bg-center bg-no-repeat pt-28 pb-20 md:pt-36 md:pb-32" style="background-image: url('/gallery/WhatsApp Image 2026-02-02 at 11.18.23 PM (3).jpeg');">
         <div class="absolute inset-0 bg-black/50"></div>
         <div class="relative max-w-[1204px] mx-auto px-5 md:px-8">
           <div class="box-border caret-transparent gap-x-4 flex flex-col gap-y-4 text-center">
@@ -34,67 +38,70 @@ import { FooterSection } from '../sections/FooterSection';
       <section class="box-border caret-transparent py-[60px] md:py-[100px]">
         <div class="box-border caret-transparent max-w-[1204px] mx-auto px-5 md:px-8">
           <div class="box-border caret-transparent max-w-[800px] mx-auto">
-            <div class="box-border caret-transparent space-y-6">
+            <h2 class="text-2xl font-bold box-border caret-transparent mb-10 md:text-3xl font-cabinet uppercase tracking-tight text-center">
+              Booking Information
+            </h2>
+            <div class="box-border caret-transparent space-y-8">
               <div class="box-border caret-transparent">
-                <h2 class="text-xl font-medium box-border caret-transparent mb-3 md:text-2xl">
-                  Estimates & Quotes
-                </h2>
+                <h3 class="text-xl font-medium box-border caret-transparent mb-3 md:text-2xl uppercase tracking-tight">
+                  Bookings
+                </h3>
                 <p class="text-base box-border caret-transparent leading-6 text-neutral-700">
-                  Estimates are always free, please enquire by email or by filling in the contact form below. On receipt of the watch, a free fixed price quote will be issued after we conduct in-house diagnosis. If the customer decides to decline the quote, the customer will only be charged the return postage costs.
+                  We require a 10% holding deposit to secure a booking, this will be reduced from your bill.
                 </p>
               </div>
 
               <div class="box-border caret-transparent">
-                <h2 class="text-xl font-medium box-border caret-transparent mb-3 md:text-2xl">
-                  Postage
-                </h2>
+                <h3 class="text-xl font-medium box-border caret-transparent mb-3 md:text-2xl uppercase tracking-tight">
+                  Cancellation Policy
+                </h3>
                 <p class="text-base box-border caret-transparent leading-6 text-neutral-700">
-                  As standard we use Royal Mail Special Delivery 1PM for all postage as this allows adequate insurance and next day delivery. This is charged by us at a flat rate of £10. If you wish to use another postage option please let us know and we will gladly accommodate.
+                  We request that you provide at least <strong>48 hours notice</strong> for you cancelling your booking. Otherwise the deposit will be non-refundable.
                 </p>
               </div>
 
               <div class="box-border caret-transparent">
-                <h2 class="text-xl font-medium box-border caret-transparent mb-3 md:text-2xl">
-                  Warranties on Watch Repairs
-                </h2>
+                <h3 class="text-xl font-medium box-border caret-transparent mb-3 md:text-2xl uppercase tracking-tight">
+                  Payment & Receipts
+                </h3>
                 <p class="text-base box-border caret-transparent leading-6 text-neutral-700">
-                  A 12 month warranty is included with all services, including replacement parts associated with the service.
-                </p>
-                <p class="text-base box-border caret-transparent leading-6 text-neutral-700 mt-3">
-                  Watches that have not been serviced are not warranted. This includes what is referred to as "partial repairs", such as works carried out on stem & crowns, straps, bezels, hand & dial repairs and glass replacements.
+                  Payment can be settled upfront or at the time of service, and please inform us if you would like a copy of the invoice provided to your email address.
                 </p>
               </div>
 
               <div class="box-border caret-transparent">
-                <h2 class="text-xl font-medium box-border caret-transparent mb-3 md:text-2xl">
-                  Partial Service / Minor Intervention Policy
-                </h2>
+                <h3 class="text-xl font-medium box-border caret-transparent mb-3 md:text-2xl uppercase tracking-tight">
+                  Time / Price
+                </h3>
                 <p class="text-base box-border caret-transparent leading-6 text-neutral-700">
-                  There is no warranty on partial repairs, however as a courtesy we usually offer to apply a previous partial repair's cost toward a comprehensive service if the watch requires a second related repair within one year.
+                  All timings and prices for services are based on a standard level of job at hand. Certain jobs will require more time using more materials and labour, thus the price could reflect this to bring the car back to the required satisfaction and quality.
                 </p>
               </div>
 
               <div class="box-border caret-transparent">
-                <h2 class="text-xl font-medium box-border caret-transparent mb-3 md:text-2xl">
-                  Exclusions
-                </h2>
+                <h3 class="text-xl font-medium box-border caret-transparent mb-3 md:text-2xl uppercase tracking-tight">
+                  Social Media
+                </h3>
                 <p class="text-base box-border caret-transparent leading-6 text-neutral-700">
-                  AMPM will honour our warranty provided that you retain the original receipt of work completed. Warranty is void if damaged by water, abuse (knocking/dropping the watch), or intervention by any third party.
+                  Please let us know if you consent to your car being featured on our social media platforms.
                 </p>
               </div>
 
               <div class="box-border caret-transparent">
-                <h2 class="text-xl font-medium box-border caret-transparent mb-3 md:text-2xl">
-                  Water Resistance
-                </h2>
+                <h3 class="text-xl font-medium box-border caret-transparent mb-3 md:text-2xl uppercase tracking-tight">
+                  Belongings in Vehicle
+                </h3>
                 <p class="text-base box-border caret-transparent leading-6 text-neutral-700">
-                  If requested, and where appropriate, a water resistance test will be carried out in our industry standard "Greiner Leak Checker Prime". A report will be given on its ability to withstand the ingress of water. It must be understood that the test carried out in the workshop cannot replicate real-world conditions, as it is a static test within a dry chamber.
+                  We would appreciate if you could remove your belongings prior to the beginning of all services.
                 </p>
-                <p class="text-base box-border caret-transparent leading-6 text-neutral-700 mt-3">
-                  The water resistance test does not constitute a guarantee of water resistance in any way, nor for any specified length of time. Gaskets can degrade quickly under exposure to chemicals or UV, and the test is solely for advising that the watch has been correctly re-sealed. Annual resealing is advised if the watch is intended for use in water.
-                </p>
-                <p class="text-base box-border caret-transparent leading-6 text-neutral-700 mt-3">
-                  Damage resulting from mistreatment, improper use, or magnetism is not covered.
+              </div>
+
+              <div class="box-border caret-transparent">
+                <h3 class="text-xl font-medium box-border caret-transparent mb-3 md:text-2xl uppercase tracking-tight">
+                  Water + Power
+                </h3>
+                <p class="text-base box-border caret-transparent leading-6 text-neutral-700">
+                  We have our own power and water supply, thus we can operate anywhere that is convenient to you.
                 </p>
               </div>
             </div>

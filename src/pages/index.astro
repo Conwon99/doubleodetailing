@@ -6,11 +6,18 @@ import { CoreValuesSection } from '../sections/CoreValuesSection';
 import { ServicePageServices } from '../sections/ServicePageServices';
 import { GallerySection } from '../sections/GallerySection';
 import { ProcessSection } from '../sections/ProcessSection';
+import { ServiceAreasSection } from '../sections/ServiceAreasSection';
+import ReviewsSection from '../sections/ReviewsSection.astro';
+import { HomeFAQ } from '../sections/FAQSection/HomeFAQ';
 import { QuoteSection } from '../sections/QuoteSection';
 import { FooterSection } from '../sections/FooterSection';
 ---
 
-<Layout>
+<Layout 
+  title="Double O Detailing - Premium Vehicle Detailing in Glasgow"
+  description="Professional mobile car detailing and valeting service in North Glasgow. We bring premium car care directly to your doorstep. Machine polishing, ceramic coatings, deep cleans, and maintenance services."
+  canonical="https://doubleodetailing.co.uk/"
+>
   <div class="min-h-screen bg-neutral-100 font-figtree text-black text-sm leading-5 antialiased">
     <Navbar client:load />
     <main class="pt-0">
@@ -19,6 +26,9 @@ import { FooterSection } from '../sections/FooterSection';
       <ServicePageServices client:load />
       <GallerySection client:load />
       <ProcessSection client:load />
+      <ServiceAreasSection client:load />
+      <ReviewsSection />
+      <HomeFAQ client:load />
       <QuoteSection client:load showTerms={false} />
       <FooterSection client:load />
     </main>

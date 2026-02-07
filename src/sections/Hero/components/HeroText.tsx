@@ -3,9 +3,9 @@ export const HeroText = () => {
     <div className="box-border caret-transparent basis-[0%] grow max-w-[650px]">
       <div className="box-border caret-transparent gap-x-4 flex flex-col gap-y-4">
         <h1 className="text-[44px] font-bold box-border caret-transparent blur-0 tracking-[-1.44px] leading-[52px] md:text-7xl md:leading-[80px] font-refrigerator uppercase">
-          <div>PREMIUM</div>
-          <div>CAR DETAILING IN</div>
-          <div><span className="text-gray-400">NORTH GLASGOW</span></div>
+          <div>Premium Vehicle</div>
+          <div>Detailing</div>
+          <div><span className="text-gray-400">in Glasgow</span></div>
         </h1>
         <div className="text-base box-border caret-transparent blur-0 leading-[26px] md:text-lg font-figtree">
           Professional mobile car detailing and valeting service in North Glasgow, bringing premium car care directly to your doorstep.
@@ -15,6 +15,14 @@ export const HeroText = () => {
         <div className="box-border caret-transparent flex">
           <a
             href="/contact"
+            onClick={() => {
+              if (typeof window !== 'undefined' && (window as any).gtag) {
+                (window as any).gtag('event', 'quoteButton_hero', {
+                  event_category: 'CTA',
+                  event_label: 'Hero Section'
+                });
+              }
+            }}
             className="text-black items-center bg-cta box-border caret-transparent gap-x-5 flex max-w-full gap-y-5 text-center border pl-6 pr-1 py-1 rounded-[100px] border-solid border-transparent hover:bg-white hover:border-cta-dark"
           >
             <div className="relative box-border caret-transparent overflow-hidden">
@@ -57,11 +65,11 @@ export const HeroText = () => {
         </div>
         <div className="box-border caret-transparent flex">
           <a
-            href="/services"
+            href="/packages"
             className="relative items-center box-border caret-transparent gap-x-2 flex max-w-full gap-y-2 overflow-hidden"
           >
             <div className="text-[15px] font-medium box-border caret-transparent leading-6 md:text-base">
-              View Our Packages &amp; Book Today
+              View Our Packages
             </div>
             <div className="relative box-border caret-transparent h-6 w-6 overflow-hidden">
               <div className="box-border caret-transparent">

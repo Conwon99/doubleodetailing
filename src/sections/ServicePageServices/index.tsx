@@ -18,7 +18,7 @@ export const ServicePageServices = () => {
               className="box-border caret-transparent gap-x-4 grid auto-cols-[1fr] grid-cols-[1fr] grid-rows-[auto] gap-y-7 mt-10 md:grid-cols-[1fr_1fr_1fr] md:gap-y-4 md:mt-14"
             >
               <ServiceCard
-                href="/services"
+                href="/machine-polishing"
                 imageUrl="/Machine polishing.png"
                 imageSizes="(max-width: 767px) 100vw, 740px"
                 title="Machine Polishing"
@@ -27,7 +27,7 @@ export const ServicePageServices = () => {
                 iconAlt="Icon"
               />
               <ServiceCard
-                href="/services"
+                href="/ceramic-coatings"
                 imageUrl="/Ceramic coating.png"
                 imageSizes="(max-width: 767px) 100vw, 740px"
                 title="Ceramic Coatings"
@@ -36,7 +36,7 @@ export const ServicePageServices = () => {
                 iconAlt="Icon"
               />
               <ServiceCard
-                href="/services"
+                href="/deep-cleans"
                 imageUrl="/Deep clean detailing.png"
                 imageSizes="(max-width: 767px) 100vw, 740px"
                 title="Deep Cleans and Valets"
@@ -45,11 +45,47 @@ export const ServicePageServices = () => {
                 iconAlt="Icon"
               />
               <ServiceCard
-                href="/services"
+                href="/maintenance"
                 imageUrl="/Maintenance.png"
                 imageSizes="(max-width: 767px) 100vw, 740px"
                 title="Maintenance"
                 description="Regular maintenance packages to keep your vehicle in pristine condition. Protect your investment with our ongoing care programs."
+                iconUrl="https://c.animaapp.com/mkllold3CHU3xz/assets/icon-5.svg"
+                iconAlt="Icon"
+              />
+              <ServiceCard
+                href="/headlight-restoration"
+                imageUrl="/Headlights restoration.png"
+                imageSizes="(max-width: 767px) 100vw, 740px"
+                title="Headlight Restoration"
+                description="Restore cloudy or yellowed headlights for improved visibility and a like-new appearance. Professional polishing and UV protection."
+                iconUrl="https://c.animaapp.com/mkllold3CHU3xz/assets/icon-5.svg"
+                iconAlt="Icon"
+              />
+              <ServiceCard
+                href="/soft-top-restoration"
+                imageUrl="/Soft top restoration.jpg"
+                imageSizes="(max-width: 767px) 100vw, 740px"
+                title="Soft Top Restoration and Coating"
+                description="Revive and protect convertible and soft tops with specialist cleaning, restoration, and durable coating for lasting finish."
+                iconUrl="https://c.animaapp.com/mkllold3CHU3xz/assets/icon-5.svg"
+                iconAlt="Icon"
+              />
+              <ServiceCard
+                href="/interior-fabric-coating"
+                imageUrl="/Interior fabric coating.png"
+                imageSizes="(max-width: 767px) 100vw, 740px"
+                title="Interior Fabric Coating"
+                description="Protect upholstery, carpets, and mats with fabric coating. Repels stains and moisture while keeping interiors looking fresh."
+                iconUrl="https://c.animaapp.com/mkllold3CHU3xz/assets/icon-5.svg"
+                iconAlt="Icon"
+              />
+              <ServiceCard
+                href="/engine-bay-detailing"
+                imageUrl="/Engine detailing.png"
+                imageSizes="(max-width: 767px) 100vw, 740px"
+                title="Engine Bay Detailing"
+                description="Thorough cleaning and dressing of the engine bay. Safe, professional treatment to showcase and protect under-bonnet areas."
                 iconUrl="https://c.animaapp.com/mkllold3CHU3xz/assets/icon-5.svg"
                 iconAlt="Icon"
               />

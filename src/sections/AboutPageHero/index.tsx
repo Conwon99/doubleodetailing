@@ -38,9 +38,9 @@ export const AboutPageHero = () => {
           </div>
           <div className="box-border caret-transparent blur-0 h-[220px] overflow-hidden mt-7 rounded-2xl md:h-[642px] md:mt-10">
             <img
-              src="/hero-background.jpeg"
+              src="/about-us-dd.jpg"
               sizes="100vw"
-              alt="Double O Detailing"
+              alt="Double O Detailing - About Us"
               className="box-border caret-transparent inline-block h-full max-w-full object-cover w-full"
             />
           </div>

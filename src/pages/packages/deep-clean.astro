@@ -1,0 +1,22 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { Navbar } from '../../sections/Navbar';
+import { PackageCategorySection } from '../../sections/PackageCategorySection';
+import { QuoteSection } from '../../sections/QuoteSection';
+import { FooterSection } from '../../sections/FooterSection';
+---
+
+<Layout 
+  title="Deep Clean Detailing - Double O Detailing | Glasgow"
+  description="Deep clean detailing package Shaken Not Stirred. Interior and exterior deep clean, decontamination, SONAX ceramic sealant. Get a quote in Glasgow and Central Scotland."
+  canonical="https://doubleodetailing.co.uk/packages/deep-clean"
+>
+  <div class="min-h-screen bg-neutral-100 font-figtree text-black text-sm leading-5 antialiased">
+    <Navbar client:load />
+    <main class="pt-0">
+      <PackageCategorySection client:load categoryId="deep-clean" />
+      <QuoteSection client:load showTerms={false} />
+      <FooterSection client:load />
+    </main>
+  </div>
+</Layout>

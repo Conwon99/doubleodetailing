@@ -1,5 +1,26 @@
 ---
 import '../styles/tailwind.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+  type?: string;
+  canonical?: string;
+  noindex?: boolean;
+}
+
+const {
+  title = "Double O Detailing - Premium Vehicle Detailing in Glasgow",
+  description = "Professional mobile car detailing and valeting service in North Glasgow. We bring premium car care directly to your doorstep. Machine polishing, ceramic coatings, deep cleans, and maintenance services.",
+  image = "https://doubleodetailing.co.uk/double-o-logo.png",
+  type = "website",
+  canonical = Astro.url.pathname === '/' ? 'https://doubleodetailing.co.uk/' : `https://doubleodetailing.co.uk${Astro.url.pathname}`,
+  noindex = false,
+} = Astro.props;
+
+const siteUrl = "https://doubleodetailing.co.uk";
+const fullImageUrl = image.startsWith('http') ? image : `${siteUrl}${image}`;
 ---
 
 <!doctype html>
@@ -9,12 +30,160 @@ import '../styles/tailwind.css';
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <title>Professional Watch Repair Troon</title>
+    
+    <!-- Primary Meta Tags -->
+    <title>{title}</title>
+    <meta name="title" content={title} />
+    <meta name="description" content={description} />
+    <meta name="keywords" content="car detailing, mobile car detailing, vehicle detailing, car valeting, ceramic coating, machine polishing, car cleaning, Glasgow, North Glasgow, Central Scotland, mobile valeting, car care, auto detailing" />
+    <meta name="author" content="Double O Detailing" />
+    <meta name="robots" content={noindex ? "noindex, nofollow" : "index, follow"} />
+    <meta name="language" content="English" />
+    <meta name="revisit-after" content="7 days" />
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href={canonical} />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content={type} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={fullImageUrl} />
+    <meta property="og:site_name" content="Double O Detailing" />
+    <meta property="og:locale" content="en_GB" />
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content={canonical} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={fullImageUrl} />
+    
+    <!-- Business Information -->
+    <meta name="geo.region" content="GB-SCT" />
+    <meta name="geo.placename" content="Glasgow" />
+    <meta name="geo.position" content="55.8642;-4.2518" />
+    <meta name="ICBM" content="55.8642, -4.2518" />
+    
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bungee&family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Luckiest+Guy&family=Manrope:wght@200..800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZVTPX27J1H"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-ZVTPX27J1H');
+    </script>
+    
+    <!-- JSON-LD Schema -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Double O Detailing",
+      "alternateName": "Double-O Detailing",
+      "description": "Professional mobile car detailing and valeting service in North Glasgow. We bring premium car care directly to your doorstep.",
+      "url": "https://doubleodetailing.co.uk",
+      "logo": "https://doubleodetailing.co.uk/double-o-logo.png",
+      "image": "https://doubleodetailing.co.uk/double-o-logo.png",
+      "telephone": "+447768243728",
+      "email": "doubleodetailing@icloud.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Glasgow",
+        "addressRegion": "Scotland",
+        "addressCountry": "GB"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "55.8642",
+        "longitude": "-4.2518"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Glasgow"
+        },
+        {
+          "@type": "City",
+          "name": "Stirling"
+        },
+        {
+          "@type": "State",
+          "name": "Central Scotland"
+        }
+      ],
+      "serviceType": [
+        "Car Detailing",
+        "Mobile Car Detailing",
+        "Vehicle Valeting",
+        "Ceramic Coating",
+        "Machine Polishing",
+        "Deep Cleaning",
+        "Car Maintenance"
+      ],
+      "priceRange": "$$",
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday"
+        ],
+        "opens": "08:00",
+        "closes": "18:00"
+      },
+      "sameAs": [
+        "https://www.facebook.com/p/Double-O-Detailing-61562055449917/",
+        "https://www.instagram.com/doubleo.detailing/"
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "reviewCount": "23",
+        "bestRating": "5",
+        "worstRating": "1"
+      }
+    })} />
+    
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Double O Detailing",
+      "url": "https://doubleodetailing.co.uk",
+      "logo": "https://doubleodetailing.co.uk/double-o-logo.png",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+447768243728",
+        "contactType": "Customer Service",
+        "areaServed": "GB",
+        "availableLanguage": "English"
+      },
+      "sameAs": [
+        "https://www.facebook.com/p/Double-O-Detailing-61562055449917/",
+        "https://www.instagram.com/doubleo.detailing/"
+      ]
+    })} />
   </head>
   <body>
     <slot />
+    <!-- Mobile message widget - bottom right, visible on small screens only -->
+    <a
+      href="/contact"
+      class="fixed bottom-5 right-5 z-50 flex md:hidden items-center gap-2 bg-cta-dark text-white px-4 py-3 rounded-full shadow-lg hover:bg-cta focus:outline-none focus:ring-2 focus:ring-cta-dark focus:ring-offset-2"
+      aria-label="Message us / Get a quote"
+    >
+      <svg class="w-6 h-6 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.864 9.864 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+      </svg>
+      <span class="font-medium text-sm">Message</span>
+    </a>
   </body>
 </html>

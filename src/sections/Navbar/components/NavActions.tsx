@@ -6,6 +6,14 @@ export const NavActions = () => {
           <div className="box-border caret-transparent flex">
             <a
               href="/contact"
+              onClick={() => {
+                if (typeof window !== 'undefined' && (window as any).gtag) {
+                  (window as any).gtag('event', 'quoteButton_nav', {
+                    event_category: 'CTA',
+                    event_label: 'Navigation'
+                  });
+                }
+              }}
               className="text-black items-center bg-transparent box-border caret-transparent gap-x-2 flex justify-between max-w-full gap-y-2 text-center w-full border pl-2 pr-1 py-1 rounded-[100px] border-solid border-transparent md:pl-3 hover:bg-white hover:border-transparent"
             >
               <div className="relative box-border caret-transparent overflow-hidden">
@@ -50,7 +58,7 @@ export const NavActions = () => {
         <div className="box-border caret-transparent min-h-0 min-w-0 md:min-h-[auto] md:min-w-[auto]">
           <div className="box-border caret-transparent flex items-center gap-x-3">
             <a
-              href="https://www.facebook.com"
+              href="https://www.facebook.com/p/Double-O-Detailing-61562055449917/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Double O Detailing on Facebook"
@@ -65,7 +73,7 @@ export const NavActions = () => {
               </svg>
             </a>
             <a
-              href="https://www.instagram.com/ampmwatch_repair/"
+              href="https://www.instagram.com/doubleo.detailing/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Double O Detailing on Instagram"
@@ -81,6 +89,14 @@ export const NavActions = () => {
             </a>
             <a
               href="/contact"
+              onClick={() => {
+                if (typeof window !== 'undefined' && (window as any).gtag) {
+                  (window as any).gtag('event', 'quoteButton_nav', {
+                    event_category: 'CTA',
+                    event_label: 'Navigation'
+                  });
+                }
+              }}
               className="text-black items-center bg-cta box-border caret-transparent gap-x-3 flex max-w-full min-h-0 min-w-0 gap-y-3 text-center border px-4 py-2 rounded-[100px] border-solid border-transparent md:min-h-[auto] md:min-w-[auto] hover:bg-white hover:border-cta-dark"
             >
               <div className="relative box-border caret-transparent min-h-0 min-w-0 overflow-hidden md:min-h-[auto] md:min-w-[auto]">

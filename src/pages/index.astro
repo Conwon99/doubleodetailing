@@ -7,6 +7,7 @@ import { ServicePageServices } from '../sections/ServicePageServices';
 import { GallerySection } from '../sections/GallerySection';
 import { ProcessSection } from '../sections/ProcessSection';
 import { ServiceAreasSection } from '../sections/ServiceAreasSection';
+import { PackagesOverview } from '../sections/PackagesOverview';
 import ReviewsSection from '../sections/ReviewsSection.astro';
 import { HomeFAQ } from '../sections/FAQSection/HomeFAQ';
 import { QuoteSection } from '../sections/QuoteSection';
@@ -24,9 +25,34 @@ import { FooterSection } from '../sections/FooterSection';
       <Hero client:load />
       <CoreValuesSection client:load />
       <ServicePageServices client:load />
+      <section class="bg-white box-border py-[60px] md:py-[100px]">
+        <div class="box-border max-w-[1204px] mx-auto px-5 md:px-8">
+          <div class="box-border flex flex-wrap justify-center gap-3">
+            <a
+              href="/contact"
+              class="text-white items-center bg-cta-dark box-border gap-x-3 flex max-w-full gap-y-3 text-center border border-cta-dark px-6 py-4 rounded-[100px] border-solid hover:text-cta-dark hover:bg-white transition"
+            >
+              <span class="relative text-sm font-medium z-[2] md:text-base md:leading-6">BOOK NOW</span>
+              <span class="box-border">
+                <svg class="h-2 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+              </span>
+            </a>
+            <a
+              href="/packages"
+              class="text-cta-dark items-center box-border gap-x-3 flex max-w-full gap-y-3 text-center border border-cta-dark px-6 py-4 rounded-[100px] border-solid hover:bg-cta-dark hover:text-white transition"
+            >
+              <span class="relative text-sm font-medium z-[2] md:text-base md:leading-6">View Packages</span>
+              <span class="box-border">
+                <svg class="h-2 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+              </span>
+            </a>
+          </div>
+        </div>
+      </section>
       <GallerySection client:load />
       <ProcessSection client:load />
       <ServiceAreasSection client:load />
+      <PackagesOverview client:load />
       <ReviewsSection />
       <HomeFAQ client:load />
       <QuoteSection client:load showTerms={false} />

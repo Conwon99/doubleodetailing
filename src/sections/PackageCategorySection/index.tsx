@@ -49,7 +49,7 @@ export const PackageCategorySection = ({ categoryId }: PackageCategorySectionPro
           <div className="box-border flex flex-col gap-y-10 w-full">
             <div className="flex flex-wrap gap-6 md:gap-8 w-full">
               {packages.map((pkg) => (
-                <div key={pkg.id} className="flex-[1_1_280px] min-w-[280px]">
+                <div key={pkg.id} id={pkg.id} className="flex-[1_1_280px] min-w-[280px] scroll-mt-24">
                   <PackageCard package={pkg} />
                 </div>
               ))}

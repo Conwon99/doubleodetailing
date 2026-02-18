@@ -10,7 +10,7 @@ const categoryOrder: PackageData["category"][] = [
 /** Gallery image for packages hero background */
 const PACKAGES_HERO_IMAGE = "/gallery/WhatsApp Image 2026-02-02 at 11.18.23 PM (3).jpeg";
 
-/** Service section images from home page - used as card backgrounds */
+/** Service section images from home page - used as section headers */
 const categoryImages: Record<PackageData["category"], string> = {
   "machine-polishing": "/Machine polishing.png",
   "deep-clean": "/Deep clean detailing.png",
@@ -45,16 +45,11 @@ export const PackagesOverview = () => {
 
       <section className="box-border py-[60px] md:py-[100px]">
         <div className="box-border max-w-[1204px] mx-auto px-5 md:px-8">
-          <div className="box-border flex flex-col gap-y-10 md:gap-y-14">
-          {/* Three overview cards - image only in the heading box, solid dark for list */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+          <div className="box-border flex flex-col gap-y-16 md:gap-y-20">
             {byCategory.map(({ categoryId, label, packages, imageUrl }) => (
-              <div
-                key={label}
-                className="rounded-xl overflow-hidden border border-neutral-700 shadow-lg bg-[#282828] flex flex-col"
-              >
-                {/* Heading box only - background image from home page services section */}
-                <div className="relative min-h-[100px] md:min-h-[120px] flex items-center justify-center p-5 overflow-hidden">
+              <div key={categoryId}>
+                {/* Section header with image */}
+                <div className="relative rounded-xl overflow-hidden border border-neutral-700 shadow-lg bg-[#282828] min-h-[100px] md:min-h-[120px] flex items-center justify-center p-6 md:p-8 mb-6 md:mb-8">
                   <img
                     src={imageUrl}
                     alt=""
@@ -62,54 +57,60 @@ export const PackagesOverview = () => {
                     aria-hidden
                   />
                   <div className="absolute inset-0 bg-[#282828]/85" />
-                  <div className="relative w-[80%] mx-auto text-center">
-                    <h3 className="font-refrigerator uppercase text-xl md:text-2xl lg:text-3xl font-bold leading-tight text-white">
-                      {label}
-                    </h3>
-                  </div>
+                  <h3 className="relative font-refrigerator uppercase text-xl md:text-2xl lg:text-3xl font-bold leading-tight text-white text-center">
+                    {label}
+                  </h3>
                 </div>
-                {/* Package list - solid dark background, no image */}
-                <div className="border-t border-neutral-600 p-5 md:p-6 text-white divide-y divide-neutral-500 flex-1">
+
+                {/* Package summary cards - full width, stacked vertically */}
+                <div className="flex flex-col gap-6 md:gap-8">
                   {packages.map((pkg) => (
-                    <div key={pkg.id} className="py-3 first:pt-0 last:pb-0">
-                      <span className="font-refrigerator uppercase text-sm md:text-base font-bold block">
-                        {pkg.tagline ?? pkg.title}
-                      </span>
-                      <p className="font-figtree text-xs md:text-sm text-neutral-200 mt-0.5 leading-snug">
-                        {pkg.subtitle ?? pkg.sections[0]?.items[0]}
-                      </p>
-                      {pkg.priceOptions && pkg.priceOptions.length > 0 ? (
-                        <div className="mt-1.5 space-y-0.5">
-                          {pkg.priceOptions.map((option, i) => (
-                            <p key={i} className="font-figtree text-xs md:text-sm font-medium text-white">
-                              {i + 1}. {option}
-                            </p>
-                          ))}
+                    <div
+                      key={pkg.id}
+                      className="rounded-xl border border-neutral-200 bg-white shadow-sm overflow-hidden flex flex-col w-full md:flex-row"
+                    >
+                      {pkg.imageUrl && (
+                        <div className="relative w-full md:w-[320px] lg:w-[380px] md:min-h-[200px] md:shrink-0 aspect-[4/3] md:aspect-auto bg-neutral-100 overflow-hidden">
+                          <img
+                            src={pkg.imageUrl}
+                            alt=""
+                            className="w-full h-full object-cover"
+                          />
                         </div>
-                      ) : (
-                        <p className="font-figtree text-xs md:text-sm font-medium text-white mt-1">
+                      )}
+                      <div className="p-5 md:p-6 flex-1 flex flex-col min-w-0">
+                        <div className="mb-3">
+                          <h4 className="font-refrigerator uppercase text-base md:text-lg font-bold text-black leading-tight">
+                            {pkg.title}
+                          </h4>
+                          {pkg.tagline && (
+                            <p className="font-refrigerator uppercase text-sm text-gray-600 mt-0.5">
+                              &ldquo;{pkg.tagline}&rdquo;
+                            </p>
+                          )}
+                        </div>
+                        <p className="font-figtree text-[15px] text-gray-700 leading-6 flex-1">
+                          {pkg.summary}
+                        </p>
+                        <p className="font-refrigerator uppercase text-lg font-bold text-black mt-4">
                           {pkg.priceDisplay}
                         </p>
-                      )}
+                        <a
+                          href={`/packages/${categoryId}/${pkg.id}`}
+                          className="mt-4 inline-block text-center text-white font-figtree text-sm font-medium py-2.5 px-4 rounded-lg bg-cta hover:bg-cta-dark border border-transparent transition w-full"
+                        >
+                          View details
+                        </a>
+                      </div>
                     </div>
                   ))}
                 </div>
-                {/* Learn More CTA - links to this category's page */}
-                <div className="border-t border-neutral-600 p-4 md:p-5">
-                  <a
-                    href={`/packages/${categoryId}`}
-                    className="block w-full text-center text-white font-figtree text-sm font-medium py-2.5 px-4 rounded-lg bg-cta hover:bg-cta-dark border border-transparent transition"
-                  >
-                    Learn More
-                  </a>
-                </div>
               </div>
             ))}
-          </div>
 
-          <p className="text-[15px] text-gray-600 md:text-base text-center max-w-[560px] mx-auto">
-            All packages are tailored to your vehicle. Get a quote for exact pricing.
-          </p>
+            <p className="text-[15px] text-gray-600 md:text-base text-center max-w-[560px] mx-auto">
+              All packages are tailored to your vehicle. Get a quote for exact pricing.
+            </p>
           </div>
         </div>
       </section>

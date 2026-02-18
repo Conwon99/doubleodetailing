@@ -5,7 +5,7 @@ export const AboutPageAbout = () => {
         <div className="box-border caret-transparent">
           <div className="box-border caret-transparent gap-x-7 flex flex-col justify-between gap-y-7 md:gap-x-10 md:flex-row md:gap-y-10">
             <div className="box-border caret-transparent max-w-[988px]">
-              <div className="text-3xl font-bold box-border caret-transparent blur-0 tracking-[-0.52px] leading-[35px] md:text-[52px] md:leading-[62px] font-cabinet">
+              <div className="text-3xl font-bold box-border caret-transparent blur-0 tracking-[-0.52px] leading-[35px] md:text-[52px] md:leading-[62px] font-refrigerator uppercase">
                 ABOUT US
               </div>
             </div>
@@ -22,44 +22,44 @@ export const AboutPageAbout = () => {
                 <div className="text-[15px] box-border caret-transparent leading-6 md:text-base">
                   From exterior polishing to deep interior cleaning, we use premium products and proven techniques to deliver lasting results. At Double-O Detailing, your car is our mission—and your satisfaction is our guarantee.
                 </div>
-                <div className="mt-8 pt-6 border-t border-neutral-200 space-y-6">
-                  <div>
-                    <h3 className="text-lg font-semibold font-cabinet text-black mb-3">
-                      Qualifications
-                    </h3>
-                    <ul className="space-y-2 text-[15px] leading-6 md:text-base text-gray-700">
-                      <li className="font-medium text-black flex items-start gap-2">
-                        <svg className="w-5 h-5 text-amber-600 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                        <span>SONAX and PROFILINE Coating Trained</span>
-                      </li>
-                      <li className="font-medium text-black flex items-start gap-2">
-                        <svg className="w-5 h-5 text-amber-600 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                        <span>SONAX and PROFILINE Expert Trained</span>
-                      </li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold font-cabinet text-black mb-3">
-                      Training certifications
-                    </h3>
-                    <ul className="space-y-2 text-[15px] leading-6 md:text-base text-gray-700">
-                      <li className="flex items-start gap-2">
-                        <svg className="w-5 h-5 text-amber-600 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                        <span>Paint Correction, Sanding + Coating Business Skills — @cmpristinedetailing</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <svg className="w-5 h-5 text-amber-600 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                        <span>Machine Polishing Technique — UKDA Trained</span>
-                      </li>
-                    </ul>
+                {/* Certification and qualification cards */}
+                <div className="mt-8 pt-6 border-t border-neutral-200">
+                  <h3 className="text-lg font-semibold font-refrigerator uppercase text-black mb-4">
+                    Our certifications
+                  </h3>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4">
+                    <div className="rounded-xl border border-neutral-200 bg-neutral-50/50 p-4 md:p-5 flex flex-col sm:flex-row sm:justify-between sm:items-start gap-3">
+                      <div className="order-2 sm:order-none flex-1 min-w-0">
+                        <span className="text-[15px] font-medium text-black leading-6 md:text-base">SONAX and PROFILINE Coating Trained</span>
+                      </div>
+                      <div className="order-1 sm:order-none w-12 h-12 sm:w-14 sm:h-14 shrink-0 flex items-center justify-center sm:self-start">
+                        <img src="/certs/SONAX.png" alt="SONAX certification" className="w-full h-full object-contain" />
+                      </div>
+                    </div>
+                    <div className="rounded-xl border border-neutral-200 bg-neutral-50/50 p-4 md:p-5 flex flex-col sm:flex-row sm:justify-between sm:items-start gap-3">
+                      <div className="order-2 sm:order-none flex-1 min-w-0">
+                        <span className="text-[15px] font-medium text-black leading-6 md:text-base">SONAX and PROFILINE Expert Trained</span>
+                      </div>
+                      <div className="order-1 sm:order-none w-12 h-12 sm:w-14 sm:h-14 shrink-0 flex items-center justify-center sm:self-start">
+                        <img src="/certs/SONAX.png" alt="SONAX certification" className="w-full h-full object-contain" />
+                      </div>
+                    </div>
+                    <div className="rounded-xl border border-neutral-200 bg-neutral-50/50 p-4 md:p-5 flex flex-col sm:flex-row sm:justify-between sm:items-start gap-3">
+                      <div className="order-2 sm:order-none flex-1 min-w-0">
+                        <span className="text-[15px] leading-6 text-gray-700 md:text-base">Paint Correction, Sanding + Coating Business Skills</span>
+                      </div>
+                      <div className="order-1 sm:order-none w-12 h-12 sm:w-14 sm:h-14 shrink-0 flex items-center justify-center sm:self-start">
+                        <img src="/certs/cmpristine.jpg" alt="Paint Correction, Sanding + Coating Business Skills certification" className="w-full h-full object-contain" />
+                      </div>
+                    </div>
+                    <div className="rounded-xl border border-neutral-200 bg-neutral-50/50 p-4 md:p-5 flex flex-col sm:flex-row sm:justify-between sm:items-start gap-3">
+                      <div className="order-2 sm:order-none flex-1 min-w-0">
+                        <span className="text-[15px] leading-6 text-gray-700 md:text-base">Machine Polishing Technique — UKDA Trained</span>
+                      </div>
+                      <div className="order-1 sm:order-none w-12 h-12 sm:w-14 sm:h-14 shrink-0 flex items-center justify-center sm:self-start">
+                        <img src="/certs/ukDA.png" alt="UKDA certification" className="w-full h-full object-contain" />
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>

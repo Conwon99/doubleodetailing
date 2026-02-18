@@ -52,14 +52,22 @@ export const ServiceAreasSection = () => {
                 Locations
               </summary>
               <ul className="grid grid-cols-2 gap-x-4 gap-y-2 text-[15px] leading-6 text-gray-700 md:text-base mt-4 pl-0 list-none lg:gap-x-6">
-                {SERVICE_AREAS.map((area) => (
-                  <li key={area} className="flex items-center gap-2">
-                    <span className="text-cta-dark shrink-0" aria-hidden>
-                      •
-                    </span>
-                    {area}
-                  </li>
-                ))}
+                {SERVICE_AREAS.map((area) => {
+                  const slug = area.toLowerCase().replace(/\s+/g, "-");
+                  return (
+                    <li key={area} className="flex items-center gap-2">
+                      <span className="text-cta-dark shrink-0" aria-hidden>
+                        •
+                      </span>
+                      <a
+                        href={`/${slug}`}
+                        className="hover:text-cta-dark hover:underline transition-colors"
+                      >
+                        {area}
+                      </a>
+                    </li>
+                  );
+                })}
               </ul>
             </details>
             <div className="box-border w-full relative rounded-xl overflow-hidden aspect-[4/3] min-h-[280px] lg:min-h-[320px]">

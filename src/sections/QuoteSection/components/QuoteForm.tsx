@@ -1,13 +1,33 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { packagesData, categoryLabels } from "../../../data/packages";
+import type { PackageData } from "../../../data/packages";
+
+const categoryOrder: PackageData["category"][] = [
+  "machine-polishing",
+  "deep-clean",
+  "maintenance",
+];
+
+const validPackageValues = new Set(packagesData.map((p) => `${p.category}/${p.id}`));
 
 export const QuoteForm = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     phone: "",
-    serviceType: "",
+    package: "",
     description: "",
   });
+
+  // Prefill package from ?package=category/id when coming from a package "Book Now" link
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const params = new URLSearchParams(window.location.search);
+    const packageParam = params.get("package");
+    if (packageParam && validPackageValues.has(packageParam)) {
+      setFormData((prev) => ({ ...prev, package: packageParam }));
+    }
+  }, []);
 
   const [imageFile, setImageFile] = useState<File | null>(null);
   const [imagePreview, setImagePreview] = useState<string | null>(null);
@@ -81,7 +101,9 @@ export const QuoteForm = () => {
       formDataToSend.append("name", formData.name);
       formDataToSend.append("email", formData.email);
       formDataToSend.append("phone", formData.phone);
-      formDataToSend.append("serviceType", formData.serviceType);
+      if (formData.package) {
+        formDataToSend.append("package", formData.package);
+      }
       formDataToSend.append("description", formData.description);
       formDataToSend.append("website", "https://doubleodetailing.co.uk/");
       
@@ -120,10 +142,10 @@ export const QuoteForm = () => {
 
   return (
     <div className="w-full max-w-[700px]">
-      <form onSubmit={handleSubmit} action="https://formspree.io/f/xnjbaogz" method="POST" encType="multipart/form-data" className="bg-black rounded-xl p-6 md:p-8 shadow-xl">
+      <form onSubmit={handleSubmit} action="https://formspree.io/f/xnjbaogz" method="POST" encType="multipart/form-data" className="bg-white rounded-xl p-6 md:p-8 shadow-xl border border-neutral-200">
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-6">
           <div className="md:col-span-2">
-            <label htmlFor="name" className="block text-sm font-medium text-white mb-2">
+            <label htmlFor="name" className="block text-sm font-medium text-gray-900 mb-2">
               Full Name *
             </label>
             <input
@@ -134,13 +156,13 @@ export const QuoteForm = () => {
               value={formData.name}
               onChange={handleChange}
               onFocus={trackFormStart}
-              className="w-full px-4 py-3 bg-gray-900 border border-gray-700 text-white rounded-lg focus:ring-2 focus:ring-cta focus:border-cta outline-none transition placeholder:text-gray-500"
+              className="w-full px-4 py-3 bg-white border border-neutral-300 text-gray-900 rounded-lg focus:ring-2 focus:ring-cta focus:border-cta outline-none transition placeholder:text-gray-400"
               placeholder="John Doe"
             />
           </div>
 
           <div>
-            <label htmlFor="email" className="block text-sm font-medium text-white mb-2">
+            <label htmlFor="email" className="block text-sm font-medium text-gray-900 mb-2">
               Email Address *
             </label>
             <input
@@ -151,13 +173,13 @@ export const QuoteForm = () => {
               value={formData.email}
               onChange={handleChange}
               onFocus={trackFormStart}
-              className="w-full px-4 py-3 bg-gray-900 border border-gray-700 text-white rounded-lg focus:ring-2 focus:ring-cta focus:border-cta outline-none transition placeholder:text-gray-500"
+              className="w-full px-4 py-3 bg-white border border-neutral-300 text-gray-900 rounded-lg focus:ring-2 focus:ring-cta focus:border-cta outline-none transition placeholder:text-gray-400"
               placeholder="john@example.com"
             />
           </div>
 
           <div>
-            <label htmlFor="phone" className="block text-sm font-medium text-white mb-2">
+            <label htmlFor="phone" className="block text-sm font-medium text-gray-900 mb-2">
               Phone Number *
             </label>
             <input
@@ -167,34 +189,40 @@ export const QuoteForm = () => {
               required
               value={formData.phone}
               onChange={handleChange}
-              className="w-full px-4 py-3 bg-gray-900 border border-gray-700 text-white rounded-lg focus:ring-2 focus:ring-cta focus:border-cta outline-none transition placeholder:text-gray-500"
+              className="w-full px-4 py-3 bg-white border border-neutral-300 text-gray-900 rounded-lg focus:ring-2 focus:ring-cta focus:border-cta outline-none transition placeholder:text-gray-400"
               placeholder="+44 123 456 7890"
             />
           </div>
 
           <div className="md:col-span-2">
-            <label htmlFor="serviceType" className="block text-sm font-medium text-white mb-2">
-              Service Type *
+            <label htmlFor="package" className="block text-sm font-medium text-gray-900 mb-2">
+              Package (Optional)
             </label>
             <select
-              id="serviceType"
-              name="serviceType"
-              required
-              value={formData.serviceType}
+              id="package"
+              name="package"
+              value={formData.package}
               onChange={handleChange}
-              className="w-full px-4 py-3 bg-gray-900 border border-gray-700 text-white rounded-lg focus:ring-2 focus:ring-cta focus:border-cta outline-none transition"
+              className="w-full px-4 py-3 bg-white border border-neutral-300 text-gray-900 rounded-lg focus:ring-2 focus:ring-cta focus:border-cta outline-none transition"
             >
-              <option value="">Select a service...</option>
-              <option value="machine-polishing">Machine Polishing</option>
-              <option value="ceramic-coatings">Ceramic Coatings</option>
-              <option value="deep-cleans-valets">Deep Cleans and Valets</option>
-              <option value="maintenance">Maintenance</option>
-              <option value="other">Other</option>
+              <option value="">Select a package...</option>
+              {categoryOrder.map((cat) => {
+                const packagesInCategory = packagesData.filter((p) => p.category === cat);
+                return (
+                  <optgroup key={cat} label={categoryLabels[cat]}>
+                    {packagesInCategory.map((pkg) => (
+                      <option key={pkg.id} value={`${pkg.category}/${pkg.id}`}>
+                        {pkg.tagline ? `${pkg.title} – "${pkg.tagline}"` : pkg.title}
+                      </option>
+                    ))}
+                  </optgroup>
+                );
+              })}
             </select>
           </div>
 
           <div className="md:col-span-2">
-            <label htmlFor="description" className="block text-sm font-medium text-white mb-2">
+            <label htmlFor="description" className="block text-sm font-medium text-gray-900 mb-2">
               Description of Issue or Service Needed *
             </label>
             <textarea
@@ -204,13 +232,13 @@ export const QuoteForm = () => {
               rows={5}
               value={formData.description}
               onChange={handleChange}
-              className="w-full px-4 py-3 bg-gray-900 border border-gray-700 text-white rounded-lg focus:ring-2 focus:ring-cta focus:border-cta outline-none transition resize-none placeholder:text-gray-500"
+              className="w-full px-4 py-3 bg-white border border-neutral-300 text-gray-900 rounded-lg focus:ring-2 focus:ring-cta focus:border-cta outline-none transition resize-none placeholder:text-gray-400"
               placeholder="Please describe the service you require for your vehicle..."
             />
           </div>
 
           <div className="md:col-span-2">
-            <label htmlFor="image" className="block text-sm font-medium text-white mb-2">
+            <label htmlFor="image" className="block text-sm font-medium text-gray-900 mb-2">
               Upload Image (Optional)
             </label>
             <div className="space-y-3">
@@ -220,14 +248,14 @@ export const QuoteForm = () => {
                 name="image"
                 accept="image/*"
                 onChange={handleImageChange}
-                className="w-full px-4 py-3 bg-gray-900 border border-gray-700 text-white rounded-lg focus:ring-2 focus:ring-cta focus:border-cta outline-none transition file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-medium file:bg-cta file:text-white hover:file:bg-cta-dark file:cursor-pointer cursor-pointer"
+                className="w-full px-4 py-3 bg-white border border-neutral-300 text-gray-900 rounded-lg focus:ring-2 focus:ring-cta focus:border-cta outline-none transition file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-medium file:bg-cta file:text-white hover:file:bg-cta-dark file:cursor-pointer cursor-pointer"
               />
               {imagePreview && (
                 <div className="relative">
                   <img
                     src={imagePreview}
                     alt="Preview"
-                    className="w-full h-48 object-cover rounded-lg border border-gray-700"
+                    className="w-full h-48 object-cover rounded-lg border border-neutral-300"
                   />
                   <button
                     type="button"
@@ -239,7 +267,7 @@ export const QuoteForm = () => {
                   </button>
                 </div>
               )}
-              <p className="text-xs text-gray-400">
+              <p className="text-xs text-gray-600">
                 Accepted formats: JPG, PNG, GIF. Max size: 10MB
               </p>
             </div>
@@ -247,7 +275,7 @@ export const QuoteForm = () => {
         </div>
 
         {submitStatus === "error" && (
-          <div className="mt-6 p-4 bg-red-900/30 border border-red-700 rounded-lg text-red-300">
+          <div className="mt-6 p-4 bg-red-50 border border-red-200 rounded-lg text-red-800">
             There was an error submitting your request. Please try again.
           </div>
         )}

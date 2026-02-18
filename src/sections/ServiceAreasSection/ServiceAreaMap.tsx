@@ -57,10 +57,12 @@ export function ServiceAreaMap() {
   }, []);
 
   return (
-    <div
-      ref={containerRef}
-      className="w-full h-full min-h-[280px] lg:min-h-[320px] rounded-xl overflow-hidden border border-neutral-200 shadow-sm bg-neutral-100"
-      aria-label="Map showing Double O Detailing service area (Glasgow and Central Scotland)"
-    />
+    <div className="relative z-0 isolate">
+      <div
+        ref={containerRef}
+        className="w-full h-full min-h-[280px] lg:min-h-[320px] rounded-xl overflow-hidden border border-neutral-200 shadow-sm bg-neutral-100 [&_.leaflet-control]:!z-[100] [&_.leaflet-pane]:!z-[1]"
+        aria-label="Map showing Double O Detailing service area (Glasgow and Central Scotland)"
+      />
+    </div>
   );
 }

@@ -53,42 +53,29 @@ export const ServicePageServices = () => {
                 iconUrl="https://c.animaapp.com/mkllold3CHU3xz/assets/icon-5.svg"
                 iconAlt="Icon"
               />
-              <ServiceCard
-                href="/headlight-restoration"
-                imageUrl="/Headlights restoration.png"
-                imageSizes="(max-width: 767px) 100vw, 740px"
-                title="Headlight Restoration"
-                description="Restore cloudy or yellowed headlights for improved visibility and a like-new appearance. Professional polishing and UV protection."
-                iconUrl="https://c.animaapp.com/mkllold3CHU3xz/assets/icon-5.svg"
-                iconAlt="Icon"
-              />
-              <ServiceCard
-                href="/soft-top-restoration"
-                imageUrl="/Soft top restoration.jpg"
-                imageSizes="(max-width: 767px) 100vw, 740px"
-                title="Soft Top Restoration and Coating"
-                description="Revive and protect convertible and soft tops with specialist cleaning, restoration, and durable coating for lasting finish."
-                iconUrl="https://c.animaapp.com/mkllold3CHU3xz/assets/icon-5.svg"
-                iconAlt="Icon"
-              />
-              <ServiceCard
-                href="/interior-fabric-coating"
-                imageUrl="/Interior fabric coating.png"
-                imageSizes="(max-width: 767px) 100vw, 740px"
-                title="Interior Fabric Coating"
-                description="Protect upholstery, carpets, and mats with fabric coating. Repels stains and moisture while keeping interiors looking fresh."
-                iconUrl="https://c.animaapp.com/mkllold3CHU3xz/assets/icon-5.svg"
-                iconAlt="Icon"
-              />
-              <ServiceCard
-                href="/engine-bay-detailing"
-                imageUrl="/Engine detailing.png"
-                imageSizes="(max-width: 767px) 100vw, 740px"
-                title="Engine Bay Detailing"
-                description="Thorough cleaning and dressing of the engine bay. Safe, professional treatment to showcase and protect under-bonnet areas."
-                iconUrl="https://c.animaapp.com/mkllold3CHU3xz/assets/icon-5.svg"
-                iconAlt="Icon"
-              />
+            </div>
+            <div className="mt-10 md:mt-14 border-t border-neutral-200 pt-8 md:pt-10">
+              <h3 className="font-refrigerator uppercase text-lg md:text-xl font-bold text-black mb-4">
+                Additional services
+              </h3>
+              <ul className="space-y-3 list-none pl-0">
+                <li>
+                  <span className="font-refrigerator uppercase text-base md:text-lg font-bold text-black">Headlight Restoration</span>
+                  <span className="font-figtree text-[15px] text-gray-700 leading-6"> — Restore cloudy or yellowed headlights for improved visibility and a like-new appearance. Professional polishing and UV protection.</span>
+                </li>
+                <li>
+                  <span className="font-refrigerator uppercase text-base md:text-lg font-bold text-black">Soft Top Restoration and Coating</span>
+                  <span className="font-figtree text-[15px] text-gray-700 leading-6"> — Revive and protect convertible and soft tops with specialist cleaning, restoration, and durable coating for lasting finish.</span>
+                </li>
+                <li>
+                  <span className="font-refrigerator uppercase text-base md:text-lg font-bold text-black">Interior Fabric Coating</span>
+                  <span className="font-figtree text-[15px] text-gray-700 leading-6"> — Protect upholstery, carpets, and mats with fabric coating. Repels stains and moisture while keeping interiors looking fresh.</span>
+                </li>
+                <li>
+                  <span className="font-refrigerator uppercase text-base md:text-lg font-bold text-black">Engine Bay Detailing</span>
+                  <span className="font-figtree text-[15px] text-gray-700 leading-6"> — Thorough cleaning and dressing of the engine bay. Safe, professional treatment to showcase and protect under-bonnet areas.</span>
+                </li>
+              </ul>
             </div>
           </div>
         </div>

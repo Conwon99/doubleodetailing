@@ -1,0 +1,81 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { Navbar } from "../../sections/Navbar";
+import { getLocationBySlug } from "../../data/locations";
+import {
+  LocationHero,
+  LocationServiceIntro,
+  LocationServicesSection,
+  LocationContentSection,
+} from "../../sections/LocationPage";
+import { Breadcrumbs } from "../../components/Breadcrumbs";
+import { GallerySection } from "../../sections/GallerySection";
+import { ProcessSection } from "../../sections/ProcessSection";
+import { ServiceAreasSection } from "../../sections/ServiceAreasSection";
+import ReviewsSection from "../../sections/ReviewsSection.astro";
+import { QuoteSection } from "../../sections/QuoteSection";
+import { FooterSection } from "../../sections/FooterSection";
+
+export async function getStaticPaths() {
+  const { locationSlugs } = await import("../../data/locations");
+  return locationSlugs.map((location) => ({
+    params: { location },
+  }));
+}
+
+const { location: locationSlug } = Astro.params;
+const location = getLocationBySlug(locationSlug ?? "");
+
+if (!location) {
+  return Astro.redirect("/404");
+}
+
+const siteUrl = "https://doubleodetailing.co.uk";
+const canonical = `${siteUrl}/${location.slug}`;
+const title = `Car Detailing ${location.name} | Mobile Valeting & Ceramic Coating | Double O Detailing`;
+const description = `Professional mobile car detailing in ${location.name} and nearby areas. Machine polishing, ceramic coatings, deep cleans, and valeting. We come to you. Book online.`;
+
+const locationSchema =
+  location.geo && location.addressLocality
+    ? {
+        name: location.name,
+        slug: location.slug,
+        addressLocality: location.addressLocality,
+        latitude: location.geo.latitude,
+        longitude: location.geo.longitude,
+      }
+    : undefined;
+---
+
+<Layout
+  title={title}
+  description={description}
+  canonical={canonical}
+  locationSchema={locationSchema}
+>
+  <div class="min-h-screen bg-neutral-100 font-figtree text-black text-sm leading-5 antialiased">
+    <Navbar client:load />
+    <main class="pt-0">
+      <div class="relative mx-auto max-w-[1204px] px-5 pt-8 md:px-8">
+        <Breadcrumbs
+          client:load
+          items={[
+            { label: "Home", href: "/" },
+            { label: "Locations", href: "/locations" },
+            { label: location.name },
+          ]}
+        />
+      </div>
+      <LocationHero client:load location={location} />
+      <LocationServiceIntro client:load location={location} />
+      <LocationServicesSection client:load location={location} />
+      <GallerySection client:load />
+      <ProcessSection client:load />
+      <ServiceAreasSection client:load />
+      <ReviewsSection />
+      <LocationContentSection client:load location={location} />
+      <QuoteSection client:load showTerms={false} />
+      <FooterSection client:load />
+    </main>
+  </div>
+</Layout>

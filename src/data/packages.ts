@@ -14,6 +14,8 @@ export type PackageData = {
   title: string;
   tagline?: string;
   subtitle?: string;
+  /** Short summary for the packages overview page */
+  summary: string;
   sections: PackageSection[];
   /** Optional extras section (e.g. Upgraded Coating, Engine Bay) */
   extras?: PackageSection;
@@ -23,6 +25,8 @@ export type PackageData = {
   priceDisplay: string;
   /** Prerequisite note for maintenance packages */
   note?: string;
+  /** Optional image for the package (path under /packages/) */
+  imageUrl?: string;
 };
 
 const PRICE_DISCLAIMER =
@@ -34,8 +38,10 @@ export const packagesData: PackageData[] = [
   {
     id: "casino-royale",
     category: "machine-polishing",
-    title: "SINGLE STAGE MACHINE POLISH + CERAMIC COATING",
+    title: "SINGLE STAGE PAINT ENHANCEMENT + CERAMIC COATING",
     tagline: "CASINO ROYALE",
+    summary:
+      "Transform your paintwork with machine polishing to remove 60–80% of swirls, marring, and oxidation, then protect it with a durable 1- or 2-year ceramic coating. Leaves a deep gloss finish with long-lasting protection against UV, bird lime, and the elements.",
     sections: [
       {
         heading: "EXTERIOR PREP",
@@ -49,7 +55,7 @@ export const packagesData: PackageData[] = [
       {
         heading: "PAINT ENHANCEMENT",
         items: [
-          "Single-stage machine polish to remove light defects, oxidation & swirl marks (60-90% correction)",
+          "Single-stage machine polish to remove swirls, marring & oxidation (60–80% correction)",
           "Glass, exhaust tips & chrome polished",
           "Two IPA panel wipe-downs for coating prep",
         ],
@@ -57,19 +63,22 @@ export const packagesData: PackageData[] = [
       {
         heading: "CERAMIC COATING OPTIONS",
         items: [
-          "Single Stage Machine Polish + 1-Year Ceramic Coating – from £295",
-          "Single Stage Machine Polish + 2-Year Ceramic Coating – from £350",
+          "Single Stage Paint Enhancement + 1-Year Ceramic Coating – from £295",
+          "Single Stage Paint Enhancement + 2-Year Ceramic Coating – from £350",
         ],
       },
     ],
-    priceDisplay: "From £295 or £350",
+    priceDisplay: "From £295 / £350",
+    imageUrl: "/packages/casino-royale.png",
   },
   {
     id: "snow-time-to-die",
     category: "machine-polishing",
     title: "WINTER PROTECTION DETAIL",
     tagline: "SNOW TIME TO DIE",
-    subtitle: "Machine polish + choice of 1-year or 2-year coating",
+    subtitle: "Light machine polish + winter protection",
+    summary:
+      "Light machine polish and winter protection package designed to protect your vehicle from road salt, grime, and harsh winter conditions while enhancing gloss and making maintenance easier. Options available: 12 Month Ceramic Wax, 1 Year Ceramic Coating.",
     sections: [
       {
         heading: "EXTERIOR PREP",
@@ -93,18 +102,21 @@ export const packagesData: PackageData[] = [
           "Glass, exhaust tips & chrome refined",
           "Paintwork prepped with panel wipe for coating adhesion",
           "Glass sealed, trims & tyres dressed",
-          "Choice of: 1-Year Ceramic Coating – from £240 | 2-Year Ceramic Coating – from £295",
+          "Options: 12 Month Ceramic Wax | 1 Year Ceramic Coating",
         ],
       },
     ],
-    priceOptions: ["1-Year Ceramic Coating – from £240", "2-Year Ceramic Coating – from £295"],
+    priceOptions: ["12 Month Ceramic Wax", "1 Year Ceramic Coating"],
     priceDisplay: "From £240 or £295",
+    imageUrl: "/packages/snow-time-to-die.jpeg",
   },
   {
     id: "shaken-not-stirred",
     category: "deep-clean",
     title: "DEEP CLEAN DETAIL",
     tagline: "SHAKEN, NOT STIRRED",
+    summary:
+      "Our ultimate reset detail. A full deep clean of the interior and exterior, including safe wash, decontamination, protection, and thorough interior detail. Brings your car back to showroom condition and sets the foundation for ongoing maintenance.",
     sections: [
       {
         heading: "EXTERIOR",
@@ -140,12 +152,15 @@ export const packagesData: PackageData[] = [
       ],
     },
     priceDisplay: "From £155",
+    imageUrl: "/packages/shaken-not-stirred.png",
   },
   {
     id: "spectre",
     category: "maintenance",
     title: "MAINTENANCE DETAIL",
     tagline: "SPECTRE",
+    summary:
+      "A top-up detail every 4–6 weeks to keep your car looking its best. Includes an interior mini detail and exterior safe wash, with added protection to maintain that just-detailed finish. Available after an initial service.",
     sections: [
       {
         heading: "EXTERIOR",
@@ -172,12 +187,15 @@ export const packagesData: PackageData[] = [
     ],
     note: "Must have had Shaken, Not Stirred or Casino Royale within a 4-6 week period to enrol in our maintenance plan",
     priceDisplay: "From £80",
+    imageUrl: "/packages/spectre.png",
   },
   {
     id: "q",
     category: "maintenance",
     title: "MAINTENANCE VALET",
     tagline: "Q",
+    summary:
+      "A lighter upkeep option covering all standard valeting, inside and out. Ideal for maintaining cleanliness between details. Available after an initial service.",
     sections: [
       {
         heading: "EXTERIOR",
@@ -202,12 +220,15 @@ export const packagesData: PackageData[] = [
     ],
     note: "Must have had Shaken, Not Stirred or Casino Royale within a 4-6 week period to enrol in our maintenance plan",
     priceDisplay: "From £55",
+    imageUrl: "/packages/q.png",
   },
   {
     id: "007",
     category: "maintenance",
     title: "EXTERIOR SAFE WASH",
     tagline: "007",
+    summary:
+      "A premium safe wash designed to minimise swirls and scratches while protecting your paintwork. Includes thorough cleaning, decontamination, protection, and optional engine bay maintenance.",
     sections: [
       {
         heading: "EXTERIOR",
@@ -225,6 +246,7 @@ export const packagesData: PackageData[] = [
       items: ["Upgraded Coating (POA)", "Engine Bay Maintenance"],
     },
     priceDisplay: "From £50",
+    imageUrl: "/packages/exterior-wash.png",
   },
 ];
 
@@ -233,3 +255,10 @@ export const categoryLabels: Record<PackageData["category"], string> = {
   "deep-clean": "Deep Clean Detailing",
   maintenance: "Maintenance",
 };
+
+export function getPackageByCategoryAndId(
+  category: PackageData["category"],
+  id: string
+): PackageData | undefined {
+  return packagesData.find((p) => p.category === category && p.id === id);
+}

@@ -10,7 +10,7 @@ export const AboutPageMission = () => {
               </div>
             </div>
             <div className="box-border caret-transparent mt-[18px] mb-4 md:mt-5">
-              <h2 className="text-3xl font-bold box-border caret-transparent tracking-[-0.52px] leading-[35px] md:text-[52px] md:leading-[62px] font-cabinet">
+              <h2 className="text-3xl font-bold box-border caret-transparent tracking-[-0.52px] leading-[35px] md:text-[52px] md:leading-[62px] font-refrigerator uppercase">
                 Qualifications
               </h2>
             </div>

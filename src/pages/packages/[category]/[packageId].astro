@@ -1,0 +1,67 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import { Navbar } from "../../../sections/Navbar";
+import { PackageCard } from "../../../sections/PackagesOverview/components/PackageCard";
+import { QuoteSection } from "../../../sections/QuoteSection";
+import { FooterSection } from "../../../sections/FooterSection";
+import {
+  packagesData,
+  categoryLabels,
+  getPackageByCategoryAndId,
+} from "../../../data/packages";
+import type { PackageData } from "../../../data/packages";
+
+export async function getStaticPaths() {
+  return packagesData.map((pkg) => ({
+    params: { category: pkg.category, packageId: pkg.id },
+    props: { package: pkg },
+  }));
+}
+
+const { package: pkg } = Astro.props;
+const categoryId = pkg.category;
+const categoryLabel = categoryLabels[categoryId];
+const title = pkg.tagline ? `${pkg.title} – "${pkg.tagline}"` : pkg.title;
+const description =
+  pkg.summary.slice(0, 155) + (pkg.summary.length > 155 ? "…" : "");
+const canonical = `https://doubleodetailing.co.uk/packages/${categoryId}/${pkg.id}`;
+---
+
+<Layout
+  title={`${title} | Packages - Double O Detailing`}
+  description={description}
+  canonical={canonical}
+>
+  <div class="min-h-screen bg-neutral-100 font-figtree text-black text-sm leading-5 antialiased">
+    <Navbar client:load />
+    <main class="pt-0">
+      <section class="box-border pt-[120px] md:pt-[150px] pb-[60px] md:pb-[100px]">
+        <div class="box-border max-w-[1204px] mx-auto px-5 md:px-8">
+          <nav class="mb-8 flex flex-col gap-2 sm:flex-row sm:items-center sm:gap-4 text-[15px]">
+            <a
+              href="/packages"
+              class="text-gray-600 hover:text-black"
+            >
+              ← Packages
+            </a>
+            <span class="text-gray-400 hidden sm:inline" aria-hidden="true">/</span>
+            <a
+              href={`/packages/${categoryId}`}
+              class="text-gray-600 hover:text-black"
+            >
+              {categoryLabel}
+            </a>
+          </nav>
+          <div class="max-w-[640px] mx-auto">
+            <PackageCard package={pkg} client:load />
+          </div>
+          <p class="mt-8 text-[15px] text-gray-600 md:text-base text-center">
+            All packages are tailored to your vehicle. <a href="/contact" class="text-cta hover:underline">Get a quote</a> for exact pricing.
+          </p>
+        </div>
+      </section>
+      <QuoteSection client:load showTerms={false} />
+      <FooterSection client:load />
+    </main>
+  </div>
+</Layout>

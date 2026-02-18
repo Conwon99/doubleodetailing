@@ -5,6 +5,15 @@ type PackageCardProps = { package: PackageData };
 export const PackageCard = ({ package: pkg }: PackageCardProps) => {
   return (
     <article className="rounded-xl overflow-hidden bg-black text-white border border-neutral-800 shadow-lg">
+      {pkg.imageUrl && (
+        <div className="relative w-full aspect-[4/3] bg-neutral-900 overflow-hidden">
+          <img
+            src={pkg.imageUrl}
+            alt=""
+            className="w-full h-full object-cover"
+          />
+        </div>
+      )}
       <div className="relative p-6 md:p-8">
         {/* Title & tagline */}
         <div>
@@ -75,10 +84,10 @@ export const PackageCard = ({ package: pkg }: PackageCardProps) => {
           </p>
         </div>
 
-        {/* Book Now - link to contact */}
+        {/* Book Now - link to contact with package prefill */}
         <div className="mt-5">
           <a
-            href="/contact"
+            href={`/contact?package=${encodeURIComponent(`${pkg.category}/${pkg.id}`)}`}
             className="block w-full text-center text-white font-figtree text-sm font-medium py-3 px-4 rounded-lg bg-cta hover:bg-cta-dark border border-transparent transition"
           >
             Book Now

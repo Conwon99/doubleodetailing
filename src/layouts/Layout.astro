@@ -1,5 +1,14 @@
 ---
 import '../styles/tailwind.css';
+import { locations } from '../data/locations';
+
+interface LocationSchemaProp {
+  name: string;
+  slug: string;
+  addressLocality: string;
+  latitude: string;
+  longitude: string;
+}
 
 interface Props {
   title?: string;
@@ -8,6 +17,7 @@ interface Props {
   type?: string;
   canonical?: string;
   noindex?: boolean;
+  locationSchema?: LocationSchemaProp;
 }
 
 const {
@@ -17,10 +27,16 @@ const {
   type = "website",
   canonical = Astro.url.pathname === '/' ? 'https://doubleodetailing.co.uk/' : `https://doubleodetailing.co.uk${Astro.url.pathname}`,
   noindex = false,
+  locationSchema,
 } = Astro.props;
 
 const siteUrl = "https://doubleodetailing.co.uk";
 const fullImageUrl = image.startsWith('http') ? image : `${siteUrl}${image}`;
+
+const defaultAreaServed = [
+  ...locations.map((loc) => ({ "@type": "City", "name": loc.name })),
+  { "@type": "State", "name": "Central Scotland" },
+];
 ---
 
 <!doctype html>
@@ -84,6 +100,7 @@ const fullImageUrl = image.startsWith('http') ? image : `${siteUrl}${image}`;
     <script type="application/ld+json" set:html={JSON.stringify({
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
+      "@id": "https://doubleodetailing.co.uk/#localbusiness",
       "name": "Double O Detailing",
       "alternateName": "Double-O Detailing",
       "description": "Professional mobile car detailing and valeting service in North Glasgow. We bring premium car care directly to your doorstep.",
@@ -103,20 +120,7 @@ const fullImageUrl = image.startsWith('http') ? image : `${siteUrl}${image}`;
         "latitude": "55.8642",
         "longitude": "-4.2518"
       },
-      "areaServed": [
-        {
-          "@type": "City",
-          "name": "Glasgow"
-        },
-        {
-          "@type": "City",
-          "name": "Stirling"
-        },
-        {
-          "@type": "State",
-          "name": "Central Scotland"
-        }
-      ],
+      "areaServed": defaultAreaServed,
       "serviceType": [
         "Car Detailing",
         "Mobile Car Detailing",
@@ -152,10 +156,62 @@ const fullImageUrl = image.startsWith('http') ? image : `${siteUrl}${image}`;
         "worstRating": "1"
       }
     })} />
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "@id": "https://doubleodetailing.co.uk/#website",
+      "name": "Double O Detailing",
+      "url": "https://doubleodetailing.co.uk",
+      "description": "Professional mobile car detailing and valeting in Glasgow and Central Scotland. Ceramic coatings, machine polishing, deep cleans, and maintenance.",
+      "publisher": { "@id": "https://doubleodetailing.co.uk/#organization" },
+      "inLanguage": "en-GB",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://doubleodetailing.co.uk/contact?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    })} />
+    
+    {locationSchema && (
+      <script type="application/ld+json" set:html={JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": `Double O Detailing – ${locationSchema.name}`,
+        "description": "Professional mobile car detailing and valeting service. We bring premium car care directly to your doorstep.",
+        "url": `${siteUrl}/${locationSchema.slug}`,
+        "telephone": "+447768243728",
+        "email": "doubleodetailing@icloud.com",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": locationSchema.addressLocality,
+          "addressRegion": "Scotland",
+          "addressCountry": "GB"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": locationSchema.latitude,
+          "longitude": locationSchema.longitude
+        },
+        "areaServed": { "@type": "City", "name": locationSchema.addressLocality },
+        "serviceType": ["Car Detailing", "Mobile Car Detailing", "Vehicle Valeting", "Ceramic Coating", "Machine Polishing", "Deep Cleaning", "Car Maintenance"],
+        "priceRange": "$$",
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "5",
+          "reviewCount": "23",
+          "bestRating": "5",
+          "worstRating": "1"
+        }
+      })} />
+    )}
     
     <script type="application/ld+json" set:html={JSON.stringify({
       "@context": "https://schema.org",
       "@type": "Organization",
+      "@id": "https://doubleodetailing.co.uk/#organization",
       "name": "Double O Detailing",
       "url": "https://doubleodetailing.co.uk",
       "logo": "https://doubleodetailing.co.uk/double-o-logo.png",

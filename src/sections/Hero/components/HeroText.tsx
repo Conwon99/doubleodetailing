@@ -23,7 +23,7 @@ export const HeroText = () => {
                 });
               }
             }}
-            className="text-black items-center bg-cta box-border caret-transparent gap-x-5 flex max-w-full gap-y-5 text-center border pl-6 pr-1 py-1 rounded-[100px] border-solid border-transparent hover:bg-white hover:border-cta-dark"
+            className="text-white items-center bg-cta box-border caret-transparent gap-x-5 flex max-w-full gap-y-5 text-center border pl-6 pr-1 py-1 rounded-[100px] border-solid border-transparent hover:bg-white hover:border-cta-dark hover:text-black"
           >
             <div className="relative box-border caret-transparent overflow-hidden">
               <div className="box-border caret-transparent">

@@ -2,30 +2,9 @@
 import Layout from "../../layouts/Layout.astro";
 import { Navbar } from "../../sections/Navbar";
 import { HeroStats } from "../../sections/Hero/components/HeroStats";
-import { WhyChooseMachinePolishingSection } from "../../sections/CoreValuesSection/WhyChooseMachinePolishingSection";
-import { WhyChooseCeramicCoatingsSection } from "../../sections/CoreValuesSection/WhyChooseCeramicCoatingsSection";
-import { WhyChooseDeepCleanSection } from "../../sections/CoreValuesSection/WhyChooseDeepCleanSection";
-import { WhyChooseMaintenanceSection } from "../../sections/CoreValuesSection/WhyChooseMaintenanceSection";
-import { WhyChooseHeadlightRestorationSection } from "../../sections/CoreValuesSection/WhyChooseHeadlightRestorationSection";
-import { WhyChooseSoftTopSection } from "../../sections/CoreValuesSection/WhyChooseSoftTopSection";
-import { WhyChooseInteriorFabricCoatingSection } from "../../sections/CoreValuesSection/WhyChooseInteriorFabricCoatingSection";
-import { WhyChooseEngineBaySection } from "../../sections/CoreValuesSection/WhyChooseEngineBaySection";
-import { ProcessSectionMachinePolishing } from "../../sections/ProcessSection/ProcessSectionMachinePolishing";
-import { ProcessSectionCeramicCoatings } from "../../sections/ProcessSection/ProcessSectionCeramicCoatings";
-import { ProcessSectionDeepClean } from "../../sections/ProcessSection/ProcessSectionDeepClean";
-import { ProcessSectionMaintenance } from "../../sections/ProcessSection/ProcessSectionMaintenance";
-import { ProcessSectionHeadlightRestoration } from "../../sections/ProcessSection/ProcessSectionHeadlightRestoration";
-import { ProcessSectionSoftTop } from "../../sections/ProcessSection/ProcessSectionSoftTop";
-import { ProcessSectionInteriorFabricCoating } from "../../sections/ProcessSection/ProcessSectionInteriorFabricCoating";
-import { ProcessSectionEngineBay } from "../../sections/ProcessSection/ProcessSectionEngineBay";
-import { MachinePolishingFAQ } from "../../sections/FAQSection/MachinePolishingFAQ";
-import { CeramicCoatingsFAQ } from "../../sections/FAQSection/CeramicCoatingsFAQ";
-import { DeepCleanFAQ } from "../../sections/FAQSection/DeepCleanFAQ";
-import { MaintenanceFAQ } from "../../sections/FAQSection/MaintenanceFAQ";
-import { HeadlightRestorationFAQ } from "../../sections/FAQSection/HeadlightRestorationFAQ";
-import { SoftTopFAQ } from "../../sections/FAQSection/SoftTopFAQ";
-import { InteriorFabricCoatingFAQ } from "../../sections/FAQSection/InteriorFabricCoatingFAQ";
-import { EngineBayFAQ } from "../../sections/FAQSection/EngineBayFAQ";
+import { ExteriorWhyChooseSection } from "../../sections/CoreValuesSection/ExteriorWhyChooseSection";
+import { ExteriorProcessSection } from "../../sections/ProcessSection/ExteriorProcessSection";
+import { ExteriorFAQSection } from "../../sections/FAQSection/ExteriorFAQSection";
 import { ServiceAreasSection } from "../../sections/ServiceAreasSection";
 import ReviewsSection from "../../sections/ReviewsSection.astro";
 import { QuoteSection } from "../../sections/QuoteSection";
@@ -33,6 +12,7 @@ import { FooterSection } from "../../sections/FooterSection";
 import { Breadcrumbs } from "../../components/Breadcrumbs";
 import { getLocationBySlug } from "../../data/locations";
 import { getServiceBySlug } from "../../data/services";
+import { getServiceDetail } from "../../data/serviceDetails";
 
 export async function getStaticPaths() {
   const { locationSlugs } = await import("../../data/locations");
@@ -54,39 +34,17 @@ if (!location || !service) {
   return Astro.redirect("/404");
 }
 
-const siteUrl = "https://doubleodetailing.co.uk";
+const siteUrl = "https://jimboscleaning.com";
 const canonical = `${siteUrl}/${location.slug}/${service.slug}`;
-const title = `${service.title} ${location.name} | Who's the Best ${service.title} Near Me? | Double O Detailing`;
-const description = `${service.shortDescription} We come to you in ${location.name} and the surrounding areas. Book mobile ${service.title.toLowerCase()} with Double O Detailing.`;
+const title = `${service.title} ${location.name} | Professional Exterior Cleaning | Jimbos Cleaning`;
+const description = `${service.shortDescription} We come to you in ${location.name} and the surrounding areas. Get a free quote.`;
 
-const heroDescriptions: Record<string, string> = {
-  "machine-polishing": `Swirl marks and dull paint are common after Scottish winters. We bring professional machine polishing to ${location.name}—restore your paintwork and protect it with a lasting finish, at your home or workplace.`,
-  "ceramic-coatings": `Long-lasting ceramic coating protection for your vehicle. We come to you in ${location.name} and the surrounding areas—superior defence against UV, chemicals, and environmental damage with a hydrophobic, easy-to-maintain finish.`,
-  "deep-cleans": `Comprehensive deep cleaning and valeting to keep your vehicle immaculate inside and out. We bring the same attention to every detail to ${location.name}—book a slot that suits you.`,
-  "maintenance": `Regular maintenance keeps your vehicle in pristine condition. We provide ongoing care programmes in ${location.name} and nearby—protect your investment with our mobile maintenance packages.`,
-  "headlight-restoration": `Cloudy or yellowed headlights are a common issue. We restore and protect headlights in ${location.name} and the surrounding areas—improved visibility and a like-new appearance at your doorstep.`,
-  "soft-top-restoration": `Revive and protect convertible and soft tops with specialist cleaning and coating. We bring our mobile service to ${location.name}—lasting finish and protection for your roof.`,
-  "interior-fabric-coating": `Protect upholstery, carpets, and mats with fabric coating. We come to you in ${location.name} and nearby—repels stains and moisture while keeping interiors looking fresh.`,
-  "engine-bay-detailing": `Thorough cleaning and dressing of the engine bay. We provide safe, professional treatment in ${location.name} and the surrounding areas—showcase and protect under-bonnet areas at your home or workplace.`,
-};
-const heroDescription = heroDescriptions[service.slug] ?? `${service.shortDescription} We come to you in ${location.name} and the surrounding areas. Book a slot that suits you.`;
+const detail = getServiceDetail(service.slug);
+const baseHero = detail?.heroDescription ?? service.shortDescription;
+const heroDescription = `${baseHero} We come to you in ${location.name} and the surrounding areas. Get a free quote.`;
 
-const packagesHref =
-  service.slug === "machine-polishing"
-    ? "/packages/machine-polishing"
-    : service.slug === "deep-cleans"
-      ? "/packages/deep-clean"
-      : service.slug === "maintenance"
-        ? "/packages/maintenance"
-        : "/packages";
-const packagesLabel =
-  service.slug === "machine-polishing"
-    ? "View Machine Polishing Packages"
-    : service.slug === "deep-cleans"
-      ? "View Deep Clean Packages"
-      : service.slug === "maintenance"
-        ? "View Maintenance Packages"
-        : "View Our Packages";
+const packagesHref = "/services";
+const packagesLabel = "View Our Services";
 ---
 
 <Layout title={title} description={description} canonical={canonical}>
@@ -117,9 +75,9 @@ const packagesLabel =
           <div class="items-start box-border gap-x-10 flex flex-col justify-between gap-y-10 md:items-end md:gap-x-[60px] md:flex-row md:gap-y-[60px] w-full">
             <div class="box-border basis-[0%] grow max-w-[650px] pt-24 md:pt-32">
               <div class="box-border gap-x-4 flex flex-col gap-y-4">
-                <h1 class="text-[44px] font-bold box-border tracking-[-1.44px] leading-[52px] md:text-7xl md:leading-[80px] font-refrigerator uppercase">
+                <h1 class="text-[44px] font-bold box-border tracking-[-1.44px] leading-[52px] md:text-7xl md:leading-[80px] font-heading uppercase">
                   <div>{service.title}</div>
-                  <div class="text-gray-400">{location.name}</div>
+                  <div class="text-blue-300">{location.name}</div>
                 </h1>
                 <p class="text-base leading-[26px] md:text-lg font-figtree">
                   {heroDescription}
@@ -131,7 +89,7 @@ const packagesLabel =
                   class="text-black items-center bg-cta box-border gap-x-5 flex max-w-full gap-y-5 text-center border pl-6 pr-1 py-1 rounded-[100px] border-solid border-transparent hover:bg-white hover:border-cta-dark"
                 >
                   <span class="relative text-sm font-medium z-[2] md:text-base md:leading-6">BOOK NOW</span>
-                  <span class="text-white items-center bg-[#8B6B3D] box-border flex h-12 justify-center w-12 overflow-hidden rounded-[50%]">
+                  <span class="text-white items-center bg-blue-600 box-border flex h-12 justify-center w-12 overflow-hidden rounded-[50%]">
                     <img src="https://c.animaapp.com/mhnzg6knJo6lE7/assets/icon-4.svg" alt="" class="h-3.5 w-3.5" style="filter: brightness(0) saturate(100%) invert(78%) sepia(45%) saturate(500%) hue-rotate(330deg) brightness(110%) contrast(85%)" />
                   </span>
                 </a>
@@ -140,7 +98,7 @@ const packagesLabel =
                     {packagesLabel}
                   </span>
                   <span class="relative h-6 w-6 overflow-hidden">
-                    <img src="https://c.animaapp.com/mhnzg6knJo6lE7/assets/icon-5.svg" alt="" class="h-full w-full" />
+                    <img src="https://c.animaapp.com/mkllold3CHU3xz/assets/icon-5.svg" alt="" class="h-full w-full" />
                   </span>
                   <span class="absolute bg-white box-border h-px bottom-0 inset-x-0" />
                 </a>
@@ -151,60 +109,11 @@ const packagesLabel =
         </div>
       </section>
 
-      {service.slug === "machine-polishing" && (
+      {detail && (
         <>
-          <WhyChooseMachinePolishingSection client:load />
-          <ProcessSectionMachinePolishing client:load />
-          <MachinePolishingFAQ client:load />
-        </>
-      )}
-      {service.slug === "ceramic-coatings" && (
-        <>
-          <WhyChooseCeramicCoatingsSection client:load />
-          <ProcessSectionCeramicCoatings client:load />
-          <CeramicCoatingsFAQ client:load />
-        </>
-      )}
-      {service.slug === "deep-cleans" && (
-        <>
-          <WhyChooseDeepCleanSection client:load />
-          <ProcessSectionDeepClean client:load />
-          <DeepCleanFAQ client:load />
-        </>
-      )}
-      {service.slug === "maintenance" && (
-        <>
-          <WhyChooseMaintenanceSection client:load />
-          <ProcessSectionMaintenance client:load />
-          <MaintenanceFAQ client:load />
-        </>
-      )}
-      {service.slug === "headlight-restoration" && (
-        <>
-          <WhyChooseHeadlightRestorationSection client:load />
-          <ProcessSectionHeadlightRestoration client:load />
-          <HeadlightRestorationFAQ client:load />
-        </>
-      )}
-      {service.slug === "soft-top-restoration" && (
-        <>
-          <WhyChooseSoftTopSection client:load />
-          <ProcessSectionSoftTop client:load />
-          <SoftTopFAQ client:load />
-        </>
-      )}
-      {service.slug === "interior-fabric-coating" && (
-        <>
-          <WhyChooseInteriorFabricCoatingSection client:load />
-          <ProcessSectionInteriorFabricCoating client:load />
-          <InteriorFabricCoatingFAQ client:load />
-        </>
-      )}
-      {service.slug === "engine-bay-detailing" && (
-        <>
-          <WhyChooseEngineBaySection client:load />
-          <ProcessSectionEngineBay client:load />
-          <EngineBayFAQ client:load />
+          <ExteriorWhyChooseSection client:load serviceSlug={service.slug} />
+          <ExteriorProcessSection client:load serviceSlug={service.slug} />
+          <ExteriorFAQSection client:load serviceSlug={service.slug} />
         </>
       )}
 

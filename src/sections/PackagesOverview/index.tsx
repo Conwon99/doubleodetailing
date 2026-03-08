@@ -2,8 +2,8 @@ import { packagesData, categoryLabels } from "../../data/packages";
 import type { PackageData } from "../../data/packages";
 
 const categoryOrder: PackageData["category"][] = [
-  "machine-polishing",
-  "deep-clean",
+  "roof-cleaning",
+  "exterior-clean",
   "maintenance",
 ];
 
@@ -12,9 +12,9 @@ const PACKAGES_HERO_IMAGE = "/gallery/WhatsApp Image 2026-02-02 at 11.18.23 PM (
 
 /** Service section images from home page - used as section headers */
 const categoryImages: Record<PackageData["category"], string> = {
-  "machine-polishing": "/Machine polishing.png",
-  "deep-clean": "/Deep clean detailing.png",
-  maintenance: "/Maintenance.png",
+  "roof-cleaning": "/jimbos/roofclean1.jpg",
+  "exterior-clean": "/jimbos/drivewaycleaningjimbo.jpg",
+  maintenance: "/jimbos/presssurejimbo.jpg",
 };
 
 export const PackagesOverview = () => {
@@ -37,7 +37,7 @@ export const PackagesOverview = () => {
           <div className="inline-block border border-white/80 px-3 py-1 rounded-[1000px] mb-4">
             <span className="font-medium leading-[22px] text-white">Packages & Pricing</span>
           </div>
-          <h2 className="text-3xl font-bold tracking-[-0.52px] leading-tight md:text-5xl md:leading-tight font-refrigerator uppercase text-white">
+          <h2 className="text-3xl font-bold tracking-[-0.52px] leading-tight md:text-5xl md:leading-tight font-heading uppercase text-white">
             Packages Overview
           </h2>
         </div>
@@ -49,15 +49,15 @@ export const PackagesOverview = () => {
             {byCategory.map(({ categoryId, label, packages, imageUrl }) => (
               <div key={categoryId}>
                 {/* Section header with image */}
-                <div className="relative rounded-xl overflow-hidden border border-neutral-700 shadow-lg bg-[#282828] min-h-[100px] md:min-h-[120px] flex items-center justify-center p-6 md:p-8 mb-6 md:mb-8">
+                <div className="relative rounded-xl overflow-hidden border border-blue-800 shadow-lg bg-blue-950 min-h-[100px] md:min-h-[120px] flex items-center justify-center p-6 md:p-8 mb-6 md:mb-8">
                   <img
                     src={imageUrl}
                     alt=""
                     className="absolute inset-0 w-full h-full object-cover"
                     aria-hidden
                   />
-                  <div className="absolute inset-0 bg-[#282828]/85" />
-                  <h3 className="relative font-refrigerator uppercase text-xl md:text-2xl lg:text-3xl font-bold leading-tight text-white text-center">
+                  <div className="absolute inset-0 bg-blue-950/85" />
+                  <h3 className="relative font-heading uppercase text-xl md:text-2xl lg:text-3xl font-bold leading-tight text-white text-center">
                     {label}
                   </h3>
                 </div>
@@ -80,19 +80,19 @@ export const PackagesOverview = () => {
                       )}
                       <div className="p-5 md:p-6 flex-1 flex flex-col min-w-0">
                         <div className="mb-3">
-                          <h4 className="font-refrigerator uppercase text-base md:text-lg font-bold text-black leading-tight">
+                          <h4 className="font-heading uppercase text-base md:text-lg font-bold text-black leading-tight">
                             {pkg.title}
                           </h4>
                           {pkg.tagline && (
-                            <p className="font-refrigerator uppercase text-sm text-gray-600 mt-0.5">
+                            <p className="font-heading uppercase text-sm text-blue-600 mt-0.5">
                               &ldquo;{pkg.tagline}&rdquo;
                             </p>
                           )}
                         </div>
-                        <p className="font-figtree text-[15px] text-gray-700 leading-6 flex-1">
+                        <p className="font-figtree text-[15px] text-blue-700 leading-6 flex-1">
                           {pkg.summary}
                         </p>
-                        <p className="font-refrigerator uppercase text-lg font-bold text-black mt-4">
+                        <p className="font-heading uppercase text-lg font-bold text-black mt-4">
                           {pkg.priceDisplay}
                         </p>
                         <a
@@ -108,8 +108,8 @@ export const PackagesOverview = () => {
               </div>
             ))}
 
-            <p className="text-[15px] text-gray-600 md:text-base text-center max-w-[560px] mx-auto">
-              All packages are tailored to your vehicle. Get a quote for exact pricing.
+            <p className="text-[15px] text-blue-600 md:text-base text-center max-w-[560px] mx-auto">
+              All packages are tailored to your property. Get a quote for exact pricing.
             </p>
           </div>
         </div>

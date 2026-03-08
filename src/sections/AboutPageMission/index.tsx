@@ -10,11 +10,11 @@ export const AboutPageMission = () => {
               </div>
             </div>
             <div className="box-border caret-transparent mt-[18px] mb-4 md:mt-5">
-              <h2 className="text-3xl font-bold box-border caret-transparent tracking-[-0.52px] leading-[35px] md:text-[52px] md:leading-[62px] font-refrigerator uppercase">
+              <h2 className="text-3xl font-bold box-border caret-transparent tracking-[-0.52px] leading-[35px] md:text-[52px] md:leading-[62px] font-heading uppercase">
                 Qualifications
               </h2>
             </div>
-            <div className="text-gray-700 box-border caret-transparent space-y-4">
+            <div className="text-blue-700 box-border caret-transparent space-y-4">
               <div className="text-[15px] box-border caret-transparent leading-6 md:text-base">
                 At Double-O Detailing, excellence starts at the top. We bring years of hands-on experience, professional training, and a passion for automotive care to every vehicle we service.
               </div>
@@ -27,7 +27,7 @@ export const AboutPageMission = () => {
             <img
               src="/about1.jpeg"
               sizes="(max-width: 767px) 100vw, 500px"
-              alt="Double O Detailing Qualifications"
+              alt="Jimbos Cleaning"
               className="box-border caret-transparent inline-block h-full max-w-full object-cover w-full"
             />
           </div>

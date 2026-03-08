@@ -7,17 +7,16 @@ import { ServicePageServices } from '../sections/ServicePageServices';
 import { GallerySection } from '../sections/GallerySection';
 import { ProcessSection } from '../sections/ProcessSection';
 import { ServiceAreasSection } from '../sections/ServiceAreasSection';
-import { PackagesOverview } from '../sections/PackagesOverview';
-import ReviewsSection from '../sections/ReviewsSection.astro';
 import { HomeFAQ } from '../sections/FAQSection/HomeFAQ';
+import ReviewsSection from '../sections/ReviewsSection.astro';
 import { QuoteSection } from '../sections/QuoteSection';
 import { FooterSection } from '../sections/FooterSection';
 ---
 
 <Layout 
-  title="Double O Detailing - Premium Vehicle Detailing in Glasgow"
-  description="Professional mobile car detailing and valeting service in North Glasgow. We bring premium car care directly to your doorstep. Machine polishing, ceramic coatings, deep cleans, and maintenance services."
-  canonical="https://doubleodetailing.co.uk/"
+  title="Jimbos Cleaning - Professional Exterior Cleaning in Ayrshire & Glasgow"
+  description="Expert roof cleaning, render softwashing, driveway, gutter, PVC and window cleaning across Ayrshire and Glasgow. Get a free quote for your property."
+  canonical="https://jimboscleaning.com/"
 >
   <div class="min-h-screen bg-neutral-100 font-figtree text-black text-sm leading-5 antialiased">
     <Navbar client:load />
@@ -38,10 +37,10 @@ import { FooterSection } from '../sections/FooterSection';
               </span>
             </a>
             <a
-              href="/packages"
+              href="/services"
               class="text-cta-dark items-center box-border gap-x-3 flex max-w-full gap-y-3 text-center border border-cta-dark px-6 py-4 rounded-[100px] border-solid hover:bg-cta-dark hover:text-white transition"
             >
-              <span class="relative text-sm font-medium z-[2] md:text-base md:leading-6">View Packages</span>
+              <span class="relative text-sm font-medium z-[2] md:text-base md:leading-6">View Services</span>
               <span class="box-border">
                 <svg class="h-2 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
               </span>
@@ -51,10 +50,9 @@ import { FooterSection } from '../sections/FooterSection';
       </section>
       <GallerySection client:load />
       <ProcessSection client:load />
-      <ServiceAreasSection client:load />
-      <PackagesOverview client:load />
-      <ReviewsSection />
       <HomeFAQ client:load />
+      <ServiceAreasSection client:load />
+      <ReviewsSection />
       <QuoteSection client:load showTerms={false} />
       <FooterSection client:load />
     </main>

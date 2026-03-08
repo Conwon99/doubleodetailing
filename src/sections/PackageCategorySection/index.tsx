@@ -4,9 +4,9 @@ import { PackageCard } from "../PackagesOverview/components/PackageCard";
 
 /** Category hero background images (same as overview card headers) */
 const categoryHeroImages: Record<PackageData["category"], string> = {
-  "machine-polishing": "/Machine polishing.png",
-  "deep-clean": "/Deep clean detailing.png",
-  maintenance: "/Maintenance.png",
+  "roof-cleaning": "/jimbos/roofclean1.jpg",
+  "exterior-clean": "/jimbos/drivewaycleaningjimbo.jpg",
+  maintenance: "/jimbos/presssurejimbo.jpg",
 };
 
 type PackageCategorySectionProps = {
@@ -37,7 +37,7 @@ export const PackageCategorySection = ({ categoryId }: PackageCategorySectionPro
             <span className="font-medium leading-[22px] text-white">Packages & Pricing</span>
           </div>
           <div className="w-[80%] mx-auto text-center">
-            <h1 className="font-refrigerator uppercase text-3xl font-bold tracking-[-0.52px] leading-tight md:text-5xl md:leading-tight text-white">
+            <h1 className="font-heading uppercase text-3xl font-bold tracking-[-0.52px] leading-tight md:text-5xl md:leading-tight text-white">
               {label}
             </h1>
           </div>
@@ -54,8 +54,8 @@ export const PackageCategorySection = ({ categoryId }: PackageCategorySectionPro
                 </div>
               ))}
             </div>
-            <p className="text-[15px] text-gray-600 md:text-base text-center max-w-[560px] mx-auto">
-              All packages are tailored to your vehicle. Get a quote for exact pricing.
+            <p className="text-[15px] text-blue-600 md:text-base text-center max-w-[560px] mx-auto">
+              All packages are tailored to your property. Get a quote for exact pricing.
             </p>
           </div>
         </div>

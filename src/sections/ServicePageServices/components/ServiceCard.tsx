@@ -26,10 +26,10 @@ export const ServiceCard = (props: ServiceCardProps) => {
               />
             </div>
             <div className="box-border caret-transparent gap-x-2 flex flex-col gap-y-2 py-4">
-              <div className="text-lg font-bold box-border caret-transparent leading-[30px] md:text-xl md:leading-7 font-refrigerator uppercase">
+              <div className="text-lg font-bold box-border caret-transparent leading-[30px] md:text-xl md:leading-7 font-heading uppercase">
                 {props.title}
               </div>
-              <div className="text-gray-700 box-border caret-transparent">
+              <div className="text-blue-700 box-border caret-transparent">
                 <div className="text-[15px] box-border caret-transparent leading-6 md:text-base">
                   {props.description}
                 </div>

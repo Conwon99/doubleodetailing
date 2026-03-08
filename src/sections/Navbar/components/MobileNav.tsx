@@ -89,17 +89,6 @@ export const MobileNav = () => {
               </li>
               <li>
                 <a
-                  href="/packages"
-                  onClick={closeMenu}
-                  className="text-slate-900 box-border caret-transparent flex justify-center max-w-full text-center hover:text-cta"
-                >
-                  <div className="text-slate-900 text-[15px] box-border caret-transparent leading-6">
-                    Packages and Pricing
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a
                   href="/gallery"
                   onClick={closeMenu}
                   className="text-slate-900 box-border caret-transparent flex justify-center max-w-full text-center hover:text-cta"
@@ -111,12 +100,12 @@ export const MobileNav = () => {
               </li>
               <li>
                 <a
-                  href="/terms"
+                  href="/services"
                   onClick={closeMenu}
                   className="text-slate-900 box-border caret-transparent flex justify-center max-w-full text-center hover:text-cta"
                 >
                   <div className="text-slate-900 text-[15px] box-border caret-transparent leading-6">
-                    Terms
+                    Services
                   </div>
                 </a>
               </li>

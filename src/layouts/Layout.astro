@@ -21,21 +21,22 @@ interface Props {
 }
 
 const {
-  title = "Double O Detailing - Premium Vehicle Detailing in Glasgow",
-  description = "Professional mobile car detailing and valeting service in North Glasgow. We bring premium car care directly to your doorstep. Machine polishing, ceramic coatings, deep cleans, and maintenance services.",
-  image = "https://doubleodetailing.co.uk/double-o-logo.png",
+  title = "Jimbos Cleaning - Professional Exterior Cleaning in Ayrshire & Glasgow",
+  description = "Expert roof cleaning, render softwashing, driveway, gutter, PVC and window cleaning across Ayrshire and Glasgow. Professional exterior cleaning services for your home or business.",
+  image = "https://jimboscleaning.com/logo.png",
   type = "website",
-  canonical = Astro.url.pathname === '/' ? 'https://doubleodetailing.co.uk/' : `https://doubleodetailing.co.uk${Astro.url.pathname}`,
+  canonical = Astro.url.pathname === '/' ? 'https://jimboscleaning.com/' : `https://jimboscleaning.com${Astro.url.pathname}`,
   noindex = false,
   locationSchema,
 } = Astro.props;
 
-const siteUrl = "https://doubleodetailing.co.uk";
+const siteUrl = "https://jimboscleaning.com";
 const fullImageUrl = image.startsWith('http') ? image : `${siteUrl}${image}`;
 
 const defaultAreaServed = [
   ...locations.map((loc) => ({ "@type": "City", "name": loc.name })),
-  { "@type": "State", "name": "Central Scotland" },
+  { "@type": "State", "name": "Ayrshire" },
+  { "@type": "City", "name": "Glasgow" },
 ];
 ---
 
@@ -51,8 +52,8 @@ const defaultAreaServed = [
     <title>{title}</title>
     <meta name="title" content={title} />
     <meta name="description" content={description} />
-    <meta name="keywords" content="car detailing, mobile car detailing, vehicle detailing, car valeting, ceramic coating, machine polishing, car cleaning, Glasgow, North Glasgow, Central Scotland, mobile valeting, car care, auto detailing" />
-    <meta name="author" content="Double O Detailing" />
+    <meta name="keywords" content="roof cleaning, exterior cleaning, roof steam cleaning, render softwashing, driveway cleaning, gutter cleaning, PVC cleaning, window cleaning, Ayrshire, Glasgow, moss removal, algae removal" />
+    <meta name="author" content="Jimbos Cleaning" />
     <meta name="robots" content={noindex ? "noindex, nofollow" : "index, follow"} />
     <meta name="language" content="English" />
     <meta name="revisit-after" content="7 days" />
@@ -66,7 +67,7 @@ const defaultAreaServed = [
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={fullImageUrl} />
-    <meta property="og:site_name" content="Double O Detailing" />
+    <meta property="og:site_name" content="Jimbos Cleaning" />
     <meta property="og:locale" content="en_GB" />
     
     <!-- Twitter -->
@@ -78,75 +79,68 @@ const defaultAreaServed = [
     
     <!-- Business Information -->
     <meta name="geo.region" content="GB-SCT" />
-    <meta name="geo.placename" content="Glasgow" />
-    <meta name="geo.position" content="55.8642;-4.2518" />
-    <meta name="ICBM" content="55.8642, -4.2518" />
+    <meta name="geo.placename" content="Ayrshire, Scotland" />
+    <meta name="geo.position" content="55.4620;-4.6299" />
+    <meta name="ICBM" content="55.4620, -4.6299" />
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bungee&family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Luckiest+Guy&family=Manrope:wght@200..800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Bungee&family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Luckiest+Guy&family=Manrope:wght@200..800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZVTPX27J1H"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YMJS781CJF"></script>
     <script is:inline>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'G-ZVTPX27J1H');
+      gtag('config', 'G-YMJS781CJF');
     </script>
     
     <!-- JSON-LD Schema -->
     <script type="application/ld+json" set:html={JSON.stringify({
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
-      "@id": "https://doubleodetailing.co.uk/#localbusiness",
-      "name": "Double O Detailing",
-      "alternateName": "Double-O Detailing",
-      "description": "Professional mobile car detailing and valeting service in North Glasgow. We bring premium car care directly to your doorstep.",
-      "url": "https://doubleodetailing.co.uk",
-      "logo": "https://doubleodetailing.co.uk/double-o-logo.png",
-      "image": "https://doubleodetailing.co.uk/double-o-logo.png",
-      "telephone": "+447768243728",
-      "email": "doubleodetailing@icloud.com",
+      "@id": "https://jimboscleaning.com/#localbusiness",
+      "name": "Jimbos Cleaning",
+      "alternateName": "Jimbo's Exterior Cleaning",
+      "description": "Expert roof cleaning and exterior cleaning services in Ayrshire and Glasgow. Roof steam cleaning, render softwashing, driveway, gutter, PVC and window cleaning.",
+      "url": "https://jimboscleaning.com",
+      "logo": "https://jimboscleaning.com/logo.png",
+      "image": "https://jimboscleaning.com/logo.png",
+      "telephone": "+447919270128",
       "address": {
         "@type": "PostalAddress",
-        "addressLocality": "Glasgow",
-        "addressRegion": "Scotland",
+        "streetAddress": "2 West Bowhouse Way",
+        "addressLocality": "Irvine",
+        "addressRegion": "Ayrshire",
         "addressCountry": "GB"
       },
       "geo": {
         "@type": "GeoCoordinates",
-        "latitude": "55.8642",
-        "longitude": "-4.2518"
+        "latitude": "55.4620",
+        "longitude": "-4.6299"
       },
       "areaServed": defaultAreaServed,
       "serviceType": [
-        "Car Detailing",
-        "Mobile Car Detailing",
-        "Vehicle Valeting",
-        "Ceramic Coating",
-        "Machine Polishing",
-        "Deep Cleaning",
-        "Car Maintenance"
+        "Roof Cleaning",
+        "Roof Steam Cleaning",
+        "Render Softwashing",
+        "Driveway Cleaning",
+        "Gutter Cleaning",
+        "PVC Cleaning",
+        "Window Cleaning",
+        "Exterior Cleaning"
       ],
       "priceRange": "$$",
       "openingHoursSpecification": {
         "@type": "OpeningHoursSpecification",
-        "dayOfWeek": [
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday",
-          "Saturday"
-        ],
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
         "opens": "08:00",
         "closes": "18:00"
       },
       "sameAs": [
-        "https://www.facebook.com/p/Double-O-Detailing-61562055449917/",
-        "https://www.instagram.com/doubleo.detailing/"
+        "https://www.facebook.com/profile.php?id=100076596473868"
       ],
       "aggregateRating": {
         "@type": "AggregateRating",
@@ -159,17 +153,17 @@ const defaultAreaServed = [
     <script type="application/ld+json" set:html={JSON.stringify({
       "@context": "https://schema.org",
       "@type": "WebSite",
-      "@id": "https://doubleodetailing.co.uk/#website",
-      "name": "Double O Detailing",
-      "url": "https://doubleodetailing.co.uk",
-      "description": "Professional mobile car detailing and valeting in Glasgow and Central Scotland. Ceramic coatings, machine polishing, deep cleans, and maintenance.",
-      "publisher": { "@id": "https://doubleodetailing.co.uk/#organization" },
+      "@id": "https://jimboscleaning.com/#website",
+      "name": "Jimbos Cleaning",
+      "url": "https://jimboscleaning.com",
+      "description": "Professional exterior cleaning in Ayrshire and Glasgow. Roof steam cleaning, render softwashing, driveway, gutter, PVC and window cleaning.",
+      "publisher": { "@id": "https://jimboscleaning.com/#organization" },
       "inLanguage": "en-GB",
       "potentialAction": {
         "@type": "SearchAction",
         "target": {
           "@type": "EntryPoint",
-          "urlTemplate": "https://doubleodetailing.co.uk/contact?q={search_term_string}"
+          "urlTemplate": "https://jimboscleaning.com/contact?q={search_term_string}"
         },
         "query-input": "required name=search_term_string"
       }
@@ -179,15 +173,14 @@ const defaultAreaServed = [
       <script type="application/ld+json" set:html={JSON.stringify({
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
-        "name": `Double O Detailing – ${locationSchema.name}`,
-        "description": "Professional mobile car detailing and valeting service. We bring premium car care directly to your doorstep.",
+        "name": `Jimbos Cleaning – ${locationSchema.name}`,
+        "description": "Professional exterior cleaning: roof steam cleaning, render softwashing, driveway, gutter, PVC and window cleaning.",
         "url": `${siteUrl}/${locationSchema.slug}`,
-        "telephone": "+447768243728",
-        "email": "doubleodetailing@icloud.com",
+        "telephone": "+447919270128",
         "address": {
           "@type": "PostalAddress",
           "addressLocality": locationSchema.addressLocality,
-          "addressRegion": "Scotland",
+          "addressRegion": "Ayrshire",
           "addressCountry": "GB"
         },
         "geo": {
@@ -196,7 +189,7 @@ const defaultAreaServed = [
           "longitude": locationSchema.longitude
         },
         "areaServed": { "@type": "City", "name": locationSchema.addressLocality },
-        "serviceType": ["Car Detailing", "Mobile Car Detailing", "Vehicle Valeting", "Ceramic Coating", "Machine Polishing", "Deep Cleaning", "Car Maintenance"],
+        "serviceType": ["Roof Cleaning", "Render Softwashing", "Driveway Cleaning", "Gutter Cleaning", "PVC Cleaning", "Window Cleaning", "Exterior Cleaning"],
         "priceRange": "$$",
         "aggregateRating": {
           "@type": "AggregateRating",
@@ -211,20 +204,19 @@ const defaultAreaServed = [
     <script type="application/ld+json" set:html={JSON.stringify({
       "@context": "https://schema.org",
       "@type": "Organization",
-      "@id": "https://doubleodetailing.co.uk/#organization",
-      "name": "Double O Detailing",
-      "url": "https://doubleodetailing.co.uk",
-      "logo": "https://doubleodetailing.co.uk/double-o-logo.png",
+      "@id": "https://jimboscleaning.com/#organization",
+      "name": "Jimbos Cleaning",
+      "url": "https://jimboscleaning.com",
+      "logo": "https://jimboscleaning.com/logo.png",
       "contactPoint": {
         "@type": "ContactPoint",
-        "telephone": "+447768243728",
+        "telephone": "+447919270128",
         "contactType": "Customer Service",
         "areaServed": "GB",
         "availableLanguage": "English"
       },
       "sameAs": [
-        "https://www.facebook.com/p/Double-O-Detailing-61562055449917/",
-        "https://www.instagram.com/doubleo.detailing/"
+        "https://www.facebook.com/profile.php?id=100076596473868"
       ]
     })} />
   </head>

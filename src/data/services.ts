@@ -11,60 +11,46 @@ export type Service = {
 
 export const services: Service[] = [
   {
-    slug: "machine-polishing",
-    title: "Machine Polishing",
+    slug: "roof-steam-cleaning",
+    title: "Roof Steam Cleaning",
     shortDescription:
-      "Professional machine polishing to restore your vehicle's paintwork to showroom condition. We use premium products and proven techniques.",
-    imageUrl: "/Machine polishing.png",
+      "Safe roof steam cleaning and Ayrshire roof cleaning services. Professional moss removal from roof and algae removal from roof tiles. Roof cleaning and moss treatment for lasting results.",
+    imageUrl: "/jimbos/roofclean1.jpg",
   },
   {
-    slug: "ceramic-coatings",
-    title: "Ceramic Coatings",
+    slug: "render-softwashing",
+    title: "Render Softwashing",
     shortDescription:
-      "Long-lasting ceramic coating protection for your vehicle. Provides superior protection against UV rays, chemicals, and environmental damage.",
-    imageUrl: "/Ceramic coating.png",
+      "Render softwashing specialists providing render cleaning Ayrshire and softwash render cleaning. Expert stain removal from render surfaces without damage.",
+    imageUrl: "/jimbos/rendersoftwashjimbo.jpg",
   },
   {
-    slug: "deep-cleans",
-    title: "Deep Cleans and Valets",
+    slug: "driveway-cleaning",
+    title: "Driveway Cleaning",
     shortDescription:
-      "Comprehensive deep cleaning and valeting services to keep your vehicle looking immaculate inside and out. Attention to every detail.",
-    imageUrl: "/Deep clean detailing.png",
+      "Driveway cleaning, pressure washing and driveway restoration. Professional patio and driveway cleaning with pressure washing services.",
+    imageUrl: "/jimbos/drivewaycleaningjimbo.jpg",
   },
   {
-    slug: "maintenance",
-    title: "Maintenance",
+    slug: "gutter-cleaning",
+    title: "Gutter Cleaning",
     shortDescription:
-      "Regular maintenance packages to keep your vehicle in pristine condition. Protect your investment with our ongoing care programs.",
-    imageUrl: "/Maintenance.png",
+      "Gutter cleaning Ayrshire and gutter maintenance. Expert gutter clearing service and gutter inspection and cleaning.",
+    imageUrl: "/jimbos/gutter%20cleaning.webp",
   },
   {
-    slug: "headlight-restoration",
-    title: "Headlight Restoration",
+    slug: "pvc-white-cleaning",
+    title: "PVC White Cleaning",
     shortDescription:
-      "Restore cloudy or yellowed headlights for improved visibility and a like-new appearance. Professional polishing and UV protection.",
-    imageUrl: "/Headlights restoration.png",
+      "PVC white cleaning specialists: PVC fascias, soffit and gutter cleaning. Professional fascia and soffit cleaning and PVC restoration.",
+    imageUrl: "/jimbos/pvc%20clean%20jimbo.jpg",
   },
   {
-    slug: "soft-top-restoration",
-    title: "Soft Top Restoration and Coating",
+    slug: "window-cleaning",
+    title: "Window Cleaning",
     shortDescription:
-      "Revive and protect convertible and soft tops with specialist cleaning, restoration, and durable coating for lasting finish.",
-    imageUrl: "/Soft top restoration.jpg",
-  },
-  {
-    slug: "interior-fabric-coating",
-    title: "Interior Fabric Coating",
-    shortDescription:
-      "Protect upholstery, carpets, and mats with fabric coating. Repels stains and moisture while keeping interiors looking fresh.",
-    imageUrl: "/Interior fabric coating.png",
-  },
-  {
-    slug: "engine-bay-detailing",
-    title: "Engine Bay Detailing",
-    shortDescription:
-      "Thorough cleaning and dressing of the engine bay. Safe, professional treatment to showcase and protect under-bonnet areas.",
-    imageUrl: "/Engine detailing.png",
+      "Residential and commercial window cleaning. Professional window washing for sparkling results every time.",
+    imageUrl: "/jimbos/window-cleaning%20jimbo.jpg",
   },
 ];
 

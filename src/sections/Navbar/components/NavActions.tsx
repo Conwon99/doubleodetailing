@@ -28,7 +28,7 @@ export const NavActions = () => {
                   </div>
                 </div>
               </div>
-              <div className="text-white items-center bg-[#8B6B3D] box-border caret-transparent flex h-8 justify-center w-8 overflow-hidden rounded-[50%]">
+              <div className="text-white items-center bg-blue-600 box-border caret-transparent flex h-8 justify-center w-8 overflow-hidden rounded-[50%]">
                 <div className="relative box-border caret-transparent">
                   <div className="box-border caret-transparent">
                     <div className="items-center box-border caret-transparent flex h-2 justify-center w-2 before:accent-auto before:caret-transparent before:text-amber-200 before:table before:text-sm before:not-italic before:normal-nums before:font-normal before:col-end-2 before:col-start-1 before:row-end-2 before:row-start-1 before:tracking-[normal] before:leading-5 before:list-outside before:list-disc before:pointer-events-auto before:text-center before:indent-[0px] before:normal-case before:visible before:border-separate before:font-geist after:accent-auto after:caret-transparent after:clear-both after:text-white after:table after:text-sm after:not-italic after:normal-nums after:font-normal after:col-end-2 after:col-start-1 after:row-end-2 after:row-start-1 after:tracking-[normal] after:leading-5 after:list-outside after:list-disc after:pointer-events-auto after:text-center after:indent-[0px] after:normal-case after:visible after:border-separate after:font-geist">
@@ -58,10 +58,10 @@ export const NavActions = () => {
         <div className="box-border caret-transparent min-h-0 min-w-0 md:min-h-[auto] md:min-w-[auto]">
           <div className="box-border caret-transparent flex items-center gap-x-3">
             <a
-              href="https://www.facebook.com/p/Double-O-Detailing-61562055449917/"
+              href="https://www.facebook.com/profile.php?id=100076596473868"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Double O Detailing on Facebook"
+              aria-label="Jimbos Cleaning on Facebook"
               className="text-black box-border caret-transparent hover:text-cta-dark"
             >
               <svg
@@ -70,21 +70,6 @@ export const NavActions = () => {
                 className="h-5 w-5 fill-current"
               >
                 <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
-              </svg>
-            </a>
-            <a
-              href="https://www.instagram.com/doubleo.detailing/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Double O Detailing on Instagram"
-              className="text-black box-border caret-transparent hover:text-cta-dark"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                className="h-5 w-5 fill-current"
-              >
-                <path d="M7 2C4.243 2 2 4.243 2 7v10c0 2.757 2.243 5 5 5h10c2.757 0 5-2.243 5-5V7c0-2.757-2.243-5-5-5H7zm0 2h10c1.654 0 3 1.346 3 3v10c0 1.654-1.346 3-3 3H7c-1.654 0-3-1.346-3-3V7c0-1.654 1.346-3 3-3zm10.5 1.5a1.5 1.5 0 100 3 1.5 1.5 0 000-3zM12 7a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6z" />
               </svg>
             </a>
             <a

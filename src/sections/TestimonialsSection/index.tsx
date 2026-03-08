@@ -18,7 +18,7 @@ export const TestimonialsSection = () => {
               </h2>
             </div>
             <div className="box-border caret-transparent blur-0 max-w-none md:max-w-[360px]">
-              <div className="text-gray-700 box-border caret-transparent">
+              <div className="text-blue-700 box-border caret-transparent">
                 <div className="text-[15px] box-border caret-transparent leading-6 md:text-base">
                   Trusted by watch enthusiasts and collectors across the UK. Our clients appreciate our expertise, attention to detail, and commitment to preserving their watches.
                 </div>

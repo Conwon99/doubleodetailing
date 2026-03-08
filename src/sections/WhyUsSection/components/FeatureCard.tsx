@@ -28,12 +28,12 @@ export const FeatureCard = (props: FeatureCardProps) => {
         className={`box-border caret-transparent gap-x-2 flex flex-col gap-y-2 ${props.variant}`}
       >
         <div
-          className={`text-xl font-semibold box-border caret-transparent leading-6 text-gray-900 md:text-2xl md:leading-8 ${props.variant}`}
+          className={`text-xl font-semibold box-border caret-transparent leading-6 text-blue-900 md:text-2xl md:leading-8 ${props.variant}`}
         >
           {props.title}
         </div>
         <div
-          className={`text-gray-600 box-border caret-transparent ${props.variant}`}
+          className={`text-blue-600 box-border caret-transparent ${props.variant}`}
         >
           <div className="text-[15px] box-border caret-transparent leading-6 md:text-base">
             {props.description}

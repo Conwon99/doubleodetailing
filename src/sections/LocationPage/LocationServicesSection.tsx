@@ -17,7 +17,7 @@ export const LocationServicesSection = ({
         <div>
           <div className="items-start box-border gap-x-7 flex flex-col justify-between gap-y-7 md:items-end md:gap-x-10 md:flex-row md:gap-y-10">
             <div className="items-start box-border gap-x-4 flex flex-col max-w-[740px] gap-y-4">
-              <h2 className="text-3xl font-bold tracking-[-0.52px] leading-[35px] md:text-[52px] md:leading-[62px] font-refrigerator uppercase">
+              <h2 className="text-3xl font-bold tracking-[-0.52px] leading-[35px] md:text-[52px] md:leading-[62px] font-heading uppercase">
                 Our services in {location.name}
               </h2>
             </div>

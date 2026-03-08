@@ -20,11 +20,11 @@ export const WhyChooseCeramicCoatingsSection = () => {
               </div>
             </div>
             <div className="box-border caret-transparent mt-[18px] mb-4 md:mt-5">
-              <h2 className="text-3xl font-bold box-border caret-transparent tracking-[-0.52px] leading-[35px] md:text-[52px] md:leading-[62px] font-refrigerator uppercase">
-                <span className="text-3xl box-border caret-transparent leading-[35px] font-refrigerator uppercase md:text-[52px] md:leading-[62px]">Why</span> <span className="font-refrigerator uppercase">Choose Our Ceramic Coatings?</span>
+              <h2 className="text-3xl font-bold box-border caret-transparent tracking-[-0.52px] leading-[35px] md:text-[52px] md:leading-[62px] font-heading uppercase">
+                <span className="text-3xl box-border caret-transparent leading-[35px] font-heading uppercase md:text-[52px] md:leading-[62px]">Why</span> <span className="font-heading uppercase">Choose Our Ceramic Coatings?</span>
               </h2>
             </div>
-            <div className="text-gray-700 box-border caret-transparent space-y-4">
+            <div className="text-blue-700 box-border caret-transparent space-y-4">
               <div className="text-[15px] box-border caret-transparent leading-6 md:text-base">
                 Ceramic coatings create a durable, hydrophobic layer that protects your paint from UV, chemicals, and environmental damage. We offer 1-year and 2-year coating options that lock in the finish after correction and make washing and maintenance easier.
               </div>
@@ -42,7 +42,7 @@ export const WhyChooseCeramicCoatingsSection = () => {
                       </svg>
                     </div>
                   </div>
-                  <div className="text-[15px] box-border caret-transparent leading-6 text-gray-700 md:text-base">
+                  <div className="text-[15px] box-border caret-transparent leading-6 text-blue-700 md:text-base">
                     Quality Products - We use proven ceramic coatings for lasting protection and gloss
                   </div>
                 </div>
@@ -54,7 +54,7 @@ export const WhyChooseCeramicCoatingsSection = () => {
                       </svg>
                     </div>
                   </div>
-                  <div className="text-[15px] box-border caret-transparent leading-6 text-gray-700 md:text-base">
+                  <div className="text-[15px] box-border caret-transparent leading-6 text-blue-700 md:text-base">
                     Mobile Service - We come to you with everything needed to apply your coating
                   </div>
                 </div>
@@ -66,7 +66,7 @@ export const WhyChooseCeramicCoatingsSection = () => {
                       </svg>
                     </div>
                   </div>
-                  <div className="text-[15px] box-border caret-transparent leading-6 text-gray-700 md:text-base">
+                  <div className="text-[15px] box-border caret-transparent leading-6 text-blue-700 md:text-base">
                     Insured - We are fully insured to work on your vehicle and at any property
                   </div>
                 </div>

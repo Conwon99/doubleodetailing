@@ -1,10 +1,11 @@
 export const GalleryGrid = () => {
   const images = [
-    { src: "/gallery/WhatsApp Image 2026-02-02 at 11.18.23 PM.jpeg", alt: "Double O Detailing Gallery 1" },
-    { src: "/gallery/WhatsApp Image 2026-02-02 at 11.18.23 PM (1).jpeg", alt: "Double O Detailing Gallery 2" },
-    { src: "/gallery/WhatsApp Image 2026-02-02 at 11.18.23 PM (2).jpeg", alt: "Double O Detailing Gallery 3" },
-    { src: "/gallery/WhatsApp Image 2026-02-02 at 11.18.23 PM (3).jpeg", alt: "Double O Detailing Gallery 4" },
-    { src: "/gallery/WhatsApp Image 2026-02-02 at 11.18.23 PM (4).jpeg", alt: "Double O Detailing Gallery 5" },
+    { src: "/jimbos/gal1.jpg", alt: "Jimbos Cleaning Gallery 1" },
+    { src: "/jimbos/gal2.jpg", alt: "Jimbos Cleaning Gallery 2" },
+    { src: "/jimbos/gal3.jpg", alt: "Jimbos Cleaning Gallery 3" },
+    { src: "/jimbos/gal4.jpg", alt: "Jimbos Cleaning Gallery 4" },
+    { src: "/jimbos/gal5.jpg", alt: "Jimbos Cleaning Gallery 5" },
+    { src: "/jimbos/gal6.jpg", alt: "Jimbos Cleaning Gallery 6" },
   ];
 
   return (

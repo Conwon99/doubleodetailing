@@ -9,7 +9,7 @@ export const ProcessSectionDeepClean = () => {
             <div className="box-border caret-transparent border border-neutral-200 px-3 py-1 rounded-[1000px] border-solid">
               <div className="font-medium box-border caret-transparent leading-[22px]">Process</div>
             </div>
-            <h2 className="text-3xl font-bold box-border caret-transparent tracking-[-0.52px] leading-[35px] md:text-[52px] md:leading-[62px] font-refrigerator uppercase">
+            <h2 className="text-3xl font-bold box-border caret-transparent tracking-[-0.52px] leading-[35px] md:text-[52px] md:leading-[62px] font-heading uppercase">
               How Our Deep Clean Works
             </h2>
           </div>

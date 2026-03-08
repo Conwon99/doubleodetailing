@@ -9,9 +9,9 @@ export const ServicePageHero = () => {
                 [Services & Pricing]
               </div>
               <h2 className="text-[44px] font-bold box-border caret-transparent tracking-[-1.44px] leading-[52px] md:text-7xl md:leading-[80px] font-cabinet">
-                Expert Watch{" "}
+                Expert Exterior{" "}
                 <span className="text-[44px] box-border caret-transparent leading-[52px] font-cabinet md:text-7xl md:leading-[80px]">
-                  Repair Services
+                  Cleaning Services
                 </span>
               </h2>
             </div>
@@ -27,7 +27,7 @@ export const ServicePageHero = () => {
                     </div>
                   </div>
                 </div>
-                <div className="text-white items-center bg-[#8B6B3D] box-border caret-transparent flex h-12 justify-center w-12 overflow-hidden rounded-[50%]">
+                <div className="text-white items-center bg-blue-600 box-border caret-transparent flex h-12 justify-center w-12 overflow-hidden rounded-[50%]">
                   <div className="box-border caret-transparent h-3.5 w-3.5">
                     <img
                       src="https://c.animaapp.com/mhnzg6knJo6lE7/assets/icon-4.svg"
@@ -42,9 +42,9 @@ export const ServicePageHero = () => {
           </div>
           <div className="box-border caret-transparent blur-0 h-[220px] overflow-hidden mt-7 rounded-2xl md:h-[642px] md:mt-10">
             <img
-              src="/hero-background.jpeg"
+              src="/hero/jimhero.jpg"
               sizes="100vw"
-              alt="Watch Repair Services"
+              alt="Exterior cleaning services - roof, render, driveway, gutters, PVC and windows"
               className="box-border caret-transparent inline-block h-full max-w-full object-cover w-full"
             />
           </div>

@@ -14,8 +14,8 @@ export const GallerySection = () => {
               </div>
             </div>
             <div className="box-border caret-transparent blur-0 max-w-[680px] text-center mx-auto">
-              <h2 className="text-3xl font-bold box-border caret-transparent tracking-[-0.52px] leading-[35px] md:text-[52px] md:leading-[62px] font-refrigerator uppercase">
-                See Our Work - Premium Car Detailing Results
+              <h2 className="text-3xl font-bold box-border caret-transparent tracking-[-0.52px] leading-[35px] md:text-[52px] md:leading-[62px] font-heading uppercase">
+                See Our Work - Exterior Cleaning Results
               </h2>
             </div>
           </div>
@@ -38,7 +38,7 @@ export const GallerySection = () => {
                     </div>
                   </div>
                 </div>
-                <div className="text-white items-center bg-[#8B6B3D] box-border caret-transparent flex h-12 justify-center w-12 overflow-hidden rounded-[50%]">
+                <div className="text-white items-center bg-blue-600 box-border caret-transparent flex h-12 justify-center w-12 overflow-hidden rounded-[50%]">
                   <div className="relative box-border caret-transparent">
                     <div className="box-border caret-transparent">
                       <div className="box-border caret-transparent h-3.5 w-3.5 before:accent-auto before:caret-transparent before:text-white before:table before:text-sm before:not-italic before:normal-nums before:font-normal before:col-end-2 before:col-start-1 before:row-end-2 before:row-start-1 before:tracking-[normal] before:leading-5 before:list-outside before:list-disc before:pointer-events-auto before:text-center before:indent-[0px] before:normal-case before:visible before:border-separate before:font-geist after:accent-auto after:caret-transparent after:clear-both after:text-white after:table after:text-sm after:not-italic after:normal-nums after:font-normal after:col-end-2 after:col-start-1 after:row-end-2 after:row-start-1 after:tracking-[normal] after:leading-5 after:list-outside after:list-disc after:pointer-events-auto after:text-center after:indent-[0px] after:normal-case after:visible after:border-separate after:font-geist">

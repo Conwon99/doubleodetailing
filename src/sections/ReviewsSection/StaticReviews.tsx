@@ -9,7 +9,7 @@ const REVIEWS = [
     time: "4 months ago",
     initial: "E",
     initialBg: "bg-violet-400",
-    text: "The Standard of service was 1st class. From early contact and detailed estimate to the finished product. I am absolutely delighted with the care and attention given to my car. My Car looks as if it just came out the Showroom and immaculate standard of cleaning. I would certainly recommend and personally will use the company again in future. Mrs E. L",
+    text: "The standard of service was 1st class. From early contact and detailed estimate to the finished product. I am absolutely delighted with the care and attention given to my property. The roof and gutters look immaculate. I would certainly recommend and personally will use the company again in future. Mrs E. L",
   },
   {
     name: "Baxter",
@@ -17,7 +17,7 @@ const REVIEWS = [
     time: "a month ago",
     initial: "B",
     initialBg: "bg-amber-500",
-    text: "Amazing and brilliant car detailing service from Gordy at Double O Detailing. He arrived on time, was polite and professional, and the full interior and exterior detail has made the car look brand new. If you're looking for mobile car detailing in the local area, I honestly couldn't recommend him enough. One of the best professional car detailers I've used.",
+    text: "Professional exterior cleaning from Jimbos Cleaning. Arrived on time, polite and thorough. The roof and gutters look great and the whole property is much tidier. Would recommend for anyone in Ayrshire looking for roof or gutter cleaning.",
   },
   {
     name: "Katie Lindsay",
@@ -25,7 +25,7 @@ const REVIEWS = [
     time: "a year ago",
     initial: "K",
     initialBg: "bg-emerald-500",
-    text: "5 Star rating. Gordie's attention to detail is second to none. I know my car is in good hands when he's about. I wouldn't use anyone else to detail my car. My car always feels like a new car when Gordie is finished. 10/10",
+    text: "5 Star rating. Gordie's attention to detail is second to none. I wouldn't use anyone else for exterior cleaning. The driveway and windows always look brilliant when he's finished. 10/10",
   },
 ];
 
@@ -69,7 +69,7 @@ export function StaticReviews() {
             href={GOOGLE_PROFILE_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-3xl font-bold tracking-[-0.52px] leading-[35px] md:text-[52px] md:leading-[62px] font-refrigerator uppercase text-white hover:text-white/90 transition-colors"
+            className="text-3xl font-bold tracking-[-0.52px] leading-[35px] md:text-[52px] md:leading-[62px] font-heading uppercase text-white hover:text-white/90 transition-colors"
           >
             What our customers say
           </a>
@@ -101,7 +101,7 @@ export function StaticReviews() {
                     {review.initial}
                   </div>
                   <div className="min-w-0">
-                    <p className="font-refrigerator font-bold text-white uppercase text-base">{review.name}</p>
+                    <p className="font-heading font-bold text-white uppercase text-base">{review.name}</p>
                     <p className="text-neutral-400 text-sm">{review.meta}</p>
                     <p className="text-neutral-500 text-sm">{review.time}</p>
                   </div>

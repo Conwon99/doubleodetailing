@@ -70,9 +70,9 @@ export const DesktopGrid = () => {
             />
             <div className="box-border caret-transparent basis-auto grow-0 shrink-0 h-[250px] min-h-0 min-w-0 overflow-hidden rounded-lg md:basis-[0%] md:grow md:shrink md:h-[348px] md:min-h-[auto] md:min-w-[auto]">
               <img
-                src="https://c.animaapp.com/mhnzg6knJo6lE7/assets/689be7db8c35ee39a62e391c_Frame_1707483177-1.webp"
+                src="/jimbos/gal1.jpg"
                 sizes="100vw"
-                alt="Why Choose 03"
+                alt="Jimbos Cleaning - Our work"
                 className="box-border caret-transparent inline-block h-full max-w-full object-cover w-full"
               />
             </div>
@@ -93,9 +93,9 @@ export const DesktopGrid = () => {
             />
             <div className="box-border caret-transparent basis-auto grow-0 shrink-0 h-[250px] min-h-0 min-w-0 overflow-hidden rounded-lg md:basis-[0%] md:grow md:shrink md:h-[348px] md:min-h-[auto] md:min-w-[auto]">
               <img
-                src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800&q=80"
+                src="/jimbos/gal2.jpg"
                 sizes="100vw"
-                alt="Expert Watchmaker Service"
+                alt="Jimbos Cleaning - Our work"
                 className="box-border caret-transparent inline-block h-full max-w-full object-cover w-full"
               />
             </div>
@@ -116,9 +116,9 @@ export const DesktopGrid = () => {
             />
             <div className="box-border caret-transparent basis-auto grow-0 shrink-0 h-[250px] min-h-0 min-w-0 overflow-hidden rounded-lg md:basis-[0%] md:grow md:shrink md:h-[348px] md:min-h-[auto] md:min-w-[auto]">
               <img
-                src="https://c.animaapp.com/mhnzg6knJo6lE7/assets/689be7db508671ff14a55e63_Frame_1707483177.webp"
+                src="/jimbos/gal3.jpg"
                 sizes="100vw"
-                alt="Why Choose 02"
+                alt="Jimbos Cleaning - Our work"
                 className="box-border caret-transparent inline-block h-full max-w-full object-cover w-full"
               />
             </div>
@@ -139,8 +139,8 @@ export const DesktopGrid = () => {
             />
             <div className="box-border caret-transparent basis-auto grow-0 shrink-0 h-[250px] min-h-0 min-w-0 overflow-hidden rounded-lg md:basis-[0%] md:grow md:shrink md:h-[348px] md:min-h-[auto] md:min-w-[auto]">
               <img
-                src="https://images.unsplash.com/photo-1594534475808-18d6d2c09e0d?w=800&q=80"
-                alt="Master Watchmakers"
+                src="/jimbos/gal4.jpg"
+                alt="Jimbos Cleaning - Our work"
                 className="box-border caret-transparent inline-block h-full max-w-full object-cover w-full"
               />
             </div>

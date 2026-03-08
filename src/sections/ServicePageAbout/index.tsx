@@ -23,13 +23,13 @@ export const ServicePageAbout = () => {
                 <div className="text-4xl font-semibold box-border caret-transparent leading-[48px] md:text-5xl md:leading-[60px]">
                   100+
                 </div>
-                <div className="text-gray-700 box-border caret-transparent ml-2">
+                <div className="text-blue-700 box-border caret-transparent ml-2">
                   <div className="text-[15px] box-border caret-transparent leading-6 md:text-base">
                     Watches Serviced
                   </div>
                 </div>
               </div>
-              <div className="text-gray-700 box-border caret-transparent">
+              <div className="text-blue-700 box-border caret-transparent">
                 <div className="text-[15px] box-border caret-transparent leading-6 md:text-base">
                   We've been restoring and repairing watches with masterful craftsmanship since 2015. Whether it's regular servicing, vintage restoration, or complete watch overhauls — we're here to help preserve and enhance your watches.
                 </div>

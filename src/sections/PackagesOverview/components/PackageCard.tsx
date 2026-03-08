@@ -17,11 +17,11 @@ export const PackageCard = ({ package: pkg }: PackageCardProps) => {
       <div className="relative p-6 md:p-8">
         {/* Title & tagline */}
         <div>
-          <h3 className="font-refrigerator uppercase text-xl md:text-2xl font-bold leading-tight">
+          <h3 className="font-heading uppercase text-xl md:text-2xl font-bold leading-tight">
             {pkg.title}
           </h3>
           {pkg.tagline && (
-            <p className="font-refrigerator uppercase text-base md:text-lg text-neutral-300 mt-1">
+            <p className="font-heading uppercase text-base md:text-lg text-neutral-300 mt-1">
               &ldquo;{pkg.tagline}&rdquo;
             </p>
           )}
@@ -76,7 +76,7 @@ export const PackageCard = ({ package: pkg }: PackageCardProps) => {
 
         {/* Price & disclaimer */}
         <div className="mt-6 pt-5 border-t border-neutral-700 flex flex-wrap items-baseline justify-between gap-3">
-          <span className="font-refrigerator uppercase text-lg md:text-xl font-bold">
+          <span className="font-heading uppercase text-lg md:text-xl font-bold">
             {pkg.priceDisplay}
           </span>
           <p className="font-figtree text-xs text-neutral-500 italic">

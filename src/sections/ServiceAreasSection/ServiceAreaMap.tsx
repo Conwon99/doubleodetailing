@@ -1,17 +1,17 @@
 import { useEffect, useRef } from "react";
 import "leaflet/dist/leaflet.css";
 
-/** Rough polygon [lat, lng] covering Glasgow, West Dunbartonshire, Stirlingshire and surrounding areas we serve. */
+/** Rough polygon [lat, lng] covering Ayrshire and southwest Glasgow (Renfrewshire, East Renfrewshire) we serve. */
 const SERVICE_AREA_POLYGON: [number, number][] = [
-  [55.82, -4.78],   // SW – south of Dumbarton / Clyde
-  [55.82, -3.92],   // SE – east of Stirling
-  [56.15, -3.92],   // NE – north of Stirling
-  [56.15, -4.52],   // N – above Killearn / Drymen
-  [56.02, -4.78],   // NW – Helensburgh / Gare Loch
-  [55.82, -4.78],   // close polygon
+  [55.35, -4.95],   // SW – south of Girvan / Maybole
+  [55.35, -4.25],   // SE – east of Cumnock
+  [55.92, -4.25],   // NE – east of Barrhead / Newton Mearns
+  [55.92, -4.40],   // N – Renfrew / Paisley
+  [55.82, -4.90],   // NW – Largs / North Ayrshire
+  [55.35, -4.95],   // close polygon
 ];
 
-const MAP_CENTER: [number, number] = [55.98, -4.35];
+const MAP_CENTER: [number, number] = [55.65, -4.55];
 const MAP_ZOOM = 9;
 
 export function ServiceAreaMap() {
@@ -61,7 +61,7 @@ export function ServiceAreaMap() {
       <div
         ref={containerRef}
         className="w-full h-full min-h-[280px] lg:min-h-[320px] rounded-xl overflow-hidden border border-neutral-200 shadow-sm bg-neutral-100 [&_.leaflet-control]:!z-[100] [&_.leaflet-pane]:!z-[1]"
-        aria-label="Map showing Double O Detailing service area (Glasgow and Central Scotland)"
+        aria-label="Map showing Jimbos Cleaning service area (Ayrshire and Glasgow)"
       />
     </div>
   );

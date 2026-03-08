@@ -20,7 +20,7 @@ export const LocationHero = ({ location }: LocationHeroProps) => {
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: `url('/hero/hero-background.png')`,
+            backgroundImage: `url('/hero/jimhero.jpg')`,
             backgroundPosition: "40% center",
           }}
         />
@@ -30,15 +30,15 @@ export const LocationHero = ({ location }: LocationHeroProps) => {
         <div className="items-start box-border gap-x-10 flex flex-col justify-between gap-y-10 md:items-end md:gap-x-[60px] md:flex-row md:gap-y-[60px] w-full">
           <div className="box-border basis-[0%] grow max-w-[650px]">
             <div className="box-border gap-x-4 flex flex-col gap-y-4">
-              <h1 className="text-[44px] font-bold box-border tracking-[-1.44px] leading-[52px] md:text-7xl md:leading-[80px] font-refrigerator uppercase">
-                <div>Premium Vehicle</div>
-                <div>Detailing</div>
+              <h1 className="text-[44px] font-bold box-border tracking-[-1.44px] leading-[52px] md:text-7xl md:leading-[80px] font-heading uppercase">
+                <div>Exterior</div>
+                <div>Cleaning</div>
                 <div>
-                  <span className="text-gray-400">in {name}</span>
+                  <span className="text-blue-300">in {name}</span>
                 </div>
               </h1>
               <p className="text-base leading-[26px] md:text-lg font-figtree">
-                Professional mobile car detailing and valeting{areas}. Scottish weather and road salt can take a toll—we bring premium car care to your doorstep so your vehicle stays protected and looking its best.
+                Professional exterior cleaning{areas}. Roof steam cleaning, render softwashing, driveway, gutter, PVC and window cleaning. We bring the service to your property—get a free quote.
               </p>
             </div>
             <div className="items-center box-border gap-x-5 flex flex-wrap gap-y-5 mt-6 md:gap-x-6 md:gap-y-6 md:mt-7">
@@ -49,7 +49,7 @@ export const LocationHero = ({ location }: LocationHeroProps) => {
                 <span className="relative text-sm font-medium z-[2] md:text-base md:leading-6">
                   BOOK NOW
                 </span>
-                <span className="text-white items-center bg-[#8B6B3D] box-border flex h-12 justify-center w-12 overflow-hidden rounded-[50%]">
+                <span className="text-white items-center bg-blue-600 box-border flex h-12 justify-center w-12 overflow-hidden rounded-[50%]">
                   <img
                     src={ICON_ARROW}
                     alt=""

@@ -18,12 +18,12 @@ export const WhyChooseMaintenanceSection = () => {
               <div className="font-medium box-border caret-transparent leading-[22px]">About Us</div>
             </div>
             <div className="box-border caret-transparent mt-[18px] mb-4 md:mt-5">
-              <h2 className="text-3xl font-bold box-border caret-transparent tracking-[-0.52px] leading-[35px] md:text-[52px] md:leading-[62px] font-refrigerator uppercase">
-                <span className="text-3xl box-border caret-transparent leading-[35px] font-refrigerator uppercase md:text-[52px] md:leading-[62px]">Why</span>{" "}
-                <span className="font-refrigerator uppercase">Choose Our Maintenance?</span>
+              <h2 className="text-3xl font-bold box-border caret-transparent tracking-[-0.52px] leading-[35px] md:text-[52px] md:leading-[62px] font-heading uppercase">
+                <span className="text-3xl box-border caret-transparent leading-[35px] font-heading uppercase md:text-[52px] md:leading-[62px]">Why</span>{" "}
+                <span className="font-heading uppercase">Choose Our Maintenance?</span>
               </h2>
             </div>
-            <div className="text-gray-700 box-border caret-transparent space-y-4">
+            <div className="text-blue-700 box-border caret-transparent space-y-4">
               <div className="text-[15px] box-border caret-transparent leading-6 md:text-base">
                 Regular maintenance keeps your vehicle looking its best and protects your investment. Our maintenance packages combine washes, light decontamination, and protection top-ups so your paint and interior stay in great condition between deeper details.
               </div>
@@ -41,7 +41,7 @@ export const WhyChooseMaintenanceSection = () => {
                       </svg>
                     </div>
                   </div>
-                  <div className="text-[15px] box-border caret-transparent leading-6 text-gray-700 md:text-base">
+                  <div className="text-[15px] box-border caret-transparent leading-6 text-blue-700 md:text-base">
                     Quality Products - Professional-grade washes and sealants to maintain your finish
                   </div>
                 </div>
@@ -53,7 +53,7 @@ export const WhyChooseMaintenanceSection = () => {
                       </svg>
                     </div>
                   </div>
-                  <div className="text-[15px] box-border caret-transparent leading-6 text-gray-700 md:text-base">
+                  <div className="text-[15px] box-border caret-transparent leading-6 text-blue-700 md:text-base">
                     Mobile Service - We come to you so maintenance fits your schedule
                   </div>
                 </div>
@@ -65,7 +65,7 @@ export const WhyChooseMaintenanceSection = () => {
                       </svg>
                     </div>
                   </div>
-                  <div className="text-[15px] box-border caret-transparent leading-6 text-gray-700 md:text-base">
+                  <div className="text-[15px] box-border caret-transparent leading-6 text-blue-700 md:text-base">
                     Insured - We are fully insured to work on your vehicle and at any property
                   </div>
                 </div>

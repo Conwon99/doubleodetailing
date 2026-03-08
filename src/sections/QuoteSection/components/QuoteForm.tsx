@@ -1,31 +1,24 @@
 import { useState, useEffect } from "react";
-import { packagesData, categoryLabels } from "../../../data/packages";
-import type { PackageData } from "../../../data/packages";
+import { services } from "../../../data/services";
 
-const categoryOrder: PackageData["category"][] = [
-  "machine-polishing",
-  "deep-clean",
-  "maintenance",
-];
-
-const validPackageValues = new Set(packagesData.map((p) => `${p.category}/${p.id}`));
+const validServiceValues = new Set(services.map((s) => s.slug));
 
 export const QuoteForm = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     phone: "",
-    package: "",
+    service: "",
     description: "",
   });
 
-  // Prefill package from ?package=category/id when coming from a package "Book Now" link
+  // Prefill service from ?service=slug when coming from a service page
   useEffect(() => {
     if (typeof window === "undefined") return;
     const params = new URLSearchParams(window.location.search);
-    const packageParam = params.get("package");
-    if (packageParam && validPackageValues.has(packageParam)) {
-      setFormData((prev) => ({ ...prev, package: packageParam }));
+    const serviceParam = params.get("service");
+    if (serviceParam && validServiceValues.has(serviceParam)) {
+      setFormData((prev) => ({ ...prev, service: serviceParam }));
     }
   }, []);
 
@@ -101,11 +94,11 @@ export const QuoteForm = () => {
       formDataToSend.append("name", formData.name);
       formDataToSend.append("email", formData.email);
       formDataToSend.append("phone", formData.phone);
-      if (formData.package) {
-        formDataToSend.append("package", formData.package);
+      if (formData.service) {
+        formDataToSend.append("service", formData.service);
       }
       formDataToSend.append("description", formData.description);
-      formDataToSend.append("website", "https://doubleodetailing.co.uk/");
+      formDataToSend.append("website", "https://jimboscleaning.com/");
       
       if (imageFile) {
         formDataToSend.append("image", imageFile);
@@ -142,10 +135,10 @@ export const QuoteForm = () => {
 
   return (
     <div className="w-full max-w-[700px]">
-      <form onSubmit={handleSubmit} action="https://formspree.io/f/xnjbaogz" method="POST" encType="multipart/form-data" className="bg-white rounded-xl p-6 md:p-8 shadow-xl border border-neutral-200">
+      <form onSubmit={handleSubmit} action="https://formspree.io/f/xnjbaogz" method="POST" encType="multipart/form-data" className="bg-white rounded-xl p-6 md:p-8 shadow-xl border border-blue-200">
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-6">
           <div className="md:col-span-2">
-            <label htmlFor="name" className="block text-sm font-medium text-gray-900 mb-2">
+            <label htmlFor="name" className="block text-sm font-medium text-blue-900 mb-2">
               Full Name *
             </label>
             <input
@@ -156,13 +149,13 @@ export const QuoteForm = () => {
               value={formData.name}
               onChange={handleChange}
               onFocus={trackFormStart}
-              className="w-full px-4 py-3 bg-white border border-neutral-300 text-gray-900 rounded-lg focus:ring-2 focus:ring-cta focus:border-cta outline-none transition placeholder:text-gray-400"
+              className="w-full px-4 py-3 bg-white border border-blue-200 text-blue-900 rounded-lg focus:ring-2 focus:ring-cta focus:border-cta outline-none transition placeholder:text-blue-400"
               placeholder="John Doe"
             />
           </div>
 
           <div>
-            <label htmlFor="email" className="block text-sm font-medium text-gray-900 mb-2">
+            <label htmlFor="email" className="block text-sm font-medium text-blue-900 mb-2">
               Email Address *
             </label>
             <input
@@ -173,13 +166,13 @@ export const QuoteForm = () => {
               value={formData.email}
               onChange={handleChange}
               onFocus={trackFormStart}
-              className="w-full px-4 py-3 bg-white border border-neutral-300 text-gray-900 rounded-lg focus:ring-2 focus:ring-cta focus:border-cta outline-none transition placeholder:text-gray-400"
+              className="w-full px-4 py-3 bg-white border border-blue-200 text-blue-900 rounded-lg focus:ring-2 focus:ring-cta focus:border-cta outline-none transition placeholder:text-blue-400"
               placeholder="john@example.com"
             />
           </div>
 
           <div>
-            <label htmlFor="phone" className="block text-sm font-medium text-gray-900 mb-2">
+            <label htmlFor="phone" className="block text-sm font-medium text-blue-900 mb-2">
               Phone Number *
             </label>
             <input
@@ -189,40 +182,33 @@ export const QuoteForm = () => {
               required
               value={formData.phone}
               onChange={handleChange}
-              className="w-full px-4 py-3 bg-white border border-neutral-300 text-gray-900 rounded-lg focus:ring-2 focus:ring-cta focus:border-cta outline-none transition placeholder:text-gray-400"
+              className="w-full px-4 py-3 bg-white border border-blue-200 text-blue-900 rounded-lg focus:ring-2 focus:ring-cta focus:border-cta outline-none transition placeholder:text-blue-400"
               placeholder="+44 123 456 7890"
             />
           </div>
 
           <div className="md:col-span-2">
-            <label htmlFor="package" className="block text-sm font-medium text-gray-900 mb-2">
-              Package (Optional)
+            <label htmlFor="service" className="block text-sm font-medium text-blue-900 mb-2">
+              Service (Optional)
             </label>
             <select
-              id="package"
-              name="package"
-              value={formData.package}
+              id="service"
+              name="service"
+              value={formData.service}
               onChange={handleChange}
-              className="w-full px-4 py-3 bg-white border border-neutral-300 text-gray-900 rounded-lg focus:ring-2 focus:ring-cta focus:border-cta outline-none transition"
+              className="w-full px-4 py-3 bg-white border border-blue-200 text-blue-900 rounded-lg focus:ring-2 focus:ring-cta focus:border-cta outline-none transition"
             >
-              <option value="">Select a package...</option>
-              {categoryOrder.map((cat) => {
-                const packagesInCategory = packagesData.filter((p) => p.category === cat);
-                return (
-                  <optgroup key={cat} label={categoryLabels[cat]}>
-                    {packagesInCategory.map((pkg) => (
-                      <option key={pkg.id} value={`${pkg.category}/${pkg.id}`}>
-                        {pkg.tagline ? `${pkg.title} – "${pkg.tagline}"` : pkg.title}
-                      </option>
-                    ))}
-                  </optgroup>
-                );
-              })}
+              <option value="">Select a service...</option>
+              {services.map((svc) => (
+                <option key={svc.slug} value={svc.slug}>
+                  {svc.title}
+                </option>
+              ))}
             </select>
           </div>
 
           <div className="md:col-span-2">
-            <label htmlFor="description" className="block text-sm font-medium text-gray-900 mb-2">
+            <label htmlFor="description" className="block text-sm font-medium text-blue-900 mb-2">
               Description of Issue or Service Needed *
             </label>
             <textarea
@@ -232,13 +218,13 @@ export const QuoteForm = () => {
               rows={5}
               value={formData.description}
               onChange={handleChange}
-              className="w-full px-4 py-3 bg-white border border-neutral-300 text-gray-900 rounded-lg focus:ring-2 focus:ring-cta focus:border-cta outline-none transition resize-none placeholder:text-gray-400"
-              placeholder="Please describe the service you require for your vehicle..."
+              className="w-full px-4 py-3 bg-white border border-blue-200 text-blue-900 rounded-lg focus:ring-2 focus:ring-cta focus:border-cta outline-none transition resize-none placeholder:text-blue-400"
+              placeholder="Please describe the service you require for your property..."
             />
           </div>
 
           <div className="md:col-span-2">
-            <label htmlFor="image" className="block text-sm font-medium text-gray-900 mb-2">
+            <label htmlFor="image" className="block text-sm font-medium text-blue-900 mb-2">
               Upload Image (Optional)
             </label>
             <div className="space-y-3">
@@ -248,14 +234,14 @@ export const QuoteForm = () => {
                 name="image"
                 accept="image/*"
                 onChange={handleImageChange}
-                className="w-full px-4 py-3 bg-white border border-neutral-300 text-gray-900 rounded-lg focus:ring-2 focus:ring-cta focus:border-cta outline-none transition file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-medium file:bg-cta file:text-white hover:file:bg-cta-dark file:cursor-pointer cursor-pointer"
+                className="w-full px-4 py-3 bg-white border border-blue-200 text-blue-900 rounded-lg focus:ring-2 focus:ring-cta focus:border-cta outline-none transition file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-medium file:bg-cta file:text-white hover:file:bg-cta-dark file:cursor-pointer cursor-pointer"
               />
               {imagePreview && (
                 <div className="relative">
                   <img
                     src={imagePreview}
                     alt="Preview"
-                    className="w-full h-48 object-cover rounded-lg border border-neutral-300"
+                    className="w-full h-48 object-cover rounded-lg border border-blue-200"
                   />
                   <button
                     type="button"
@@ -267,7 +253,7 @@ export const QuoteForm = () => {
                   </button>
                 </div>
               )}
-              <p className="text-xs text-gray-600">
+              <p className="text-xs text-blue-600">
                 Accepted formats: JPG, PNG, GIF. Max size: 10MB
               </p>
             </div>

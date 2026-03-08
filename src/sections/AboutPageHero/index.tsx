@@ -5,7 +5,7 @@ export const AboutPageHero = () => {
         <div className="box-border caret-transparent pb-[60px] md:pb-[100px]">
           <div className="items-start box-border caret-transparent gap-x-7 flex flex-col justify-between gap-y-7 md:items-end md:gap-x-10 md:flex-row md:gap-y-10">
             <div className="items-start box-border caret-transparent gap-x-4 flex blur-0 flex-col max-w-[740px] gap-y-4">
-              <h2 className="text-[44px] font-bold box-border caret-transparent tracking-[-1.44px] leading-[52px] md:text-7xl md:leading-[80px] font-refrigerator uppercase">
+              <h2 className="text-[44px] font-bold box-border caret-transparent tracking-[-1.44px] leading-[52px] md:text-7xl md:leading-[80px] font-heading uppercase">
                 About Us
               </h2>
             </div>
@@ -22,7 +22,7 @@ export const AboutPageHero = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="text-white items-center bg-[#8B6B3D] box-border caret-transparent flex h-12 justify-center w-12 overflow-hidden rounded-[50%]">
+                  <div className="text-white items-center bg-blue-600 box-border caret-transparent flex h-12 justify-center w-12 overflow-hidden rounded-[50%]">
                     <div className="box-border caret-transparent h-3.5 w-3.5">
                       <img
                         src="https://c.animaapp.com/mhnzg6knJo6lE7/assets/icon-4.svg"
@@ -38,9 +38,9 @@ export const AboutPageHero = () => {
           </div>
           <div className="box-border caret-transparent blur-0 h-[220px] overflow-hidden mt-7 rounded-2xl md:h-[642px] md:mt-10">
             <img
-              src="/about-us-dd.jpg"
+              src="/jimbos/gal1.jpg"
               sizes="100vw"
-              alt="Double O Detailing - About Us"
+              alt="Jimbos Cleaning - About Us"
               className="box-border caret-transparent inline-block h-full max-w-full object-cover w-full"
             />
           </div>

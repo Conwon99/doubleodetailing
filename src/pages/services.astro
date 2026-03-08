@@ -2,21 +2,21 @@
 import Layout from '../layouts/Layout.astro';
 import { Navbar } from '../sections/Navbar';
 import { ServicePageHero } from '../sections/ServicePageHero';
-import { ServicesSection } from '../sections/ServicesSection';
+import { ServicePageServices } from '../sections/ServicePageServices';
 import { QuoteSection } from '../sections/QuoteSection';
 import { FooterSection } from '../sections/FooterSection';
 ---
 
 <Layout 
-  title="Our Services - Double O Detailing | Machine Polishing, Ceramic Coating & More"
-  description="Browse our car detailing services: Machine Polishing, Ceramic Coatings, Deep Cleans and Valets, and Maintenance. Professional mobile car detailing in Glasgow and Central Scotland."
-  canonical="https://doubleodetailing.co.uk/services"
+  title="Our Services - Jimbos Cleaning | Roof, Render, Driveway & More"
+  description="Roof steam cleaning, render softwashing, driveway, gutter, PVC and window cleaning across Ayrshire and Glasgow. Professional exterior cleaning for your property."
+  canonical="https://jimboscleaning.com/services"
 >
   <div class="min-h-screen bg-neutral-100 font-figtree text-black text-sm leading-5 antialiased">
     <Navbar client:load />
     <main class="pt-0">
       <ServicePageHero client:load />
-      <ServicesSection client:load />
+      <ServicePageServices client:load />
       <QuoteSection client:load showTerms={false} />
       <FooterSection client:load />
     </main>

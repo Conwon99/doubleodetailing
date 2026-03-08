@@ -23,9 +23,9 @@ export const MobileCarousel = () => {
             />
             <div className="box-border caret-transparent basis-auto grow-0 shrink-0 h-[250px] min-h-[auto] min-w-[auto] overflow-hidden rounded-lg md:basis-[0%] md:grow md:shrink md:h-[348px] md:min-h-0 md:min-w-0">
               <img
-                src="https://images.unsplash.com/photo-1524592094714-0f0654e20314?w=800&q=80"
+                src="/jimbos/gal1.jpg"
                 sizes="100vw"
-                alt="Precision Watchmaking Tools"
+                alt="Jimbos Cleaning - Our work"
                 className="box-border caret-transparent inline-block h-full max-w-full object-cover w-full"
               />
             </div>
@@ -46,9 +46,9 @@ export const MobileCarousel = () => {
             />
             <div className="box-border caret-transparent basis-auto grow-0 shrink-0 h-[250px] min-h-[auto] min-w-[auto] overflow-hidden rounded-lg md:basis-[0%] md:grow md:shrink md:h-[348px] md:min-h-0 md:min-w-0">
               <img
-                src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800&q=80"
+                src="/jimbos/gal2.jpg"
                 sizes="100vw"
-                alt="Expert Watchmaker Service"
+                alt="Jimbos Cleaning - Our work"
                 className="box-border caret-transparent inline-block h-full max-w-full object-cover w-full"
               />
             </div>
@@ -69,9 +69,9 @@ export const MobileCarousel = () => {
             />
             <div className="box-border caret-transparent basis-auto grow-0 shrink-0 h-[250px] min-h-[auto] min-w-[auto] overflow-hidden rounded-lg md:basis-[0%] md:grow md:shrink md:h-[348px] md:min-h-0 md:min-w-0">
               <img
-                src="https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?w=800&q=80"
+                src="/jimbos/gal3.jpg"
                 sizes="100vw"
-                alt="Bespoke Watch Solutions"
+                alt="Jimbos Cleaning - Our work"
                 className="box-border caret-transparent inline-block h-full max-w-full object-cover w-full"
               />
             </div>
@@ -92,8 +92,8 @@ export const MobileCarousel = () => {
             />
             <div className="box-border caret-transparent basis-auto grow-0 shrink-0 h-[250px] min-h-[auto] min-w-[auto] overflow-hidden rounded-lg md:basis-[0%] md:grow md:shrink md:h-[348px] md:min-h-0 md:min-w-0">
               <img
-                src="https://images.unsplash.com/photo-1594534475808-18d6d2c09e0d?w=800&q=80"
-                alt="Master Watchmakers"
+                src="/jimbos/gal4.jpg"
+                alt="Jimbos Cleaning - Our work"
                 className="box-border caret-transparent inline-block h-full max-w-full object-cover w-full"
               />
             </div>

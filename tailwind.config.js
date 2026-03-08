@@ -39,9 +39,9 @@ module.exports = {
           foreground: "hsl(var(--card-foreground))",
         },
         cta: {
-          DEFAULT: "#6B7280",
-          light: "#9CA3AF",
-          dark: "#4B5563",
+          DEFAULT: "#3B82F6",
+          light: "#60A5FA",
+          dark: "#2563EB",
         },
       },
       borderRadius: {
@@ -64,7 +64,8 @@ module.exports = {
         "cormorant": ["Cormorant Garamond", "serif"],
         "lato": ["Lato", "sans-serif"],
         "cabinet": ["CabinetGrotesk-Variable", "CabinetGrotesk-Regular", "ui-sans-serif", "system-ui", "sans-serif"],
-        "refrigerator": ["RefrigeratorDeluxe", "ui-sans-serif", "system-ui", "sans-serif"]
+        "refrigerator": ["RefrigeratorDeluxe", "ui-sans-serif", "system-ui", "sans-serif"],
+        "heading": ["'Plus Jakarta Sans'", "ui-sans-serif", "system-ui", "sans-serif"]
       },
       keyframes: {
         "accordion-down": {

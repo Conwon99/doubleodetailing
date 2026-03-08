@@ -8,8 +8,8 @@ export const Logo = () => {
       >
         <div className="box-border caret-transparent">
           <img
-            src="/double-o-logo.png"
-            alt="Double O Detailing Logo"
+            src="/logo.png"
+            alt="Jimbos Cleaning Logo"
             className="box-border caret-transparent inline-block max-w-full h-24 object-contain md:h-32 brightness-0 invert"
             style={{ filter: 'brightness(0) invert(1)' }}
           />

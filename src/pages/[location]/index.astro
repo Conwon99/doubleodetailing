@@ -30,10 +30,10 @@ if (!location) {
   return Astro.redirect("/404");
 }
 
-const siteUrl = "https://doubleodetailing.co.uk";
+const siteUrl = "https://jimboscleaning.com";
 const canonical = `${siteUrl}/${location.slug}`;
-const title = `Car Detailing ${location.name} | Mobile Valeting & Ceramic Coating | Double O Detailing`;
-const description = `Professional mobile car detailing in ${location.name} and nearby areas. Machine polishing, ceramic coatings, deep cleans, and valeting. We come to you. Book online.`;
+const title = `Exterior Cleaning ${location.name} | Roof, Driveway & Gutter Cleaning | Jimbos Cleaning`;
+const description = `Professional exterior cleaning in ${location.name} and nearby. Roof steam cleaning, render softwashing, driveway, gutter, PVC and window cleaning. Get a free quote.`;
 
 const locationSchema =
   location.geo && location.addressLocality
@@ -75,7 +75,18 @@ const locationSchema =
       <ReviewsSection />
       <LocationContentSection client:load location={location} />
       <QuoteSection client:load showTerms={false} />
-      <FooterSection client:load />
+      <FooterSection
+        client:load
+        mapLocation={
+          location.geo
+            ? {
+                lat: location.geo.latitude,
+                lng: location.geo.longitude,
+                name: location.name,
+              }
+            : undefined
+        }
+      />
     </main>
   </div>
 </Layout>

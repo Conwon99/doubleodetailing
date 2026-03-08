@@ -11,7 +11,7 @@ export const ProcessSectionMachinePolishing = () => {
                 Process
               </div>
             </div>
-            <h2 className="text-3xl font-bold box-border caret-transparent tracking-[-0.52px] leading-[35px] md:text-[52px] md:leading-[62px] font-refrigerator uppercase">
+            <h2 className="text-3xl font-bold box-border caret-transparent tracking-[-0.52px] leading-[35px] md:text-[52px] md:leading-[62px] font-heading uppercase">
               How Machine Polishing Works
             </h2>
           </div>

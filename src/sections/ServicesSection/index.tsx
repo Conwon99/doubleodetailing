@@ -20,7 +20,7 @@ export const ServicesSection = () => {
                   Watches Ticking
                 </span>
               </h2>
-              <p className="text-[15px] box-border caret-transparent leading-6 text-gray-700 mt-3 md:text-base">
+              <p className="text-[15px] box-border caret-transparent leading-6 text-blue-700 mt-3 md:text-base">
                 Fully trained, fully insured workshop & insured shipping up to £10,000
               </p>
             </div>
@@ -30,7 +30,7 @@ export const ServicesSection = () => {
 
           {/* Services Not Exhaustive Notice */}
           <div className="box-border caret-transparent mt-6 text-center max-w-[800px] mx-auto">
-            <p className="text-[15px] box-border caret-transparent leading-6 text-gray-700 md:text-base">
+            <p className="text-[15px] box-border caret-transparent leading-6 text-blue-700 md:text-base">
               The services and repairs referred to above are not exhaustive, if you require a repair type not listed above please get in touch
             </p>
           </div>

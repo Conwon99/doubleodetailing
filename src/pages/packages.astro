@@ -1,24 +1,4 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import { Navbar } from '../sections/Navbar';
-import { PackagesOverview } from '../sections/PackagesOverview';
-import ReviewsSection from '../sections/ReviewsSection.astro';
-import { QuoteSection } from '../sections/QuoteSection';
-import { FooterSection } from '../sections/FooterSection';
+// Redirect old /packages links to contact (packages section removed)
+return Astro.redirect('/contact');
 ---
-
-<Layout 
-  title="Packages & Pricing - Double O Detailing | Car Detailing Packages Glasgow"
-  description="View our car detailing packages and pricing: Machine Polishing & Coatings, Deep Clean Detailing, and Maintenance. Casino Royale, Spectre, 007 and more. Get a quote for your vehicle in Glasgow and Central Scotland."
-  canonical="https://doubleodetailing.co.uk/packages"
->
-  <div class="min-h-screen bg-neutral-100 font-figtree text-black text-sm leading-5 antialiased">
-    <Navbar client:load />
-    <main class="pt-0">
-      <PackagesOverview client:load />
-      <ReviewsSection />
-      <QuoteSection client:load showTerms={false} />
-      <FooterSection client:load />
-    </main>
-  </div>
-</Layout>

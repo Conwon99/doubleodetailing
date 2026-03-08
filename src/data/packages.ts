@@ -1,6 +1,6 @@
 /**
  * Package data for Packages & Pricing page.
- * Sourced from Double O Detailing package cards (SONAX Professional Detailer).
+ * Exterior cleaning services – Jimbos Cleaning.
  */
 
 export type PackageSection = {
@@ -10,18 +10,18 @@ export type PackageSection = {
 
 export type PackageData = {
   id: string;
-  category: "machine-polishing" | "deep-clean" | "maintenance";
+  category: "roof-cleaning" | "exterior-clean" | "maintenance";
   title: string;
   tagline?: string;
   subtitle?: string;
   /** Short summary for the packages overview page */
   summary: string;
   sections: PackageSection[];
-  /** Optional extras section (e.g. Upgraded Coating, Engine Bay) */
+  /** Optional extras section */
   extras?: PackageSection;
-  /** Optional pricing options within the card (e.g. coating choices with prices) */
+  /** Optional pricing options within the card */
   priceOptions?: string[];
-  /** Main price display text (e.g. "From £295 or £350") */
+  /** Main price display text */
   priceDisplay: string;
   /** Prerequisite note for maintenance packages */
   note?: string;
@@ -30,229 +30,130 @@ export type PackageData = {
 };
 
 const PRICE_DISCLAIMER =
-  "Price/Time can vary based on vehicle condition and size.";
+  "Price/Time can vary based on property size and condition.";
 
 export const PRICE_DISCLAIMER_TEXT = PRICE_DISCLAIMER;
 
 export const packagesData: PackageData[] = [
   {
-    id: "casino-royale",
-    category: "machine-polishing",
-    title: "SINGLE STAGE PAINT ENHANCEMENT + CERAMIC COATING",
-    tagline: "CASINO ROYALE",
+    id: "roof-steam-full",
+    category: "roof-cleaning",
+    title: "ROOF STEAM CLEANING",
+    tagline: "Full roof clean",
     summary:
-      "Transform your paintwork with machine polishing to remove 60–80% of swirls, marring, and oxidation, then protect it with a durable 1- or 2-year ceramic coating. Leaves a deep gloss finish with long-lasting protection against UV, bird lime, and the elements.",
+      "Safe roof steam cleaning with moss and algae removal from roof tiles. Professional treatment for lasting results and improved curb appeal. Suitable for all roof types across Ayrshire and Glasgow.",
     sections: [
       {
-        heading: "EXTERIOR PREP",
+        heading: "SERVICE INCLUDES",
         items: [
-          "Wheel arches, alloys, exhaust tips deep cleaned & decontaminated",
-          "Safe multi-stage wash using prewash, snow foam & 2-bucket method",
-          "Paint chemically decontaminated (iron, sap & tar removal) and clay treated",
-          "Dried with plush towels & air blow-dry to reduce water spotting",
-        ],
-      },
-      {
-        heading: "PAINT ENHANCEMENT",
-        items: [
-          "Single-stage machine polish to remove swirls, marring & oxidation (60–80% correction)",
-          "Glass, exhaust tips & chrome polished",
-          "Two IPA panel wipe-downs for coating prep",
-        ],
-      },
-      {
-        heading: "CERAMIC COATING OPTIONS",
-        items: [
-          "Single Stage Paint Enhancement + 1-Year Ceramic Coating – from £295",
-          "Single Stage Paint Enhancement + 2-Year Ceramic Coating – from £350",
+          "Safe steam cleaning – no high pressure that can damage tiles",
+          "Moss and algae removal from roof",
+          "Algae removal from roof tiles",
+          "Eco-friendly treatments where appropriate",
+          "Full inspection and clear gutters if needed",
         ],
       },
     ],
-    priceDisplay: "From £295 / £350",
-    imageUrl: "/packages/casino-royale.png",
+    priceDisplay: "From £POA",
+    imageUrl: "/packages/roof-steam.png",
   },
   {
-    id: "snow-time-to-die",
-    category: "machine-polishing",
-    title: "WINTER PROTECTION DETAIL",
-    tagline: "SNOW TIME TO DIE",
-    subtitle: "Light machine polish + winter protection",
+    id: "render-softwash",
+    category: "roof-cleaning",
+    title: "RENDER SOFTWASHING",
+    tagline: "Render & wall cleaning",
     summary:
-      "Light machine polish and winter protection package designed to protect your vehicle from road salt, grime, and harsh winter conditions while enhancing gloss and making maintenance easier. Options available: 12 Month Ceramic Wax, 1 Year Ceramic Coating.",
+      "Expert render softwashing and stain removal from render surfaces without damage. Restore the look of your property's exterior walls.",
     sections: [
       {
-        heading: "EXTERIOR PREP",
+        heading: "SERVICE INCLUDES",
         items: [
-          "Wheel arches, alloys, tyres & exhaust tips deep cleaned and decontaminated",
-          "Safe prewash, snow foam & 2-bucket wash using soft mitts and brushes",
-        ],
-      },
-      {
-        heading: "DECONTAMINATION",
-        items: [
-          "Chemical decontamination (iron, tar & sap removal)",
-          "Clay bar treatment for bonded contaminants",
-          "Rinsed, towel dried & air blown to prevent spotting",
-        ],
-      },
-      {
-        heading: "POLISH & PROTECTION",
-        items: [
-          "Light machine polish to enhance gloss and depth",
-          "Glass, exhaust tips & chrome refined",
-          "Paintwork prepped with panel wipe for coating adhesion",
-          "Glass sealed, trims & tyres dressed",
-          "Options: 12 Month Ceramic Wax | 1 Year Ceramic Coating",
+          "Softwash treatment for render and painted walls",
+          "Stain removal from render (algae, dirt, pollution)",
+          "Safe, low-pressure method to protect surfaces",
+          "Suitable for residential and commercial properties",
         ],
       },
     ],
-    priceOptions: ["12 Month Ceramic Wax", "1 Year Ceramic Coating"],
-    priceDisplay: "From £240 or £295",
-    imageUrl: "/packages/snow-time-to-die.jpeg",
+    priceDisplay: "From £POA",
+    imageUrl: "/packages/render-softwash.png",
   },
   {
-    id: "shaken-not-stirred",
-    category: "deep-clean",
-    title: "DEEP CLEAN DETAIL",
-    tagline: "SHAKEN, NOT STIRRED",
+    id: "full-exterior",
+    category: "exterior-clean",
+    title: "FULL EXTERIOR CLEAN",
+    tagline: "Complete property exterior",
     summary:
-      "Our ultimate reset detail. A full deep clean of the interior and exterior, including safe wash, decontamination, protection, and thorough interior detail. Brings your car back to showroom condition and sets the foundation for ongoing maintenance.",
+      "Complete exterior cleaning package: driveway, gutters, PVC fascias and soffits, and windows. One comprehensive service to restore your property's appearance.",
     sections: [
       {
         heading: "EXTERIOR",
         items: [
-          "Wheel arches, alloys, exhaust tips, and engine bay deep cleaned and protected",
-          "Safe multi-stage wash using prewash, snow foam, and 2-bucket method",
-          "Paintwork chemically decontaminated (iron, sap & tar removal)",
-          "SONAX 3-month ceramic sealant for gloss & protection",
-          "Dried with plush towels & air blow-dry to avoid water spots",
-          "Trim, arches & tyres dressed (Matte, Satin, or Gloss finish)",
-        ],
-      },
-      {
-        heading: "INTERIOR",
-        items: [
-          "Full deep vacuum including boot",
-          "Compressed air dust removal & detailed cleaning of all surfaces",
-          "Carpets & mats shampooed and wet-vac extracted",
-          "Seats, consoles, vents, belts, and switches thoroughly detailed",
-          "Matte UV-protective interior dressing applied",
-          "Glass cleaned inside & out",
-          "Door shuts and jambs cleaned & protected",
+          "Driveway pressure washing and cleaning",
+          "Gutter clearing and cleaning",
+          "PVC fascias, soffits and gutters cleaned",
+          "Window cleaning (external)",
         ],
       },
     ],
     extras: {
       heading: "EXTRAS",
       items: [
-        "Upgraded Coating (POA)",
-        "Ozone Machine Treatment for Odours",
-        "Pet Hair Removal",
-        "SONAX Fabric Coating (Carpets/Mats/Seats)",
+        "Roof steam cleaning (add-on)",
+        "Render softwashing (add-on)",
       ],
     },
-    priceDisplay: "From £155",
-    imageUrl: "/packages/shaken-not-stirred.png",
+    priceDisplay: "From £POA",
+    imageUrl: "/packages/full-exterior.png",
   },
   {
-    id: "spectre",
-    category: "maintenance",
-    title: "MAINTENANCE DETAIL",
-    tagline: "SPECTRE",
+    id: "driveway-gutter",
+    category: "exterior-clean",
+    title: "DRIVEWAY & GUTTER CLEAN",
+    tagline: "Driveway + gutters",
     summary:
-      "A top-up detail every 4–6 weeks to keep your car looking its best. Includes an interior mini detail and exterior safe wash, with added protection to maintain that just-detailed finish. Available after an initial service.",
+      "Driveway cleaning and gutter clearing in one visit. Ideal for regular maintenance or a one-off refresh of your property's entrance and drainage.",
     sections: [
       {
-        heading: "EXTERIOR",
+        heading: "SERVICE INCLUDES",
         items: [
-          "Wheel arches, alloys & exhaust tips cleaned and decontaminated",
-          "Safe multi-stage wash using prewash, snow foam & 2-bucket method",
-          "SONAX 3-month ceramic sealant for gloss & protection",
-          "Dried with plush towels & air blow-dry to avoid water spots",
-          "Trim, arches & tyres dressed (Matte, Satin, or Gloss finish)",
-        ],
-      },
-      {
-        heading: "INTERIOR",
-        items: [
-          "Full vacuum including upholstery & boot",
-          "Compressed air dust removal & detailed surface cleaning",
-          "Carpets & mats deep cleaned and wet-vac extracted",
-          "Seats, consoles, vents, and switches detailed",
-          "Matte UV-protective interior dressing applied",
-          "Glass cleaned inside & out",
-          "Door shuts & jambs cleaned and protected",
+          "Driveway pressure washing",
+          "Gutter clearing and inspection",
+          "Removal of leaves, debris and blockages",
+          "Optional PVC cleaning (quote on request)",
         ],
       },
     ],
-    note: "Must have had Shaken, Not Stirred or Casino Royale within a 4-6 week period to enrol in our maintenance plan",
-    priceDisplay: "From £80",
-    imageUrl: "/packages/spectre.png",
+    priceDisplay: "From £POA",
+    imageUrl: "/packages/driveway-gutter.png",
   },
   {
-    id: "q",
+    id: "maintenance-plan",
     category: "maintenance",
-    title: "MAINTENANCE VALET",
-    tagline: "Q",
+    title: "MAINTENANCE PLAN",
+    tagline: "Regular exterior care",
     summary:
-      "A lighter upkeep option covering all standard valeting, inside and out. Ideal for maintaining cleanliness between details. Available after an initial service.",
+      "Regular exterior cleaning to keep your property looking its best. Schedule gutter cleans, window cleans and driveway refreshes at intervals that suit you.",
     sections: [
       {
-        heading: "EXTERIOR",
+        heading: "MAINTENANCE",
         items: [
-          "Wheel arches, alloys & tyres cleaned",
-          "Safe prewash & 2-bucket contact wash",
-          "Liquid wax applied for added gloss",
-          "Dried with soft microfibre towels",
-          "Trim, arches & tyres dressed (Matte, Satin, or Gloss finish)",
-        ],
-      },
-      {
-        heading: "INTERIOR",
-        items: [
-          "Full vacuum (boot included if empty)",
-          "Dust removal & wipe-down of all surfaces",
-          "Carpets & mats vacuumed, cleaned & dried",
-          "Glass cleaned inside & out",
-          "Door sills pressure washed & dried",
+          "Scheduled gutter cleaning",
+          "Window cleaning (external)",
+          "Driveway refresh as required",
+          "Flexible frequency – monthly, quarterly or as needed",
         ],
       },
     ],
-    note: "Must have had Shaken, Not Stirred or Casino Royale within a 4-6 week period to enrol in our maintenance plan",
-    priceDisplay: "From £55",
-    imageUrl: "/packages/q.png",
-  },
-  {
-    id: "007",
-    category: "maintenance",
-    title: "EXTERIOR SAFE WASH",
-    tagline: "007",
-    summary:
-      "A premium safe wash designed to minimise swirls and scratches while protecting your paintwork. Includes thorough cleaning, decontamination, protection, and optional engine bay maintenance.",
-    sections: [
-      {
-        heading: "EXTERIOR",
-        items: [
-          "Wheel arches, alloys & exhaust tips deep cleaned and decontaminated",
-          "Safe prewash, snow foam & 2-bucket wash with soft brushes including intricate areas",
-          "SONAX 3-month ceramic sealant for gloss & protection",
-          "Dried with plush towels & air blow-dry to avoid spotting",
-          "Trim, arches & tyres dressed (Matte, Satin, or Gloss finish)",
-        ],
-      },
-    ],
-    extras: {
-      heading: "EXTRAS",
-      items: ["Upgraded Coating (POA)", "Engine Bay Maintenance"],
-    },
-    priceDisplay: "From £50",
-    imageUrl: "/packages/exterior-wash.png",
+    note: "Ideal after an initial full exterior or roof clean. Contact us to discuss your schedule.",
+    priceDisplay: "From £POA",
+    imageUrl: "/packages/maintenance.png",
   },
 ];
 
 export const categoryLabels: Record<PackageData["category"], string> = {
-  "machine-polishing": "Machine Polishing & Coatings",
-  "deep-clean": "Deep Clean Detailing",
+  "roof-cleaning": "Roof & Render Cleaning",
+  "exterior-clean": "Exterior Cleaning",
   maintenance: "Maintenance",
 };
 

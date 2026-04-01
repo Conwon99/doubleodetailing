@@ -1,9 +1,10 @@
 import { getServiceDetail } from "@/data/serviceDetails";
 import { ProcessCard } from "./components/ProcessCard";
+import type { Location } from "@/data/locations";
 
-type Props = { serviceSlug: string };
+type Props = { serviceSlug: string; location?: Location };
 
-export const ExteriorProcessSection = ({ serviceSlug }: Props) => {
+export const ExteriorProcessSection = ({ serviceSlug, location }: Props) => {
   const detail = getServiceDetail(serviceSlug);
   if (!detail) return null;
 
@@ -19,7 +20,7 @@ export const ExteriorProcessSection = ({ serviceSlug }: Props) => {
               <div className="font-medium box-border caret-transparent leading-[22px]">Process</div>
             </div>
             <h2 className="text-3xl font-bold box-border caret-transparent tracking-[-0.52px] leading-[35px] md:text-[52px] md:leading-[62px] font-heading uppercase">
-              How It Works
+              How It Works{location ? ` in ${location.name}` : ""}
             </h2>
           </div>
           <div className="box-border caret-transparent gap-x-[18px] flex flex-col max-w-[752px] gap-y-[18px] md:gap-x-5 md:gap-y-5">

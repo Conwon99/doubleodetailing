@@ -1,11 +1,11 @@
 export const GalleryGrid = () => {
   const images = [
-    { src: "/jimbos/gal1.jpg", alt: "Jimbos Cleaning Gallery 1" },
-    { src: "/jimbos/gal2.jpg", alt: "Jimbos Cleaning Gallery 2" },
-    { src: "/jimbos/gal3.jpg", alt: "Jimbos Cleaning Gallery 3" },
-    { src: "/jimbos/gal4.jpg", alt: "Jimbos Cleaning Gallery 4" },
-    { src: "/jimbos/gal5.jpg", alt: "Jimbos Cleaning Gallery 5" },
-    { src: "/jimbos/gal6.jpg", alt: "Jimbos Cleaning Gallery 6" },
+    { src: "/jimbos/gal1.jpg", alt: "Exterior cleaning and roof cleaning work in Ayrshire" },
+    { src: "/jimbos/gal2.jpg", alt: "Professional roof and property cleaning by Jimbos Cleaning" },
+    { src: "/jimbos/gal3.jpg", alt: "Render softwashing and exterior cleaning results" },
+    { src: "/jimbos/gal4.jpg", alt: "Driveway and gutter cleaning in Ayrshire and Glasgow" },
+    { src: "/jimbos/gal5.jpg", alt: "Roof steam cleaning and moss removal - before and after" },
+    { src: "/jimbos/gal6.jpg", alt: "PVC and window cleaning - Jimbos Cleaning gallery" },
   ];
 
   return (

@@ -10,11 +10,11 @@ export type BreadcrumbsProps = {
 export const Breadcrumbs = ({ items }: BreadcrumbsProps) => {
   return (
     <nav aria-label="Breadcrumb" className="mb-6 md:mb-8">
-      <ol className="flex flex-wrap items-center gap-x-2 gap-y-1 text-sm text-blue-600 md:text-base">
+      <ol className="flex flex-wrap items-center gap-x-2 gap-y-1 text-sm text-neutral-600 md:text-base">
         {items.map((item, i) => (
           <li key={i} className="flex items-center gap-x-2">
             {i > 0 && (
-              <span className="text-blue-400" aria-hidden>
+              <span className="text-neutral-400" aria-hidden>
                 /
               </span>
             )}

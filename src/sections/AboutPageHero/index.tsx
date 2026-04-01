@@ -12,7 +12,7 @@ export const AboutPageHero = () => {
             <div className="box-border caret-transparent gap-x-[18px] flex blur-0 flex-col max-w-[340px] gap-y-[18px] md:gap-x-5 md:gap-y-5">
               <div className="box-border caret-transparent flex">
                 <a
-                  href="/contact"
+                  href="/contact/"
                   className="text-black items-center bg-transparent box-border caret-transparent gap-x-5 flex max-w-full gap-y-5 text-center border pl-6 pr-1 py-1 rounded-[100px] border-solid border-cta hover:bg-cta hover:text-white"
                 >
                   <div className="relative box-border caret-transparent overflow-hidden">

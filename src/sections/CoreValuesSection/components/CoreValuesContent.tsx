@@ -11,7 +11,7 @@ export const CoreValuesContent = () => {
           <span className="text-3xl box-border caret-transparent leading-[35px] font-heading uppercase md:text-[52px] md:leading-[62px]">Why</span> <span className="font-heading uppercase">Choose Jimbos Cleaning?</span>
         </h2>
       </div>
-      <div className="text-blue-700 box-border caret-transparent">
+      <div className="text-neutral-700 box-border caret-transparent">
         <p className="text-[15px] box-border caret-transparent leading-6 md:text-base">
           At Jimbos Cleaning we deliver professional exterior cleaning across Ayrshire and Glasgow. From roof steam cleaning and moss removal to render softwashing, driveway, gutter, PVC and window cleaning—we bring safe, effective service to your property. Fully insured and with a focus on quality and customer satisfaction.
         </p>
@@ -45,8 +45,8 @@ export const CoreValuesContent = () => {
       <div className="box-border caret-transparent mt-6 pt-6 border-t border-neutral-200">
         <div className="box-border caret-transparent flex pt-6">
           <a
-            href="/contact"
-            className="text-white items-center bg-cta-dark box-border caret-transparent gap-x-3 flex max-w-full gap-y-3 text-center border border-cta-dark px-6 py-4 rounded-[100px] border-solid hover:text-cta-dark hover:bg-white"
+            href="/contact/"
+            className="text-white items-center bg-cta-dark box-border caret-transparent gap-x-3 flex max-w-full gap-y-3 text-center border border-cta-dark px-6 py-4 rounded-[100px] border-solid hover:text-neutral-800 hover:bg-white"
           >
             <div className="relative box-border caret-transparent overflow-hidden">
               <div className="box-border caret-transparent">

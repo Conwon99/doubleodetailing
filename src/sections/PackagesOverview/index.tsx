@@ -84,12 +84,12 @@ export const PackagesOverview = () => {
                             {pkg.title}
                           </h4>
                           {pkg.tagline && (
-                            <p className="font-heading uppercase text-sm text-blue-600 mt-0.5">
+                            <p className="font-heading uppercase text-sm text-neutral-600 mt-0.5">
                               &ldquo;{pkg.tagline}&rdquo;
                             </p>
                           )}
                         </div>
-                        <p className="font-figtree text-[15px] text-blue-700 leading-6 flex-1">
+                        <p className="font-figtree text-[15px] text-neutral-700 leading-6 flex-1">
                           {pkg.summary}
                         </p>
                         <p className="font-heading uppercase text-lg font-bold text-black mt-4">
@@ -108,7 +108,7 @@ export const PackagesOverview = () => {
               </div>
             ))}
 
-            <p className="text-[15px] text-blue-600 md:text-base text-center max-w-[560px] mx-auto">
+            <p className="text-[15px] text-neutral-600 md:text-base text-center max-w-[560px] mx-auto">
               All packages are tailored to your property. Get a quote for exact pricing.
             </p>
           </div>

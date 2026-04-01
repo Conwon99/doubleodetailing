@@ -25,7 +25,7 @@ export const ServicePageCard = (props: ServicePageCardProps) => {
               <div className="text-lg font-medium box-border caret-transparent leading-[30px] md:text-xl md:leading-7">
                 {props.title}
               </div>
-              <div className="text-blue-700 box-border caret-transparent">
+              <div className="text-neutral-700 box-border caret-transparent">
                 <div className="text-[15px] box-border caret-transparent leading-6 md:text-base">
                   {props.description}
                 </div>
@@ -36,7 +36,7 @@ export const ServicePageCard = (props: ServicePageCardProps) => {
         <div className="box-border caret-transparent flex">
           <a
             href={props.href}
-            className="text-white items-center bg-cta box-border caret-transparent gap-x-5 flex max-w-full gap-y-5 text-center border pl-6 pr-1 py-1 rounded-[100px] border-solid border-transparent hover:text-cta hover:bg-white hover:border-cta"
+            className="text-white items-center bg-cta box-border caret-transparent gap-x-5 flex max-w-full gap-y-5 text-center border pl-6 pr-1 py-1 rounded-[100px] border-solid border-transparent hover:text-neutral-800 hover:bg-white hover:border-cta"
           >
             <div className="relative box-border caret-transparent overflow-hidden">
               <div className="box-border caret-transparent">

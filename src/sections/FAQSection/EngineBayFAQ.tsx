@@ -23,7 +23,7 @@ export const EngineBayFAQ = () => {
                   <span className="font-heading uppercase text-base md:text-lg font-bold text-black">{faq.question}</span>
                   <span className={`shrink-0 w-8 h-8 flex items-center justify-center rounded-full bg-neutral-100 text-neutral-600 transition-transform ${openIndex === index ? "rotate-180" : ""}`} aria-hidden><svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg></span>
                 </button>
-                <div className={`overflow-hidden transition-all duration-200 ${openIndex === index ? "max-h-[500px]" : "max-h-0"}`}><div className="px-5 pb-5 md:px-6 md:pb-6 pt-0 text-[15px] leading-6 text-blue-700 md:text-base">{faq.answer}</div></div>
+                <div className={`overflow-hidden transition-all duration-200 ${openIndex === index ? "max-h-[500px]" : "max-h-0"}`}><div className="px-5 pb-5 md:px-6 md:pb-6 pt-0 text-[15px] leading-6 text-neutral-700 md:text-base">{faq.answer}</div></div>
               </div>
             ))}
           </div>

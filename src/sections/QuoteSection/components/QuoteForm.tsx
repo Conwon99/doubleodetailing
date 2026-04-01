@@ -104,7 +104,7 @@ export const QuoteForm = () => {
         formDataToSend.append("image", imageFile);
       }
 
-      const response = await fetch("https://formspree.io/f/xnjbaogz", {
+      const response = await fetch("https://formspree.io/f/movnnnry", {
         method: "POST",
         body: formDataToSend,
         headers: {
@@ -135,10 +135,10 @@ export const QuoteForm = () => {
 
   return (
     <div className="w-full max-w-[700px]">
-      <form onSubmit={handleSubmit} action="https://formspree.io/f/xnjbaogz" method="POST" encType="multipart/form-data" className="bg-white rounded-xl p-6 md:p-8 shadow-xl border border-blue-200">
+      <form onSubmit={handleSubmit} action="https://formspree.io/f/movnnnry" method="POST" encType="multipart/form-data" className="bg-white rounded-xl p-6 md:p-8 shadow-xl border border-blue-200">
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-6">
           <div className="md:col-span-2">
-            <label htmlFor="name" className="block text-sm font-medium text-blue-900 mb-2">
+            <label htmlFor="name" className="block text-sm font-medium text-neutral-900 mb-2">
               Full Name *
             </label>
             <input
@@ -149,13 +149,13 @@ export const QuoteForm = () => {
               value={formData.name}
               onChange={handleChange}
               onFocus={trackFormStart}
-              className="w-full px-4 py-3 bg-white border border-blue-200 text-blue-900 rounded-lg focus:ring-2 focus:ring-cta focus:border-cta outline-none transition placeholder:text-blue-400"
+              className="w-full px-4 py-3 bg-white border border-blue-200 text-neutral-900 rounded-lg focus:ring-2 focus:ring-cta focus:border-cta outline-none transition placeholder:text-neutral-400"
               placeholder="John Doe"
             />
           </div>
 
           <div>
-            <label htmlFor="email" className="block text-sm font-medium text-blue-900 mb-2">
+            <label htmlFor="email" className="block text-sm font-medium text-neutral-900 mb-2">
               Email Address *
             </label>
             <input
@@ -166,13 +166,13 @@ export const QuoteForm = () => {
               value={formData.email}
               onChange={handleChange}
               onFocus={trackFormStart}
-              className="w-full px-4 py-3 bg-white border border-blue-200 text-blue-900 rounded-lg focus:ring-2 focus:ring-cta focus:border-cta outline-none transition placeholder:text-blue-400"
+              className="w-full px-4 py-3 bg-white border border-blue-200 text-neutral-900 rounded-lg focus:ring-2 focus:ring-cta focus:border-cta outline-none transition placeholder:text-neutral-400"
               placeholder="john@example.com"
             />
           </div>
 
           <div>
-            <label htmlFor="phone" className="block text-sm font-medium text-blue-900 mb-2">
+            <label htmlFor="phone" className="block text-sm font-medium text-neutral-900 mb-2">
               Phone Number *
             </label>
             <input
@@ -182,13 +182,13 @@ export const QuoteForm = () => {
               required
               value={formData.phone}
               onChange={handleChange}
-              className="w-full px-4 py-3 bg-white border border-blue-200 text-blue-900 rounded-lg focus:ring-2 focus:ring-cta focus:border-cta outline-none transition placeholder:text-blue-400"
+              className="w-full px-4 py-3 bg-white border border-blue-200 text-neutral-900 rounded-lg focus:ring-2 focus:ring-cta focus:border-cta outline-none transition placeholder:text-neutral-400"
               placeholder="+44 123 456 7890"
             />
           </div>
 
           <div className="md:col-span-2">
-            <label htmlFor="service" className="block text-sm font-medium text-blue-900 mb-2">
+            <label htmlFor="service" className="block text-sm font-medium text-neutral-900 mb-2">
               Service (Optional)
             </label>
             <select
@@ -196,7 +196,7 @@ export const QuoteForm = () => {
               name="service"
               value={formData.service}
               onChange={handleChange}
-              className="w-full px-4 py-3 bg-white border border-blue-200 text-blue-900 rounded-lg focus:ring-2 focus:ring-cta focus:border-cta outline-none transition"
+              className="w-full px-4 py-3 bg-white border border-blue-200 text-neutral-900 rounded-lg focus:ring-2 focus:ring-cta focus:border-cta outline-none transition"
             >
               <option value="">Select a service...</option>
               {services.map((svc) => (
@@ -208,7 +208,7 @@ export const QuoteForm = () => {
           </div>
 
           <div className="md:col-span-2">
-            <label htmlFor="description" className="block text-sm font-medium text-blue-900 mb-2">
+            <label htmlFor="description" className="block text-sm font-medium text-neutral-900 mb-2">
               Description of Issue or Service Needed *
             </label>
             <textarea
@@ -218,13 +218,13 @@ export const QuoteForm = () => {
               rows={5}
               value={formData.description}
               onChange={handleChange}
-              className="w-full px-4 py-3 bg-white border border-blue-200 text-blue-900 rounded-lg focus:ring-2 focus:ring-cta focus:border-cta outline-none transition resize-none placeholder:text-blue-400"
+              className="w-full px-4 py-3 bg-white border border-blue-200 text-neutral-900 rounded-lg focus:ring-2 focus:ring-cta focus:border-cta outline-none transition resize-none placeholder:text-neutral-400"
               placeholder="Please describe the service you require for your property..."
             />
           </div>
 
           <div className="md:col-span-2">
-            <label htmlFor="image" className="block text-sm font-medium text-blue-900 mb-2">
+            <label htmlFor="image" className="block text-sm font-medium text-neutral-900 mb-2">
               Upload Image (Optional)
             </label>
             <div className="space-y-3">
@@ -234,7 +234,7 @@ export const QuoteForm = () => {
                 name="image"
                 accept="image/*"
                 onChange={handleImageChange}
-                className="w-full px-4 py-3 bg-white border border-blue-200 text-blue-900 rounded-lg focus:ring-2 focus:ring-cta focus:border-cta outline-none transition file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-medium file:bg-cta file:text-white hover:file:bg-cta-dark file:cursor-pointer cursor-pointer"
+                className="w-full px-4 py-3 bg-white border border-blue-200 text-neutral-900 rounded-lg focus:ring-2 focus:ring-cta focus:border-cta outline-none transition file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-medium file:bg-cta file:text-white hover:file:bg-cta-dark file:cursor-pointer cursor-pointer"
               />
               {imagePreview && (
                 <div className="relative">
@@ -253,7 +253,7 @@ export const QuoteForm = () => {
                   </button>
                 </div>
               )}
-              <p className="text-xs text-blue-600">
+              <p className="text-xs text-neutral-600">
                 Accepted formats: JPG, PNG, GIF. Max size: 10MB
               </p>
             </div>

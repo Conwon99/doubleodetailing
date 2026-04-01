@@ -20,7 +20,7 @@ export const ServicesSection = () => {
                   Watches Ticking
                 </span>
               </h2>
-              <p className="text-[15px] box-border caret-transparent leading-6 text-blue-700 mt-3 md:text-base">
+              <p className="text-[15px] box-border caret-transparent leading-6 text-neutral-700 mt-3 md:text-base">
                 Fully trained, fully insured workshop & insured shipping up to £10,000
               </p>
             </div>
@@ -30,7 +30,7 @@ export const ServicesSection = () => {
 
           {/* Services Not Exhaustive Notice */}
           <div className="box-border caret-transparent mt-6 text-center max-w-[800px] mx-auto">
-            <p className="text-[15px] box-border caret-transparent leading-6 text-blue-700 md:text-base">
+            <p className="text-[15px] box-border caret-transparent leading-6 text-neutral-700 md:text-base">
               The services and repairs referred to above are not exhaustive, if you require a repair type not listed above please get in touch
             </p>
           </div>
@@ -38,8 +38,8 @@ export const ServicesSection = () => {
           <div className="box-border caret-transparent flex justify-center mt-8">
             <div className="box-border caret-transparent flex">
               <a
-                href="/contact"
-                className="text-white items-center bg-cta-dark box-border caret-transparent gap-x-3 flex max-w-full gap-y-3 text-center border border-cta-dark px-6 py-4 rounded-[100px] border-solid hover:text-cta-dark hover:bg-white"
+                href="/contact/"
+                className="text-white items-center bg-cta-dark box-border caret-transparent gap-x-3 flex max-w-full gap-y-3 text-center border border-cta-dark px-6 py-4 rounded-[100px] border-solid hover:text-neutral-800 hover:bg-white"
               >
                 <div className="relative box-border caret-transparent overflow-hidden">
                   <div className="box-border caret-transparent">

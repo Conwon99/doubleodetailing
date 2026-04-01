@@ -5,20 +5,17 @@ export const ServicePageHero = () => {
         <div className="box-border caret-transparent pb-[60px] md:pb-[100px]">
           <div className="items-start box-border caret-transparent gap-x-7 flex flex-col justify-between gap-y-7 md:items-center md:gap-x-10 md:flex-row md:gap-y-10">
             <div className="items-start box-border caret-transparent gap-x-4 flex blur-0 flex-col max-w-none gap-y-4 md:max-w-[555px]">
-              <div className="text-[15px] box-border caret-transparent leading-6 md:text-base">
-                [Services & Pricing]
-              </div>
-              <h2 className="text-[44px] font-bold box-border caret-transparent tracking-[-1.44px] leading-[52px] md:text-7xl md:leading-[80px] font-cabinet">
+              <h1 className="text-[44px] font-bold box-border caret-transparent tracking-[-1.44px] leading-[52px] md:text-7xl md:leading-[80px] font-cabinet">
                 Expert Exterior{" "}
                 <span className="text-[44px] box-border caret-transparent leading-[52px] font-cabinet md:text-7xl md:leading-[80px]">
                   Cleaning Services
                 </span>
-              </h2>
+              </h1>
             </div>
             <div className="box-border caret-transparent flex">
               <a
-                href="/contact"
-                className="text-white items-center bg-cta box-border caret-transparent gap-x-5 flex max-w-full gap-y-5 text-center border pl-6 pr-1 py-1 rounded-[100px] border-solid border-transparent hover:bg-white hover:text-cta hover:border-cta"
+                href="/contact/"
+                className="text-white items-center bg-cta box-border caret-transparent gap-x-5 flex max-w-full gap-y-5 text-center border pl-6 pr-1 py-1 rounded-[100px] border-solid border-transparent hover:bg-white hover:text-neutral-800 hover:border-cta"
               >
                 <div className="relative box-border caret-transparent overflow-hidden">
                   <div className="box-border caret-transparent">

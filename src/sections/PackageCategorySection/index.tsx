@@ -28,7 +28,7 @@ export const PackageCategorySection = ({ categoryId }: PackageCategorySectionPro
         <div className="absolute inset-0 bg-black/50" />
         <div className="relative z-10 text-center px-5">
           <a
-            href="/packages"
+            href="/packages/"
             className="inline-block text-sm font-figtree text-white/90 hover:text-white mb-4"
           >
             ← Back to Packages
@@ -54,7 +54,7 @@ export const PackageCategorySection = ({ categoryId }: PackageCategorySectionPro
                 </div>
               ))}
             </div>
-            <p className="text-[15px] text-blue-600 md:text-base text-center max-w-[560px] mx-auto">
+            <p className="text-[15px] text-neutral-600 md:text-base text-center max-w-[560px] mx-auto">
               All packages are tailored to your property. Get a quote for exact pricing.
             </p>
           </div>

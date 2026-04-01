@@ -1,15 +1,23 @@
 import { getServiceDetail } from "@/data/serviceDetails";
 import { getServiceBySlug } from "@/data/services";
+import type { Location } from "@/data/locations";
 
-type Props = { serviceSlug: string };
+type Props = { serviceSlug: string; location?: Location };
 
-export const ExteriorWhyChooseSection = ({ serviceSlug }: Props) => {
+export const ExteriorWhyChooseSection = ({ serviceSlug, location }: Props) => {
   const detail = getServiceDetail(serviceSlug);
   const service = getServiceBySlug(serviceSlug);
   if (!detail || !service) return null;
 
   const { whyChoose } = detail;
   const imageUrl = service.imageUrl || "/jimbos/roofclean1.jpg";
+  const locationLine =
+    location?.neighborhoods?.length &&
+    location.neighborhoods.length >= 2
+      ? `Serving ${location.name}, ${location.neighborhoods[0]}, ${location.neighborhoods[1]} and the surrounding area.`
+      : location
+        ? `Serving ${location.name} and the surrounding area.`
+        : null;
 
   return (
     <section className="bg-white box-border caret-transparent py-[60px] md:py-[100px]">
@@ -31,11 +39,15 @@ export const ExteriorWhyChooseSection = ({ serviceSlug }: Props) => {
             </div>
             <div className="box-border caret-transparent mt-[18px] mb-4 md:mt-5">
               <h2 className="text-3xl font-bold box-border caret-transparent tracking-[-0.52px] leading-[35px] md:text-[52px] md:leading-[62px] font-heading uppercase">
-                <span className="text-3xl box-border caret-transparent leading-[35px] font-heading uppercase md:text-[52px] md:leading-[62px]">Why</span>{" "}
                 <span className="font-heading uppercase">{whyChoose.title}</span>
               </h2>
+              {locationLine && (
+                <p className="mt-3 text-[15px] leading-6 text-neutral-600 md:text-base">
+                  {locationLine}
+                </p>
+              )}
             </div>
-            <div className="text-blue-700 box-border caret-transparent space-y-4">
+            <div className="text-neutral-700 box-border caret-transparent space-y-4">
               {whyChoose.points.map((point, i) => (
                 <div key={i} className="box-border caret-transparent gap-x-3 flex items-start gap-y-2">
                   <div className="text-black items-center bg-neutral-200 box-border caret-transparent flex h-6 justify-center w-6 overflow-hidden rounded-[50%] shrink-0 mt-0.5">
@@ -45,15 +57,15 @@ export const ExteriorWhyChooseSection = ({ serviceSlug }: Props) => {
                   </div>
                   <div>
                     <div className="font-medium text-black text-[15px] md:text-base">{point.title}</div>
-                    <div className="text-[15px] box-border caret-transparent leading-6 text-blue-700 md:text-base">{point.description}</div>
+                    <div className="text-[15px] box-border caret-transparent leading-6 text-neutral-700 md:text-base">{point.description}</div>
                   </div>
                 </div>
               ))}
             </div>
             <div className="box-border caret-transparent mt-7 md:mt-10">
               <a
-                href="/contact"
-                className="text-white items-center bg-cta-dark box-border caret-transparent gap-x-3 flex max-w-full gap-y-3 text-center border border-cta-dark px-6 py-4 rounded-[100px] border-solid hover:text-cta-dark hover:bg-white"
+                href="/contact/"
+                className="text-white items-center bg-cta-dark box-border caret-transparent gap-x-3 flex max-w-full gap-y-3 text-center border border-cta-dark px-6 py-4 rounded-[100px] border-solid hover:text-neutral-800 hover:bg-white"
               >
                 <span className="relative text-sm font-medium z-[2] md:text-base md:leading-6">BOOK NOW</span>
                 <span className="box-border caret-transparent">

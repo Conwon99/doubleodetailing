@@ -12,7 +12,7 @@ export const AboutPageAbout = () => {
           </div>
           <div className="items-center md:items-end box-border caret-transparent gap-x-7 flex flex-col justify-center md:justify-between gap-y-7 mt-[18px] md:gap-x-10 md:flex-row md:gap-y-10 md:mt-5">
             <div className="box-border caret-transparent gap-x-[18px] flex blur-0 flex-col max-w-[488px] gap-y-[18px] md:gap-x-5 md:gap-y-5">
-              <div className="text-blue-700 box-border caret-transparent space-y-4">
+              <div className="text-neutral-700 box-border caret-transparent space-y-4">
                 <div className="text-[15px] box-border caret-transparent leading-6 md:text-base">
                   At Jimbos Cleaning we deliver professional exterior cleaning across Ayrshire and Glasgow. From roof steam cleaning and moss removal to render softwashing, driveway, gutter, PVC and window cleaning, we bring safe, effective service to your property. As a local business we pride ourselves on quality, reliability and customer satisfaction.
                 </div>
@@ -22,25 +22,34 @@ export const AboutPageAbout = () => {
                 <div className="text-[15px] box-border caret-transparent leading-6 md:text-base">
                   We're fully insured and use appropriate products and techniques for roofs, render, driveways and more. Get in touch for a free quote—we're here to help keep your property looking clean and well maintained.
                 </div>
-                <div className="mt-8 pt-6 border-t border-neutral-200">
+                <div className="mt-8 pt-6 border-t border-blue-200">
                   <h3 className="text-lg font-semibold font-heading uppercase text-black mb-4">
                     Why choose us
                   </h3>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4">
-                    <div className="rounded-xl border border-neutral-200 bg-neutral-50/50 p-4 md:p-5 flex flex-col sm:flex-row sm:justify-between sm:items-start gap-3">
-                      <div className="order-2 sm:order-none flex-1 min-w-0">
-                        <span className="text-[15px] font-medium text-black leading-6 md:text-base">Fully insured</span>
-                      </div>
+                  <div className="flex flex-wrap gap-x-6 gap-y-3">
+                    <div className="flex items-center gap-2">
+                      <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-amber-100 text-amber-600" aria-hidden>
+                        <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                      </span>
+                      <span className="text-[15px] font-medium text-black md:text-base">21 years experience</span>
                     </div>
-                    <div className="rounded-xl border border-neutral-200 bg-neutral-50/50 p-4 md:p-5 flex flex-col sm:flex-row sm:justify-between sm:items-start gap-3">
-                      <div className="order-2 sm:order-none flex-1 min-w-0">
-                        <span className="text-[15px] font-medium text-black leading-6 md:text-base">Mobile service</span>
-                      </div>
+                    <div className="flex items-center gap-2">
+                      <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-amber-100 text-amber-600" aria-hidden>
+                        <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                      </span>
+                      <span className="text-[15px] font-medium text-black md:text-base">500+ Jobs completed</span>
                     </div>
-                    <div className="rounded-xl border border-neutral-200 bg-neutral-50/50 p-4 md:p-5 flex flex-col sm:flex-row sm:justify-between sm:items-start gap-3">
-                      <div className="order-2 sm:order-none flex-1 min-w-0">
-                        <span className="text-[15px] leading-6 text-blue-700 md:text-base">Safe, effective methods for every surface</span>
-                      </div>
+                    <div className="flex items-center gap-2">
+                      <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-amber-100 text-amber-600" aria-hidden>
+                        <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg>
+                      </span>
+                      <span className="text-[15px] font-medium text-black md:text-base">5 Star rated</span>
                     </div>
                   </div>
                 </div>

@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /thank-you
 
-Sitemap: https://doubleodetailing.co.uk/sitemap.xml
+Sitemap: https://jimboscleaning.com/sitemap.xml

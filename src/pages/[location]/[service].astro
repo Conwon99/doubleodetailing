@@ -13,6 +13,8 @@ import { Breadcrumbs } from "../../components/Breadcrumbs";
 import { getLocationBySlug } from "../../data/locations";
 import { getServiceBySlug } from "../../data/services";
 import { getServiceDetail } from "../../data/serviceDetails";
+import { getLocationServiceIntro } from "../../data/locationServiceIntros";
+import { LocationServicePageIntro } from "../../sections/LocationPage";
 
 export async function getStaticPaths() {
   const { locationSlugs } = await import("../../data/locations");
@@ -34,8 +36,6 @@ if (!location || !service) {
   return Astro.redirect("/404");
 }
 
-const siteUrl = "https://jimboscleaning.com";
-const canonical = `${siteUrl}/${location.slug}/${service.slug}`;
 const title = `${service.title} ${location.name} | Professional Exterior Cleaning | Jimbos Cleaning`;
 const description = `${service.shortDescription} We come to you in ${location.name} and the surrounding areas. Get a free quote.`;
 
@@ -43,11 +43,13 @@ const detail = getServiceDetail(service.slug);
 const baseHero = detail?.heroDescription ?? service.shortDescription;
 const heroDescription = `${baseHero} We come to you in ${location.name} and the surrounding areas. Get a free quote.`;
 
+const pageIntro = getLocationServiceIntro(location, service);
+
 const packagesHref = "/services";
 const packagesLabel = "View Our Services";
 ---
 
-<Layout title={title} description={description} canonical={canonical}>
+<Layout title={title} description={description}>
   <div class="min-h-screen bg-neutral-100 font-figtree text-black text-sm leading-5 antialiased">
     <Navbar client:load />
     <main class="pt-0">
@@ -77,7 +79,7 @@ const packagesLabel = "View Our Services";
               <div class="box-border gap-x-4 flex flex-col gap-y-4">
                 <h1 class="text-[44px] font-bold box-border tracking-[-1.44px] leading-[52px] md:text-7xl md:leading-[80px] font-heading uppercase">
                   <div>{service.title}</div>
-                  <div class="text-blue-300">{location.name}</div>
+                  <div class="text-white/80">{location.name}</div>
                 </h1>
                 <p class="text-base leading-[26px] md:text-lg font-figtree">
                   {heroDescription}
@@ -85,7 +87,7 @@ const packagesLabel = "View Our Services";
               </div>
               <div class="items-center box-border gap-x-5 flex flex-wrap gap-y-5 mt-6 md:gap-x-6 md:gap-y-6 md:mt-7">
                 <a
-                  href="/contact"
+                  href="/contact/"
                   class="text-black items-center bg-cta box-border gap-x-5 flex max-w-full gap-y-5 text-center border pl-6 pr-1 py-1 rounded-[100px] border-solid border-transparent hover:bg-white hover:border-cta-dark"
                 >
                   <span class="relative text-sm font-medium z-[2] md:text-base md:leading-6">BOOK NOW</span>
@@ -109,11 +111,13 @@ const packagesLabel = "View Our Services";
         </div>
       </section>
 
+      <LocationServicePageIntro client:load heading={pageIntro.heading} paragraphs={pageIntro.paragraphs} />
+
       {detail && (
         <>
-          <ExteriorWhyChooseSection client:load serviceSlug={service.slug} />
-          <ExteriorProcessSection client:load serviceSlug={service.slug} />
-          <ExteriorFAQSection client:load serviceSlug={service.slug} />
+          <ExteriorWhyChooseSection client:load serviceSlug={service.slug} location={location} />
+          <ExteriorProcessSection client:load serviceSlug={service.slug} location={location} />
+          <ExteriorFAQSection client:load serviceSlug={service.slug} location={location} />
         </>
       )}
 

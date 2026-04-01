@@ -5,7 +5,7 @@ export const NavActions = () => {
         <div className="box-border caret-transparent hidden">
           <div className="box-border caret-transparent flex">
             <a
-              href="/contact"
+              href="/contact/"
               onClick={() => {
                 if (typeof window !== 'undefined' && (window as any).gtag) {
                   (window as any).gtag('event', 'quoteButton_nav', {
@@ -14,7 +14,7 @@ export const NavActions = () => {
                   });
                 }
               }}
-              className="text-black items-center bg-transparent box-border caret-transparent gap-x-2 flex justify-between max-w-full gap-y-2 text-center w-full border pl-2 pr-1 py-1 rounded-[100px] border-solid border-transparent md:pl-3 hover:bg-white hover:border-transparent"
+              className="text-black items-center bg-transparent box-border caret-transparent gap-x-2 flex justify-between max-w-full gap-y-2 text-center w-full border pl-2 pr-1 py-1 rounded-[100px] border-solid border-transparent md:pl-3 hover:bg-neutral-100 hover:border-transparent"
             >
               <div className="relative box-border caret-transparent overflow-hidden">
                 <div className="box-border caret-transparent">
@@ -62,7 +62,7 @@ export const NavActions = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Jimbos Cleaning on Facebook"
-              className="text-black box-border caret-transparent hover:text-cta-dark"
+              className="text-black box-border caret-transparent hover:text-neutral-800"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -73,7 +73,7 @@ export const NavActions = () => {
               </svg>
             </a>
             <a
-              href="/contact"
+              href="/contact/"
               onClick={() => {
                 if (typeof window !== 'undefined' && (window as any).gtag) {
                   (window as any).gtag('event', 'quoteButton_nav', {

@@ -30,8 +30,6 @@ if (!location) {
   return Astro.redirect("/404");
 }
 
-const siteUrl = "https://jimboscleaning.com";
-const canonical = `${siteUrl}/${location.slug}`;
 const title = `Exterior Cleaning ${location.name} | Roof, Driveway & Gutter Cleaning | Jimbos Cleaning`;
 const description = `Professional exterior cleaning in ${location.name} and nearby. Roof steam cleaning, render softwashing, driveway, gutter, PVC and window cleaning. Get a free quote.`;
 
@@ -50,7 +48,6 @@ const locationSchema =
 <Layout
   title={title}
   description={description}
-  canonical={canonical}
   locationSchema={locationSchema}
 >
   <div class="min-h-screen bg-neutral-100 font-figtree text-black text-sm leading-5 antialiased">

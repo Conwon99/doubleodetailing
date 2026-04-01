@@ -20,17 +20,23 @@ interface Props {
   locationSchema?: LocationSchemaProp;
 }
 
+const siteUrl = "https://jimboscleaning.com";
+// Canonical: trailing slash (trailingSlash: 'always' in astro.config).
+const pathname = Astro.url.pathname;
+const pathWithSlash = pathname.endsWith("/") ? pathname : pathname + "/";
+const defaultCanonical =
+  pathWithSlash === "/" ? `${siteUrl}/` : `${siteUrl}${pathWithSlash}`;
+
 const {
   title = "Jimbos Cleaning - Professional Exterior Cleaning in Ayrshire & Glasgow",
   description = "Expert roof cleaning, render softwashing, driveway, gutter, PVC and window cleaning across Ayrshire and Glasgow. Professional exterior cleaning services for your home or business.",
   image = "https://jimboscleaning.com/logo.png",
   type = "website",
-  canonical = Astro.url.pathname === '/' ? 'https://jimboscleaning.com/' : `https://jimboscleaning.com${Astro.url.pathname}`,
+  canonical = defaultCanonical,
   noindex = false,
   locationSchema,
 } = Astro.props;
 
-const siteUrl = "https://jimboscleaning.com";
 const fullImageUrl = image.startsWith('http') ? image : `${siteUrl}${image}`;
 
 const defaultAreaServed = [
@@ -46,6 +52,8 @@ const defaultAreaServed = [
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" href="/logo.png" />
+    <link rel="apple-touch-icon" href="/logo.png" />
     <meta name="generator" content={Astro.generator} />
     
     <!-- Primary Meta Tags -->
@@ -80,8 +88,8 @@ const defaultAreaServed = [
     <!-- Business Information -->
     <meta name="geo.region" content="GB-SCT" />
     <meta name="geo.placename" content="Ayrshire, Scotland" />
-    <meta name="geo.position" content="55.4620;-4.6299" />
-    <meta name="ICBM" content="55.4620, -4.6299" />
+    <meta name="geo.position" content="55.6190;-4.6551" />
+    <meta name="ICBM" content="55.6190, -4.6551" />
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -97,7 +105,7 @@ const defaultAreaServed = [
       gtag('config', 'G-YMJS781CJF');
     </script>
     
-    <!-- JSON-LD Schema -->
+    <!-- JSON-LD Schema: LocalBusiness (primary) -->
     <script type="application/ld+json" set:html={JSON.stringify({
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
@@ -118,8 +126,8 @@ const defaultAreaServed = [
       },
       "geo": {
         "@type": "GeoCoordinates",
-        "latitude": "55.4620",
-        "longitude": "-4.6299"
+        "latitude": "55.6190",
+        "longitude": "-4.6551"
       },
       "areaServed": defaultAreaServed,
       "serviceType": [
@@ -148,7 +156,8 @@ const defaultAreaServed = [
         "reviewCount": "23",
         "bestRating": "5",
         "worstRating": "1"
-      }
+      },
+      "parentOrganization": { "@id": "https://jimboscleaning.com/#organization" }
     })} />
     <script type="application/ld+json" set:html={JSON.stringify({
       "@context": "https://schema.org",
@@ -224,7 +233,7 @@ const defaultAreaServed = [
     <slot />
     <!-- Mobile message widget - bottom right, visible on small screens only -->
     <a
-      href="/contact"
+      href="/contact/"
       class="fixed bottom-5 right-5 z-50 flex md:hidden items-center gap-2 bg-cta-dark text-white px-4 py-3 rounded-full shadow-lg hover:bg-cta focus:outline-none focus:ring-2 focus:ring-cta-dark focus:ring-offset-2"
       aria-label="Message us / Get a quote"
     >

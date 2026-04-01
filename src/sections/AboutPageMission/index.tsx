@@ -14,7 +14,7 @@ export const AboutPageMission = () => {
                 Qualifications
               </h2>
             </div>
-            <div className="text-blue-700 box-border caret-transparent space-y-4">
+            <div className="text-neutral-700 box-border caret-transparent space-y-4">
               <div className="text-[15px] box-border caret-transparent leading-6 md:text-base">
                 At Double-O Detailing, excellence starts at the top. We bring years of hands-on experience, professional training, and a passion for automotive care to every vehicle we service.
               </div>

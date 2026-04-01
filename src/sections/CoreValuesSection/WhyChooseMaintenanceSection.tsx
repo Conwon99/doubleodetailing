@@ -23,7 +23,7 @@ export const WhyChooseMaintenanceSection = () => {
                 <span className="font-heading uppercase">Choose Our Maintenance?</span>
               </h2>
             </div>
-            <div className="text-blue-700 box-border caret-transparent space-y-4">
+            <div className="text-neutral-700 box-border caret-transparent space-y-4">
               <div className="text-[15px] box-border caret-transparent leading-6 md:text-base">
                 Regular maintenance keeps your vehicle looking its best and protects your investment. Our maintenance packages combine washes, light decontamination, and protection top-ups so your paint and interior stay in great condition between deeper details.
               </div>
@@ -41,7 +41,7 @@ export const WhyChooseMaintenanceSection = () => {
                       </svg>
                     </div>
                   </div>
-                  <div className="text-[15px] box-border caret-transparent leading-6 text-blue-700 md:text-base">
+                  <div className="text-[15px] box-border caret-transparent leading-6 text-neutral-700 md:text-base">
                     Quality Products - Professional-grade washes and sealants to maintain your finish
                   </div>
                 </div>
@@ -53,7 +53,7 @@ export const WhyChooseMaintenanceSection = () => {
                       </svg>
                     </div>
                   </div>
-                  <div className="text-[15px] box-border caret-transparent leading-6 text-blue-700 md:text-base">
+                  <div className="text-[15px] box-border caret-transparent leading-6 text-neutral-700 md:text-base">
                     Mobile Service - We come to you so maintenance fits your schedule
                   </div>
                 </div>
@@ -65,15 +65,15 @@ export const WhyChooseMaintenanceSection = () => {
                       </svg>
                     </div>
                   </div>
-                  <div className="text-[15px] box-border caret-transparent leading-6 text-blue-700 md:text-base">
+                  <div className="text-[15px] box-border caret-transparent leading-6 text-neutral-700 md:text-base">
                     Insured - We are fully insured to work on your vehicle and at any property
                   </div>
                 </div>
               </div>
               <div className="box-border caret-transparent flex flex-wrap gap-3">
                 <a
-                  href="/contact"
-                  className="text-white items-center bg-cta-dark box-border caret-transparent gap-x-3 flex max-w-full gap-y-3 text-center border border-cta-dark px-6 py-4 rounded-[100px] border-solid hover:text-cta-dark hover:bg-white"
+                  href="/contact/"
+                  className="text-white items-center bg-cta-dark box-border caret-transparent gap-x-3 flex max-w-full gap-y-3 text-center border border-cta-dark px-6 py-4 rounded-[100px] border-solid hover:text-neutral-800 hover:bg-white"
                 >
                   <span className="relative text-sm font-medium z-[2] md:text-base md:leading-6">BOOK NOW</span>
                   <span className="box-border caret-transparent">
@@ -82,7 +82,7 @@ export const WhyChooseMaintenanceSection = () => {
                 </a>
                 <a
                   href="/packages/maintenance"
-                  className="text-cta-dark items-center box-border caret-transparent gap-x-3 flex max-w-full gap-y-3 text-center border border-cta-dark px-6 py-4 rounded-[100px] border-solid hover:bg-cta-dark hover:text-white"
+                  className="text-neutral-800 items-center box-border caret-transparent gap-x-3 flex max-w-full gap-y-3 text-center border border-cta-dark px-6 py-4 rounded-[100px] border-solid hover:bg-cta-dark hover:text-white"
                 >
                   <span className="relative text-sm font-medium z-[2] md:text-base md:leading-6">View Packages</span>
                   <span className="box-border caret-transparent">

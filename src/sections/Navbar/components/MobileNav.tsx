@@ -17,9 +17,9 @@ export const MobileNav = () => {
         onClick={toggleMenu}
         aria-label="menu"
         aria-expanded={isOpen}
-        className="relative text-white text-2xl box-border caret-transparent block float-right min-h-[auto] min-w-[auto] p-3 md:hidden"
+        className="relative text-neutral-900 text-2xl box-border caret-transparent block float-right min-h-[auto] min-w-[auto] p-3 md:hidden"
       >
-        <div className="text-white box-border caret-transparent w-6 h-6">
+        <div className="text-neutral-900 box-border caret-transparent w-6 h-6">
           {isOpen ? (
             <svg
               className="w-6 h-6"
@@ -69,7 +69,7 @@ export const MobileNav = () => {
                 <a
                   href="/"
                   onClick={closeMenu}
-                  className="text-slate-900 box-border caret-transparent flex justify-center max-w-full text-center hover:text-cta"
+                  className="text-slate-900 box-border caret-transparent flex justify-center max-w-full text-center hover:text-neutral-800"
                 >
                   <div className="text-slate-900 text-[15px] box-border caret-transparent leading-6">
                     Home
@@ -78,9 +78,9 @@ export const MobileNav = () => {
               </li>
               <li>
                 <a
-                  href="/about"
+                  href="/about/"
                   onClick={closeMenu}
-                  className="text-slate-900 box-border caret-transparent flex justify-center max-w-full text-center hover:text-cta"
+                  className="text-slate-900 box-border caret-transparent flex justify-center max-w-full text-center hover:text-neutral-800"
                 >
                   <div className="text-slate-900 text-[15px] box-border caret-transparent leading-6">
                     About
@@ -89,9 +89,9 @@ export const MobileNav = () => {
               </li>
               <li>
                 <a
-                  href="/gallery"
+                  href="/gallery/"
                   onClick={closeMenu}
-                  className="text-slate-900 box-border caret-transparent flex justify-center max-w-full text-center hover:text-cta"
+                  className="text-slate-900 box-border caret-transparent flex justify-center max-w-full text-center hover:text-neutral-800"
                 >
                   <div className="text-slate-900 text-[15px] box-border caret-transparent leading-6">
                     Gallery
@@ -100,9 +100,9 @@ export const MobileNav = () => {
               </li>
               <li>
                 <a
-                  href="/services"
+                  href="/services/"
                   onClick={closeMenu}
-                  className="text-slate-900 box-border caret-transparent flex justify-center max-w-full text-center hover:text-cta"
+                  className="text-slate-900 box-border caret-transparent flex justify-center max-w-full text-center hover:text-neutral-800"
                 >
                   <div className="text-slate-900 text-[15px] box-border caret-transparent leading-6">
                     Services
@@ -111,9 +111,9 @@ export const MobileNav = () => {
               </li>
               <li>
                 <a
-                  href="/contact"
+                  href="/contact/"
                   onClick={closeMenu}
-                  className="text-slate-900 box-border caret-transparent flex justify-center max-w-full text-center hover:text-cta"
+                  className="text-slate-900 box-border caret-transparent flex justify-center max-w-full text-center hover:text-neutral-800"
                 >
                   <div className="text-slate-900 text-[15px] box-border caret-transparent leading-6">
                     Contact
@@ -123,7 +123,7 @@ export const MobileNav = () => {
             </ul>
             <div className="box-border caret-transparent px-5 pb-5">
               <a
-                href="/contact"
+                href="/contact/"
                 onClick={() => {
                   if (typeof window !== 'undefined' && (window as any).gtag) {
                     (window as any).gtag('event', 'quoteButton_nav', {

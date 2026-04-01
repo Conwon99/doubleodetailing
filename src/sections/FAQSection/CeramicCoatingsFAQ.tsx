@@ -87,7 +87,7 @@ export const CeramicCoatingsFAQ = () => {
                     openIndex === index ? "max-h-[500px]" : "max-h-0"
                   }`}
                 >
-                  <div className="px-5 pb-5 md:px-6 md:pb-6 pt-0 text-[15px] leading-6 text-blue-700 md:text-base">
+                  <div className="px-5 pb-5 md:px-6 md:pb-6 pt-0 text-[15px] leading-6 text-neutral-700 md:text-base">
                     {faq.answer}
                   </div>
                 </div>

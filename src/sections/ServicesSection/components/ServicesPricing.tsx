@@ -45,7 +45,7 @@ export const ServicesPricing = () => {
                   className="box-border caret-transparent border-b border-neutral-200 pb-4 last:border-b-0 last:pb-0"
                 >
                   <div className="box-border caret-transparent flex flex-col gap-y-1 md:flex-row md:justify-between md:items-start md:gap-x-4">
-                    <div className="text-[15px] box-border caret-transparent leading-6 text-blue-700 flex-1 md:text-base">
+                    <div className="text-[15px] box-border caret-transparent leading-6 text-neutral-700 flex-1 md:text-base">
                       {service.name}
                     </div>
                     <div className="text-[15px] font-medium box-border caret-transparent leading-6 text-black whitespace-nowrap md:text-base">
@@ -82,7 +82,7 @@ export const ServicesPricing = () => {
                   className="box-border caret-transparent border-b border-neutral-200 pb-4 last:border-b-0 last:pb-0"
                 >
                   <div className="box-border caret-transparent flex flex-col gap-y-1 md:flex-row md:justify-between md:items-start md:gap-x-4">
-                    <div className="text-[15px] box-border caret-transparent leading-6 text-blue-700 flex-1 md:text-base">
+                    <div className="text-[15px] box-border caret-transparent leading-6 text-neutral-700 flex-1 md:text-base">
                       {service.name}
                     </div>
                     <div className="text-[15px] font-medium box-border caret-transparent leading-6 text-black whitespace-nowrap md:text-base">

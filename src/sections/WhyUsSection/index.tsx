@@ -23,7 +23,7 @@ export const WhyUsSection = () => {
                   </h2>
                 </div>
                 <div className="box-border caret-transparent blur-0 max-w-none md:max-w-[360px]">
-                  <div className="text-blue-700 box-border caret-transparent">
+                  <div className="text-neutral-700 box-border caret-transparent">
                     <div className="text-[15px] box-border caret-transparent leading-6 md:text-base">
                       We deliver professional exterior cleaning across Ayrshire and Glasgow. Fully insured, with the right equipment and methods for roofs, render, driveways, gutters, PVC and windows. Quality, reliability and customer satisfaction on every job.
                     </div>

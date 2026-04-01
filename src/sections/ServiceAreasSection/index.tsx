@@ -27,7 +27,7 @@ export const ServiceAreasSection = () => {
           <h2 className="text-3xl font-bold tracking-[-0.52px] leading-[35px] md:text-[52px] md:leading-[62px] font-heading uppercase">
             Areas We Cover
           </h2>
-          <p className="text-[15px] text-blue-700 leading-6 md:text-base max-w-[640px]">
+          <p className="text-[15px] text-neutral-700 leading-6 md:text-base max-w-[640px]">
             We cover Ayrshire and southwest Glasgow with professional exterior cleaning—roof, render, driveway, gutters, PVC and windows. Get in touch to confirm we cover your area or to book a free quote.
           </p>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
@@ -35,15 +35,15 @@ export const ServiceAreasSection = () => {
               <summary className="font-heading uppercase text-lg font-bold text-black cursor-pointer list-none [&::-webkit-details-marker]:hidden flex items-center gap-2 before:content-[''] before:inline-block before:border-t-2 before:border-r-2 before:border-black before:w-2 before:h-2 before:rotate-45 before:shrink-0 before:transition-transform group-open:before:rotate-[-135deg]">
                 Locations
               </summary>
-              <ul className="grid grid-cols-2 gap-x-4 gap-y-2 text-[15px] leading-6 text-blue-700 md:text-base mt-4 pl-0 list-none lg:gap-x-6">
+              <ul className="grid grid-cols-2 gap-x-4 gap-y-2 text-[15px] leading-6 text-neutral-700 md:text-base mt-4 pl-0 list-none lg:gap-x-6">
                 {locations.map((loc) => (
                   <li key={loc.slug} className="flex items-center gap-2">
-                    <span className="text-cta-dark shrink-0" aria-hidden>
+                    <span className="text-neutral-800 shrink-0" aria-hidden>
                       •
                     </span>
                     <a
                       href={`/${loc.slug}`}
-                      className="hover:text-cta-dark hover:underline transition-colors"
+                      className="hover:text-neutral-800 hover:underline transition-colors"
                     >
                       {loc.name}
                     </a>

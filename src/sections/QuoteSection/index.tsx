@@ -55,7 +55,7 @@ export const QuoteSection = ({ showTerms = true }: QuoteSectionProps) => {
                         });
                       }
                     }}
-                    className="text-white text-xl font-medium hover:text-cta transition-colors md:text-2xl"
+                    className="text-white text-xl font-medium hover:text-neutral-700 transition-colors md:text-2xl"
                   >
                     07919 270128
                   </a>

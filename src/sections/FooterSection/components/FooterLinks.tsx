@@ -16,19 +16,19 @@ export const FooterLinks = () => {
             Home
           </a>
           <a
-            href="/about"
+            href="/about/"
             className="text-[15px] box-border caret-transparent leading-6 text-white/80 hover:text-white md:text-base"
           >
             About Us
           </a>
           <a
-            href="/services"
+            href="/services/"
             className="text-[15px] box-border caret-transparent leading-6 text-white/80 hover:text-white md:text-base"
           >
             Services
           </a>
           <a
-            href="/contact"
+            href="/contact/"
             className="text-[15px] box-border caret-transparent leading-6 text-white/80 hover:text-white md:text-base"
           >
             Contact
@@ -43,7 +43,7 @@ export const FooterLinks = () => {
           {services.map((service) => (
             <a
               key={service.slug}
-              href={`/${service.slug}`}
+              href={`/${service.slug}/`}
               className="text-[15px] box-border caret-transparent leading-6 text-white/80 hover:text-white md:text-base"
             >
               {service.title}
@@ -57,7 +57,7 @@ export const FooterLinks = () => {
         </div>
         <nav className="box-border caret-transparent gap-x-0 flex flex-col gap-y-3">
           <a
-            href="/locations"
+            href="/locations/"
             className="text-[15px] box-border caret-transparent leading-6 text-white/80 hover:text-white md:text-base"
           >
             All areas
@@ -65,7 +65,7 @@ export const FooterLinks = () => {
           {locations.map((loc) => (
             <a
               key={loc.slug}
-              href={`/${loc.slug}`}
+              href={`/${loc.slug}/`}
               className="text-[15px] box-border caret-transparent leading-6 text-white/80 hover:text-white md:text-base"
             >
               {loc.name}

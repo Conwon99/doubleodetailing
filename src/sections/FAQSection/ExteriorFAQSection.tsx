@@ -1,16 +1,36 @@
 import { useState } from "react";
 import { getServiceDetail } from "@/data/serviceDetails";
 import { getServiceBySlug } from "@/data/services";
+import type { Location } from "@/data/locations";
 
-type Props = { serviceSlug: string };
+type Props = { serviceSlug: string; location?: Location };
 
-export const ExteriorFAQSection = ({ serviceSlug }: Props) => {
+function getLocationFaq(serviceTitle: string, location: Location): { question: string; answer: string } {
+  const neighborhoods = location.neighborhoods ?? [];
+  const areaPhrase =
+    neighborhoods.length >= 3
+      ? `including ${neighborhoods[0]}, ${neighborhoods[1]} and ${neighborhoods[2]}`
+      : neighborhoods.length
+        ? `including ${neighborhoods.join(" and ")}`
+        : "";
+  const answer = areaPhrase
+    ? `Yes. We cover ${location.name} and the surrounding areas ${areaPhrase}. Get in touch for a free quote and we’ll sort a date that suits you.`
+    : `Yes. We cover ${location.name} and the surrounding area. Get in touch for a free quote and we’ll sort a date that suits you.`;
+  return {
+    question: `Do you do ${serviceTitle.toLowerCase()} in ${location.name}?`,
+    answer,
+  };
+}
+
+export const ExteriorFAQSection = ({ serviceSlug, location }: Props) => {
   const detail = getServiceDetail(serviceSlug);
   const service = getServiceBySlug(serviceSlug);
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   if (!detail || !service) return null;
   const { faqs } = detail;
+  const locationFaq = location ? getLocationFaq(service.title, location) : null;
+  const allFaqs = locationFaq ? [locationFaq, ...faqs] : faqs;
 
   return (
     <section className="bg-white box-border py-[60px] md:py-[100px]">
@@ -23,7 +43,7 @@ export const ExteriorFAQSection = ({ serviceSlug }: Props) => {
             {service.title} FAQs
           </h2>
           <div className="box-border flex flex-col gap-y-0 border border-neutral-200 rounded-xl overflow-hidden">
-            {faqs.map((faq, index) => (
+            {allFaqs.map((faq, index) => (
               <div key={index} className="border-b border-neutral-200 last:border-b-0">
                 <button
                   type="button"
@@ -39,7 +59,7 @@ export const ExteriorFAQSection = ({ serviceSlug }: Props) => {
                   </span>
                 </button>
                 <div className={`overflow-hidden transition-all duration-200 ${openIndex === index ? "max-h-[500px]" : "max-h-0"}`}>
-                  <div className="px-5 pb-5 md:px-6 md:pb-6 pt-0 text-[15px] leading-6 text-blue-700 md:text-base">{faq.answer}</div>
+                  <div className="px-5 pb-5 md:px-6 md:pb-6 pt-0 text-[15px] leading-6 text-neutral-700 md:text-base">{faq.answer}</div>
                 </div>
               </div>
             ))}

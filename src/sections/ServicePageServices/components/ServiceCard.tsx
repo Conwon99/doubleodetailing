@@ -29,7 +29,7 @@ export const ServiceCard = (props: ServiceCardProps) => {
               <div className="text-lg font-bold box-border caret-transparent leading-[30px] md:text-xl md:leading-7 font-heading uppercase">
                 {props.title}
               </div>
-              <div className="text-blue-700 box-border caret-transparent">
+              <div className="text-neutral-700 box-border caret-transparent">
                 <div className="text-[15px] box-border caret-transparent leading-6 md:text-base">
                   {props.description}
                 </div>

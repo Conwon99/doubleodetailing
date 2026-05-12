@@ -1,10 +1,11 @@
 import { useState } from "react";
+import { AREA_TAGLINE } from "@/constants/site";
 
 const faqs: { question: string; answer: string }[] = [
   {
     question: "What areas do you cover?",
     answer:
-      "We cover Ayrshire and southwest Glasgow, including Irvine, Kilmarnock, Ayr, Troon, Prestwick, Paisley, Saltcoats, Ardrossan, Largs, and many more. Get in touch to confirm we cover your area.",
+      `We cover ${AREA_TAGLINE}, including the towns listed on our areas page. Get in touch to confirm we cover your postcode.`,
   },
   {
     question: "What services do you offer?",

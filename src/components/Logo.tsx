@@ -1,3 +1,5 @@
+import { BUSINESS_NAME } from "@/constants/site";
+
 export const Logo = () => {
   return (
     <div className="box-border caret-transparent basis-[0%] grow">
@@ -9,8 +11,11 @@ export const Logo = () => {
         <div className="box-border caret-transparent">
           <img
             src="/logo.png"
-            alt="Jimbos Cleaning Logo"
+            alt={`${BUSINESS_NAME} logo`}
             className="box-border caret-transparent inline-block max-w-full h-24 object-contain md:h-32"
+            width={500}
+            height={500}
+            decoding="async"
           />
         </div>
       </a>

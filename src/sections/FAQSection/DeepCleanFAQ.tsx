@@ -14,7 +14,7 @@ const faqs: { question: string; answer: string }[] = [
   {
     question: "Do you come to me?",
     answer:
-      "Yes. We're a mobile service and bring our equipment to you. We need a suitable space (e.g. driveway) and access to power. We cover Glasgow and the surrounding areas—get in touch to confirm we can reach you.",
+      "Yes. We're a mobile service and bring our equipment to you. We need a suitable space (e.g. driveway) and access to power. We cover Edinburgh and the Lothians—get in touch to confirm we can reach you.",
   },
   {
     question: "Can you clean leather and fabric interiors?",
@@ -24,7 +24,7 @@ const faqs: { question: string; answer: string }[] = [
   {
     question: "What areas do you cover?",
     answer:
-      "We're based in North Glasgow and cover Glasgow, Central Scotland, Stirling, and the surrounding areas. Contact us with your location and we'll confirm we can reach you.",
+      "We're based in Edinburgh and cover Edinburgh, Midlothian, East Lothian and West Lothian. Contact us with your location and we'll confirm we can reach you.",
   },
 ];
 

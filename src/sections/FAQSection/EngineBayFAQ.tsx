@@ -3,9 +3,9 @@ import { useState } from "react";
 const faqs: { question: string; answer: string }[] = [
   { question: "Is it safe to clean the engine bay?", answer: "Yes, when done properly. We protect sensitive parts, use appropriate products, and avoid high-pressure water on electronics. The engine should be cool before we start. We're experienced in safe engine bay cleaning." },
   { question: "How long does it take?", answer: "Typically a few hours depending on the vehicle and condition. We'll give you a better idea when you book or request a quote." },
-  { question: "Do you come to me?", answer: "Yes. We're mobile and come to you. We need a suitable space and power. We cover Glasgow and the surrounding areas—get in touch to confirm." },
+  { question: "Do you come to me?", answer: "Yes. We're mobile and come to you. We need a suitable space and power. We cover Edinburgh and the Lothians—get in touch to confirm." },
   { question: "Will it affect my warranty?", answer: "Professional engine bay cleaning, when done correctly, should not affect warranty. We use safe methods and don't remove or modify any components. If you have concerns, check with your dealer." },
-  { question: "What areas do you cover?", answer: "We're based in North Glasgow and cover Glasgow, Central Scotland, Stirling, and the surrounding areas. Contact us with your location and we'll confirm we can reach you." },
+  { question: "What areas do you cover?", answer: "We're based in Edinburgh and cover Edinburgh, Midlothian, East Lothian and West Lothian. Contact us with your location and we'll confirm we can reach you." },
 ];
 
 export const EngineBayFAQ = () => {

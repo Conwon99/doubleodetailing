@@ -3,9 +3,9 @@ import { useState } from "react";
 const faqs: { question: string; answer: string }[] = [
   { question: "What causes headlights to go cloudy?", answer: "UV exposure, road grime, and oxidation break down the plastic lens coating over time, leaving a yellow or hazy appearance. Restoration removes the damaged layer and we then protect the lens to slow it happening again." },
   { question: "How long does headlight restoration last?", answer: "With proper UV protection applied, results can last a few years depending on use and care. We'll advise on aftercare. Without protection, haze can return sooner." },
-  { question: "Do you come to me?", answer: "Yes. We're mobile and bring the equipment to you. We need a suitable space and power. We cover Glasgow and the surrounding areas—get in touch to confirm." },
+  { question: "Do you come to me?", answer: "Yes. We're mobile and bring the equipment to you. We need a suitable space and power. We cover Edinburgh and the Lothians—get in touch to confirm." },
   { question: "Can you do both headlights in one visit?", answer: "Yes. We typically restore both headlights in one session so they match and your car looks consistent." },
-  { question: "What areas do you cover?", answer: "We're based in North Glasgow and cover Glasgow, Central Scotland, Stirling, and the surrounding areas. Contact us with your location and we'll confirm we can reach you." },
+  { question: "What areas do you cover?", answer: "We're based in Edinburgh and cover Edinburgh, Midlothian, East Lothian and West Lothian. Contact us with your location and we'll confirm we can reach you." },
 ];
 
 export const HeadlightRestorationFAQ = () => {

@@ -1,5 +1,7 @@
 # Technical SEO Audit – Jimbos Cleaning (jimboscleaning.com)
 
+> **Superseded after EdiClean Exterior Cleaning rebrand (Edinburgh / Lothians) on 2026-05-12; figures above relate to the previous brand only.**
+
 **Business:** Exterior cleaner | **Primary area:** Ayrshire  
 **Audit date:** 2025 | **Status:** Implemented fixes + remaining checklist
 

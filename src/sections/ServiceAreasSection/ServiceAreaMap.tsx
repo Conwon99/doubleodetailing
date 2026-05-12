@@ -1,17 +1,17 @@
 import { useEffect, useRef } from "react";
 import "leaflet/dist/leaflet.css";
+import { BUSINESS_NAME, META_AREA_PHRASE } from "@/constants/site";
 
-/** Rough polygon [lat, lng] covering Ayrshire and southwest Glasgow (Renfrewshire, East Renfrewshire) we serve. */
+/** Rough polygon [lat, lng] covering Edinburgh, Midlothian, East Lothian and West Lothian. */
 const SERVICE_AREA_POLYGON: [number, number][] = [
-  [55.35, -4.95],   // SW – south of Girvan / Maybole
-  [55.35, -4.25],   // SE – east of Cumnock
-  [55.92, -4.25],   // NE – east of Barrhead / Newton Mearns
-  [55.92, -4.40],   // N – Renfrew / Paisley
-  [55.82, -4.90],   // NW – Largs / North Ayrshire
-  [55.35, -4.95],   // close polygon
+  [56.08, -3.66],
+  [56.08, -2.68],
+  [55.80, -2.68],
+  [55.80, -3.66],
+  [56.08, -3.66],
 ];
 
-const MAP_CENTER: [number, number] = [55.65, -4.55];
+const MAP_CENTER: [number, number] = [55.9270, -3.2070];
 const MAP_ZOOM = 9;
 
 export function ServiceAreaMap() {
@@ -56,12 +56,14 @@ export function ServiceAreaMap() {
     };
   }, []);
 
+  const mapLabel = `Map showing ${BUSINESS_NAME} service area (${META_AREA_PHRASE})`;
+
   return (
     <div className="relative z-0 isolate">
       <div
         ref={containerRef}
         className="w-full h-full min-h-[280px] lg:min-h-[320px] rounded-xl overflow-hidden border border-neutral-200 shadow-sm bg-neutral-100 [&_.leaflet-control]:!z-[100] [&_.leaflet-pane]:!z-[1]"
-        aria-label="Map showing Jimbos Cleaning service area (Ayrshire and Glasgow)"
+        aria-label={mapLabel}
       />
     </div>
   );

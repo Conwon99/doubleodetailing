@@ -3,6 +3,8 @@
  * Used by exterior cleaning service pages.
  */
 
+import { META_AREA_PHRASE } from "@/constants/site";
+
 export type ServiceDetailContent = {
   heroDescription: string;
   whyChoose: {
@@ -16,7 +18,7 @@ export type ServiceDetailContent = {
 export const serviceDetails: Record<string, ServiceDetailContent> = {
   "roof-steam-cleaning": {
     heroDescription:
-      "Professional roof steam cleaning with safe moss and algae removal from roof tiles. We bring expert Ayrshire roof cleaning to your property—effective, environmentally friendly treatment that protects your roof and improves curb appeal.",
+      `Professional roof steam cleaning with safe moss and algae removal from roof tiles. Effective, environmentally friendly treatment that protects your roof and improves curb appeal across ${META_AREA_PHRASE}.`,
     whyChoose: {
       title: "Why Choose Our Roof Steam Cleaning?",
       points: [
@@ -67,7 +69,7 @@ export const serviceDetails: Record<string, ServiceDetailContent> = {
         {
           title: "Experienced Team",
           description:
-            "We're used to working on residential and commercial properties across Ayrshire and Glasgow.",
+            `We're used to working on residential and commercial properties across ${META_AREA_PHRASE}.`,
         },
       ],
     },

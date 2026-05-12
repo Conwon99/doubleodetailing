@@ -1,5 +1,6 @@
 import type { Location } from "@/data/locations";
 import { services } from "@/data/services";
+import { getLocationServicesSectionParagraphs } from "@/data/locationPageCopy";
 import { ServiceCard } from "@/sections/ServicePageServices/components/ServiceCard";
 
 const ICON_URL = "https://c.animaapp.com/mkllold3CHU3xz/assets/icon-5.svg";
@@ -11,6 +12,8 @@ export type LocationServicesSectionProps = {
 export const LocationServicesSection = ({
   location,
 }: LocationServicesSectionProps) => {
+  const introParagraphs = getLocationServicesSectionParagraphs(location);
+
   return (
     <section id="services" className="bg-white box-border pb-[60px] md:pb-[100px]">
       <div className="box-border max-w-[1204px] mx-auto px-5 md:px-8">
@@ -20,6 +23,11 @@ export const LocationServicesSection = ({
               <h2 className="text-3xl font-bold tracking-[-0.52px] leading-[35px] md:text-[52px] md:leading-[62px] font-heading uppercase">
                 Our services in {location.name}
               </h2>
+              <div className="space-y-3 text-[15px] text-neutral-700 leading-6 md:text-base">
+                {introParagraphs.map((paragraph) => (
+                  <p key={paragraph}>{paragraph}</p>
+                ))}
+              </div>
             </div>
           </div>
           <div
@@ -29,7 +37,7 @@ export const LocationServicesSection = ({
             {services.map((service) => (
               <ServiceCard
                 key={service.slug}
-                href={`/${location.slug}/${service.slug}`}
+                href={`/${location.slug}/${service.slug}/`}
                 imageUrl={service.imageUrl}
                 imageSizes="(max-width: 767px) 100vw, 740px"
                 title={service.title}

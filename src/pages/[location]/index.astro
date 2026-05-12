@@ -15,6 +15,8 @@ import { ServiceAreasSection } from "../../sections/ServiceAreasSection";
 import ReviewsSection from "../../sections/ReviewsSection.astro";
 import { QuoteSection } from "../../sections/QuoteSection";
 import { FooterSection } from "../../sections/FooterSection";
+import { BUSINESS_NAME } from "../../constants/site";
+import { getLocationMetaDescription } from "../../data/locationPageCopy";
 
 export async function getStaticPaths() {
   const { locationSlugs } = await import("../../data/locations");
@@ -30,8 +32,8 @@ if (!location) {
   return Astro.redirect("/404");
 }
 
-const title = `Exterior Cleaning ${location.name} | Roof, Driveway & Gutter Cleaning | Jimbos Cleaning`;
-const description = `Professional exterior cleaning in ${location.name} and nearby. Roof steam cleaning, render softwashing, driveway, gutter, PVC and window cleaning. Get a free quote.`;
+const title = `Exterior Cleaning ${location.name} | Roof, Driveway & Gutter Cleaning | ${BUSINESS_NAME}`;
+const description = getLocationMetaDescription(location);
 
 const locationSchema =
   location.geo && location.addressLocality

@@ -1,4 +1,5 @@
 import type { Location } from "@/data/locations";
+import { getLocationHeroParagraphs } from "@/data/locationPageCopy";
 import { HeroStats } from "@/sections/Hero/components/HeroStats";
 
 const ICON_ARROW =
@@ -11,8 +12,8 @@ export type LocationHeroProps = {
 };
 
 export const LocationHero = ({ location }: LocationHeroProps) => {
-  const { name, neighborhoods = [] } = location;
-  const areas = neighborhoods.length ? ` in ${name} and nearby areas like ${neighborhoods.slice(0, 3).join(", ")}` : ` in ${name}`;
+  const { name } = location;
+  const heroParagraphs = getLocationHeroParagraphs(location);
 
   return (
     <section className="relative text-white overflow-hidden min-h-screen">
@@ -20,7 +21,7 @@ export const LocationHero = ({ location }: LocationHeroProps) => {
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: `url('/hero/jimhero.jpg')`,
+            backgroundImage: `url('/hero/hero-main.jpg')`,
             backgroundPosition: "40% center",
           }}
         />
@@ -37,9 +38,11 @@ export const LocationHero = ({ location }: LocationHeroProps) => {
                   <span className="text-white/80">in {name}</span>
                 </div>
               </h1>
-              <p className="text-base leading-[26px] md:text-lg font-figtree">
-                Professional exterior cleaning{areas}. Roof steam cleaning, render softwashing, driveway, gutter, PVC and window cleaning. We bring the service to your property—get a free quote.
-              </p>
+              <div className="space-y-3 text-base leading-[26px] md:text-lg font-figtree">
+                {heroParagraphs.map((paragraph) => (
+                  <p key={paragraph}>{paragraph}</p>
+                ))}
+              </div>
             </div>
             <div className="items-center box-border gap-x-5 flex flex-wrap gap-y-5 mt-6 md:gap-x-6 md:gap-y-6 md:mt-7">
               <a

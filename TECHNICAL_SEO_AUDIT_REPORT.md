@@ -1,5 +1,7 @@
 # Technical SEO Audit Report — Jimbos Cleaning
 
+> **Superseded after EdiClean Exterior Cleaning rebrand (Edinburgh / Lothians) on 2026-05-12; figures above relate to the previous brand only.**
+
 **Source:** Screaming Frog crawl export (`internal_all.csv`)  
 **Total URLs crawled:** 336
 **HTML pages:** 317

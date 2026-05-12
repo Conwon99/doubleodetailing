@@ -19,12 +19,12 @@ const faqs: { question: string; answer: string }[] = [
   {
     question: "Do you come to my location?",
     answer:
-      "Yes. We're mobile and come to you. We need a suitable space (e.g. driveway) and access to power. We cover Glasgow and the surrounding areas—contact us to confirm we can reach you.",
+      "Yes. We're mobile and come to you. We need a suitable space (e.g. driveway) and access to power. We cover Edinburgh and the Lothians—contact us to confirm we can reach you.",
   },
   {
     question: "What areas do you cover?",
     answer:
-      "We're based in North Glasgow and cover Glasgow, Central Scotland, Stirling, and the surrounding areas. Get in touch with your location and we'll confirm we can reach you.",
+      "We're based in Edinburgh and cover Edinburgh, Midlothian, East Lothian and West Lothian. Get in touch with your location and we'll confirm we can reach you.",
   },
 ];
 

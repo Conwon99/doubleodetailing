@@ -29,7 +29,7 @@ const faqs: { question: string; answer: string }[] = [
   {
     question: "What areas do you cover?",
     answer:
-      "We're based in North Glasgow and cover Glasgow, Central Scotland, Stirling, and the surrounding areas. Get in touch with your location and we can confirm we can reach you.",
+      "We're based in Edinburgh and cover Edinburgh, Midlothian, East Lothian and West Lothian. Get in touch with your location and we can confirm we can reach you.",
   },
 ];
 

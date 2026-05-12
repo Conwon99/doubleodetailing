@@ -1,5 +1,7 @@
 # SEO Audit – Double O Detailing
 
+> **Superseded after EdiClean Exterior Cleaning rebrand (Edinburgh / Lothians) on 2026-05-12; figures above relate to the previous brand only.**
+
 **Site:** doubleodetailing.co.uk  
 **Audit date:** February 2026  
 **Scope:** Technical SEO, on-page SEO, structure, and recommendations.

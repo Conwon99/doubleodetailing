@@ -4,8 +4,8 @@ const faqs: { question: string; answer: string }[] = [
   { question: "What does fabric coating do?", answer: "Fabric coating creates a barrier that repels liquids and dirt from upholstery, carpets, and mats. Spills bead off and are easier to wipe away, and the interior stays cleaner for longer." },
   { question: "How long does it last?", answer: "Depending on use and product, fabric coating can last from several months to a year or more. We'll advise on aftercare. Avoiding harsh cleaners helps maintain the protection." },
   { question: "Is it safe for all fabrics?", answer: "We use products designed for automotive upholstery and carpets. We assess the material before application and can advise if your interior is suitable." },
-  { question: "Do you come to me?", answer: "Yes. We're mobile and come to you. We need a suitable space and power. We cover Glasgow and the surrounding areas—get in touch to confirm." },
-  { question: "What areas do you cover?", answer: "We're based in North Glasgow and cover Glasgow, Central Scotland, Stirling, and the surrounding areas. Contact us with your location and we'll confirm we can reach you." },
+  { question: "Do you come to me?", answer: "Yes. We're mobile and come to you. We need a suitable space and power. We cover Edinburgh and the Lothians—get in touch to confirm." },
+  { question: "What areas do you cover?", answer: "We're based in Edinburgh and cover Edinburgh, Midlothian, East Lothian and West Lothian. Contact us with your location and we'll confirm we can reach you." },
 ];
 
 export const InteriorFabricCoatingFAQ = () => {

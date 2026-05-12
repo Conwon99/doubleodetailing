@@ -3,9 +3,9 @@ import { useState } from "react";
 const faqs: { question: string; answer: string }[] = [
   { question: "What types of soft tops do you work on?", answer: "We work on fabric and vinyl convertible tops. We use products suited to each material and assess condition before cleaning and coating." },
   { question: "How long does the coating last?", answer: "With proper care, the coating can last a year or more. We'll advise on aftercare. Keeping the top clean and avoiding harsh chemicals helps." },
-  { question: "Do you come to me?", answer: "Yes. We're mobile and come to you. We need a suitable space and power. We cover Glasgow and the surrounding areas—get in touch to confirm." },
+  { question: "Do you come to me?", answer: "Yes. We're mobile and come to you. We need a suitable space and power. We cover Edinburgh and the Lothians—get in touch to confirm." },
   { question: "Can you fix tears or damage?", answer: "We focus on cleaning, restoration, and coating. Significant tears or structural damage may need a trimmer or specialist; we can advise when we assess the top." },
-  { question: "What areas do you cover?", answer: "We're based in North Glasgow and cover Glasgow, Central Scotland, Stirling, and the surrounding areas. Contact us with your location and we'll confirm we can reach you." },
+  { question: "What areas do you cover?", answer: "We're based in Edinburgh and cover Edinburgh, Midlothian, East Lothian and West Lothian. Contact us with your location and we'll confirm we can reach you." },
 ];
 
 export const SoftTopFAQ = () => {

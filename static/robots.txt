@@ -1,5 +1,6 @@
+# https://edicleanexteriorcleaning.co.uk — allow full crawl; block only error page if it exists at this path.
 User-agent: *
 Allow: /
-Disallow: /thank-you
+Disallow: /404/
 
-Sitemap: https://jimboscleaning.com/sitemap.xml
+Sitemap: https://edicleanexteriorcleaning.co.uk/sitemap.xml
